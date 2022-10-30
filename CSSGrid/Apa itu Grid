@@ -1,0 +1,8 @@
+            <- Konsep dan definisi apa & kenapa Pakai CSS Grid ->
+
+    Adalah modul CSS baru untuk mendefinisikan sistem layout berbentuk grid dalam 2 dimensi  (bari & kolom) , berbeda dengan Flexbox yang 1 dimensi , atau vartikal saja atau horizontal saja , kalau CSS grid itu bisa ke 2 dua nya (2 dimensi)
+    bisa mengatur baris sekaligus kolom 
+        CSS grid ini bukanlah pengganti dari Flexbox , bahkan nanti kita bisa menggunakan ke 2 duanya berbarengan , antara CSS grid , dan flexbox , jadi CSS grid membuat sesuatu yang lebih kompleks 
+        
+        Property Grid 
+    - Display: Grid ;    

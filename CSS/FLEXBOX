@@ -1,0 +1,89 @@
+                            <- Apa itu FlexBox ->
+
+sudah lama ada sejak thn 2016 atau 2017 , untuk menempatkan element HTML secara spesifik...
+        -> Definisi FlexBox adalah sebuah model layout 1 dimensi yang dapat mengatur jarak dan penjajaran antar item dalam sebuah container / bagaimana kita mensejajarkan antara 1 elemen dengan yang lainnya , dengan menggunakan flexbox kita hanya bisa mengatur 1 dimensi , maksudnya adalah kita hanya bisa mengatur elemen secara horizontal dalam 1 baris , atau secara vertikal dalam 1 kolom ,jadi gk bisa 2 dua nya sekaligus  ,  dan ada juga teknik css yang bisa atur 2 dimensi sekaligus , itu disebut dengan CSS Grid ...
+
+        -> Definisi lain FlexBox adalah sebuah modul yang menawarkan cara yang efektif untuk menyusun, mensejajarkan dan mendistribusikan jarak antar item di dalam sebuah container, meskipun ukurannya dinamis atau bahkan kita tidak tau ...
+
+                    -> Istilah istilah dalam FlexBox 
+
+            - Container (Pasti kita punya untuk pembungkusnya)
+            - Items (Element element yang ada di dalamnya atau disebut child)
+            - main axis (sejajar secara Horizontal)
+adalah sumbu utama dari sebuah container yang menentukan urutan dari penempatan items secara horizontal            
+            - cross axis (sejajar secara Vertikal)
+            - main size (Ukuran dari container)
+adalah ukuran (width/height) dari container yang akan membuat dimensi dari items nya relatif terhadap main size            
+            - cross size (ukuran dari colomn nya)
+            - main start - main end (menentukan awal dari elementnya secara horizontal)
+adalah mulai dan berakhirnya items yang disimpan didalam container            
+            - cross start - cross end (menentukan awal dari elementnya secara vertikal)
+            
+         <- Property Pada container kalau mau berjalan dengan baik kasih propertynya ke containernya dan juga element didalamnya ->
+
+    - display:flex; => Tujuan dari display flex adalah membuat sebuah element parent menjadi flexbox, dan membuat element element didalamnya bisa berperilaku flex juga (jangan elementnya saja yang di kasih display flex, bungkusnya juga)
+    , 1 . harus di container nya dulu kasih display flex 
+
+    - flex-direction; => untuk mengatur arah dari urutan di dalamnya bisa secara horizontal kebalikannya bisa juga secara vertikal kebalikannya , cara ngasihnya , defaultnya adalah row yaitu dari kiri ke kanan.
+        .container {
+            flex-direction: row | row-reverse (kebalikan kanan ke kiri) | column | column-reverse (kebalikan bawah atas defaulnya column atas bawah atau vertikal );
+        }
+    - flex-wrap; => Untuk mengatur element didalam container jika tidak muat lagi , agar di turunkan ke bawah , karena biasanya akan di paksa dalam 1 baris
+        .container {
+            flex-wrap: nowrap(Default) | wrap(diturunkan dari kiri ke kanan) | wrap-reverse (kebalikan wrap);
+        }
+            deskripsi : => Secara default semua items didalam container akan berada pada satu baris meskipun ukurannya sudah tidak cukup. wrap memungkinkan untuk memindahkan items ke baris dibawahnya
+    
+    - justify-content; => Untuk mengatur rata dari element element didalamnya (mengatur jarak antar items)
+        * flex-start -> rata kiri
+        * flex-end -> rata kanan
+        * center -> tengah
+        * space-between -> rata kanan , rata kiri dan tengah
+        * space-around -> sama dengan space between bedanya ada celah offset kiri dan kanan
+        * space evenly -> sama dengan space around cuma lebih besar offsetnya
+
+    - align-items; => Untuk mengatur kesejajaran antar items secara vertikal (mengatur perilaku penjajaran items terhadap cross axis)
+        * flex-start => rata atas secara vertikal
+        * flex-end => rata bawah secara vertikal
+        * center => rata tengah secara vertikal
+        * stretch => memenuhi height (tinggi) jika kita tidak kasih height pada elemetnya (child or itemnya)
+        * baseline => akan rata pada font-text nya
+
+    - align-content; => Berlaku ketika contentnya lebih dari satu baris , untuk mengatur jarak antar items terhadap cross axis (hanya berlaku ketika items lebih dari 1 baris)    
+
+        * flex-start => rata atas secara vertikal
+        * flex-end => rata bawah secara vertikal
+        * center => rata tengah secara vertikal
+        * stretch => tidak memenuhi layar tapi terstruktur
+        * space-betwen => rata atas vertikal , rata bawah vertikal , dan tengah vertikal 
+        * space-around => sama dengan space-between bedanya jarak antara atas dan bawah setengah dari offset tengahnya
+
+                <- Property pada Items ->
+            - Order => Untuk mengatur dari elemen elementnya (mengatur urutannya bisa pakai order)   
+                    Ctt: Urutan awal dari order adalah 0 , jadi order paling besar akan berada paling akhir artinya , kita tukar ke paling akhir , di file FLEXBOX.html sudah ada contohnya
+
+            - flex-grow / flex => untuk mengatur ukuran dari itemnya (untuk mendapatkan hasil yang sama tanpa perlu mendefinisikan ukurannya)     
+            cara pakainya 
+            .container div{
+                flex: 1;
+            }
+            .container div .dua {
+                flex: 2;
+            } 
+                Maka di div flex 1 ukuran dari semua width dan heightnya itemnya akan memenuhi containernya bila tidak di kasih width nya , (jangan lupa kasih height pada container nya) , jadi seperti ketika memakai align-items:stretch; (memenuhi layar)
+            
+            namun di flex: 2; kita bisa atur .dua nya jadi 2x lipat dari width yang lainnya
+
+            - align-self => Untuk mengatur 1 saja elemen di dalam barisnya mau dimana (mengatur perilaku penjajaran sebuah item yang spesifik terhadap cross axis (vertikal))
+                * flex-start => rata atas secara vertikal
+                * flex-end => rata bawah secara vertikal
+                * stretch => rata atas dan bawah full secara vertikal (seperti align items stretch)
+                * baseline => sama dengan align items rata dengan font nya
+                * center => itemnya akan berada di tengah
+
+        Ctt: Hampir di semua browser populer di support untuk flex box ini , tapi jangan lupa tetap pakai vendor prefix ( -webkit- )
+
+
+
+
+

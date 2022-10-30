@@ -1,0 +1,61 @@
+            CSS calc() <- Function didalam CSS 
+Fungsi calc adalah sebuah fungsi pada CSS, yang memungkinkan kita untuk melakukan operasi matematika / kalkulasi pada nilai dari sebuah properti 
+        - Nilai yang bisa di calc() -
+1.<length>
+2.<angle>
+3.<time>
+4.<percentage>                    
+5.<number>
+        <!-- Kita bisa melakukan Penjumlahan dan penguran -->
+                     <!-- Di bawah Contohnya -->
+Penjumlahan :
+    width: calc(10px + 100px); =110px hasilnya
+
+Pengurangan :
+    width: calc(100% - 30px); = 100% dikurangi 30px ;
+
+Perkalian :
+    margin: calc(10px * 3); = valid
+        or
+    margin: calc(3 * 10px); = valid
+        or
+    margin: calc(30px * 3px); = invalid 
+    ->> Tidak boleh dikalikan dengan pixel kecuali dengan angka biasa atau satuan <<-
+
+Pembagian :
+    margin: calc(30px / 3); = valid
+        or
+    margin: calc(30px / 10px); = invalid
+        or
+    margin: calc(30px / 0); = invalid (tidak bisa di bagi 0)                                                 
+    ->> Hanya dapat di bagi dengan satuan , sama dengan perkalian cuma tidak bisa juga di bagi dengan 0 <<-
+
+
+                Ctt: Perlu di ingat operator / + - * harus ada spasi nya tidak boleh nyatu , kalau nyatu maka akan invalid contoh 10px*3 (eror) which true is 10px * 3 <- true ->
+
+            Contoh penggunaan calc() <-Function dalam kasus->    
+.el {
+    font-size: calc(3vw + 2px);
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    padding: calc(1vh + 5px);
+}            
+   <- Nesting (calc Bersarang) ->
+.el {
+    width: calc(calc(100% / 3) - calc(1rem * 2));
+}        
+    Ctt: penjelasannya , pertama 1rem * 2 dahulu naru 100% / 3 , barulah hasilnya di kurangi 
+
+                            - CSS Variable /Custom Propertie -
+ketika kita ingin element kita penuh satu layar cuma tidak menghalangi navbar atau header yang ada di atas 
+
+:root {
+    --header-height:32px;
+}
+.el {
+    height: calc(100vh - var(--header-height))
+}
+
+            Hampir di semua browser ini jalan , kecuali di operamini , untuk browser populer bisa jalan harusnya ...
+
+max-width artinya , maksimal lebarnya , kalau lebih kecil dari itu dia akan mengikuti ...

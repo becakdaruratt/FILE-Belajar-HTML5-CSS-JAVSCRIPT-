@@ -1,0 +1,21 @@
+                  <- Em VS Rem -> untuk Typografi
+
+- Kapan kita pakai em , dan kapan kita pakai Rem -       
+em ->> Mengatur ukuran margin , padding dan font-size relatif
+       Parent
+       nilai default em(16px) -> jika tidak ada 1 pun font-size 
+    Ctt: em -> kalau misalkan di parentnya kita gunakan 2em , dan parentnya lagi 10px , maka font yang kitapakai jika kita pakai 2em jadi = 40px; karena , pertama dia ambil di parent yang 2em , dan 2em tadi 2x dari parentnya lagi , sehingga 2 em yang kita pakai jadi 4 em , = 40px; 
+
+            Cara atasi -> Rem 
+Rem ->> niai default jika tidak ada font-size (16px)                   
+        hanya akan mengambil font-size di <html> or :root -> walaupun kita kasih
+        nilai pada parentnya , tetap yang di ambil hanyalah di html or :root nya,     
+
+         Ctt: Gunakanlah Rem pada Font , sedangkan em -> gunakanlah lenght (margin, padding ,width) tapi perilakunya sedikit berbeda 
+
+
+                  em -> untuk padding: 1em, 3em; -> 16px & 48px
+    padding em-> akan relatif terhadap elementnya baru parentnya , jika misalkan    dia punya element yang serupa seperti padding: 1em,3em; dan di bawahnya , walau bukan parentnya kita kasih 1em juga , maka dia akan 1x dari 16px & 48px , 
+    jika kita kasih 2em , maka dia akan 2x dari 16px & 48px , jika 0.5em , maka dia akan setengah dari 16px & 48px , namun perlu di ingat jika misalkan tidak ada sama sekali ukuran dari padding nya , dari parent 1 , ke parent laiinya , maka dia akan memakai nilai di default yaitu (16px) 
+
+                  em ->> untuk margin , dia akan relatif terhadap parentnya , sama dengan padding , namun jika ingin relatif terhadap :root nya or <html> kita bisa gunakan Rem 

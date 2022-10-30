@@ -1,0 +1,14 @@
+            - Kapan sih kita pake satuan satuan ini -
+kalo kita ingat ingat kembali pelajaran kita yang lalu , 4rem kan kalau defaultnya 64, terus di bawahnya ada 1.8em , otomatis em itu pertama yang dia cari adalah satuan nya, jika tidka ada maka dia akan ambil , 1x dari 4rem itu makanya hasilnya 74 
+
+        1. viewport width ->> kalau misalkan kita kasih gambar di header , lalu kita kasih 100% atau px, tinggi dari gambar nya tidak akan memenuhi layar itu karena , karena dia tidak relatif dengan pembungkusnya , caranya yaitu dengan menggunakan viewport height(vh) maka , mau dibuka di manapun, tinggi dari gambar nya akan tetap memenuhi layar, namun jika kita scroll saja kebawa sedikit maka dia akan hilang tingginya , kalau kita kecilkan sampai ke ukuran minimal , maka saat kita refresh tinggi nya akan tetap segitu , atau responsive lah , bisa dibilang, itu kalau menggunakan vh(viewport hight), dan jangan lupa untuk kasih background-image:cover; agar lebar dari gambar nya mengikuti dari halaman website nya 
+        , dan tambahkan juga background-position:center; agar gambar nya selalu ditengah sampai dia gk muat lagi, jadi kalau kita kecilkan , tinggi nya akan selalu berusaha sesuai viewport dari layarnya (tampilannya) dan agar tulisan nya juga ikut ditengah , ada triknya, pertama , kita jadikan headernya jadi display:flex; dan untuk h1 nya , kita jadikan margin auto , maka secar horizontal dan vertikal akan selalu ditengah 
+            Ctt: jangan menggunakan viewportwidth(vw) , karena untuk lebarnya udah menyesuaikan , kita tidak mau itu 
+
+
+
+
+            Ctt: Cara agar scroll horizontal hilang , {
+                overflow-x: hidden; (dibodynya)
+            }
+            font-style: italic; -> cara agar tulisan jadi cetak miring

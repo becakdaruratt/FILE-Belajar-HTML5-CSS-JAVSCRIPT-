@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan FlexBox</title>
+    <style>
+        body {
+            background-color: #333;
+            overflow-x: hidden ;
+        }
+        .container {
+            background-color: white;
+            width: calc(100vw - 2rem);
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .article p {
+
+            width: calc(100vw - 80ch);
+        }
+        .kanan , h2 p {
+            width: 50ch;
+        }
+        .qoutes {
+            display: flex;
+            border: 2px solid black;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            width: calc(100vw - 2.5rem);
+        }
+        .lorem1 {
+            background-color: rgb(119, 0, 255);
+            flex-grow: 1;
+            padding: 10px;
+            width: 50%;
+        }
+        .lorem2 {
+            flex-grow: 1;
+            background-color: green;
+            padding: 10px;
+            width: 50%;
+        }
+        .lorem3 {
+            flex-grow: 1;
+            background-color: red;
+            width: 50%;
+            padding: 10px;
+        }
+        img {
+            width: 100%;
+            height: 150px;
+        }
+        .thumbnail {
+            width: 50%;
+        }
+        .gambar {
+            margin: 40px auto;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 2px solid black;
+        }
+        .besar {
+            margin: 100px auto;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .header {
+            background-color: lightblue;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .card {
+            width: 25%;
+            padding: 20px;
+        }
+        .tulisan {
+            text-align: center;
+        }
+        .card.besarr {
+            transform: scale(1.4);
+        }
+        .kotak {
+            border: 2px solid red;
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            display: flex;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: auto;
+            display: flex;
+        }
+        .box p {
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+        
+        @media( min-width: 600px ) {
+            .thumbnail {
+
+            }
+        }
+        @media( max-width: 600px ){
+            .qoutes {
+                flex-wrap: nowrap;
+                flex-grow: 0;
+            }
+            .lorem1 , .lorem2 , .lorem3 {
+                width: 25%;
+            }
+            .besar {
+                justify-content: flex-start;
+                flex-direction: column;
+                border: none;
+            }
+            .card {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 10px;
+            }
+            .besar {
+                margin: 0 auto;
+            }
+            .card.besarr {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kiri">
+            <h2>Sidebar satu</h2>
+            <ul>
+                <li><a href="">link 1</a></li>
+                <li><a href="">link 2</a></li>
+                <li><a href="">link 3</a></li>
+                <li><a href="">link 4</a></li>
+                <li><a href="">link 5</a></li>
+            </ul>
+        </div>
+        <div class="article">
+            <h2>Judul Artikel</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deserunt libero vero. Dolorum illum voluptas enim soluta eaque beatae sunt magnam, eius quasi optio deserunt blanditiis officiis culpa, corrupti aliquid quod, corporis iusto aliquam. Veritatis earum explicabo minima cumque magni.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quod sapiente dicta architecto nostrum. Ex error consectetur tempore, quia enim eligendi sunt et similique hic nisi, tenetur ullam? Nobis delectus vel pariatur ipsa, modi, sint fuga sapiente accusantium, dicta repellendus distinctio ducimus qui. Aut illo explicabo quibusdam atque aliquam nesciunt saepe? At perspiciatis sequi quis tenetur, ullam quia culpa odio officiis! Eligendi dolores et accusamus ut, neque aut praesentium culpa, magnam aliquid in rem tempora eos iure dolorem amet. Corporis, eum modi tempore possimus perferendis mollitia dolorem recusandae quibusdam officia deleniti fugit magnam, culpa ipsam repudiandae cum molestiae laboriosam aut.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorum saepe incidunt consectetur ipsum, harum, est dignissimos odio in alias temporibus recusandae neque! Numquam molestias totam nihil aut alias necessitatibus neque perferendis earum voluptate possimus hic esse, atque deserunt? Dolore amet officia ut unde odit qui eaque culpa minima molestias!</p>
+        </div>
+        <div class="kanan">
+            <h2>Sidebar dua</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestiae nesciunt rem veniam, recusandae labore velit sed possimus consectetur tempore est? Modi facere eum rerum suscipit laudantium dolorum delectus quidem mollitia exercitationem ut, ducimus amet dolor ipsa repellendus aut? Quaerat, natus? Dolorum tempore eaque aliquid voluptatum repellendus a nam ad.</p>
+        </div>
+    </div>
+    <div class="qoutes">
+        <div class="lorem1">
+            <h2>lorem 1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis distinctio perferendis, libero beatae id deserunt laborum commodi rem magni maxime!</p>
+        </div>
+        <div class="lorem2">
+            <h2>lorem 2</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum architecto quia perspiciatis corrupti, excepturi rerum mollitia! Harum itaque tempora cumque unde aspernatur eveniet modi laboriosam.
+        </div>
+        <div class="lorem3">
+            <h2>lorem 3</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet commodi nihil necessitatibus suscipit porro facilis totam, quae velit eveniet laborum autem vitae unde veniam quo temporibus doloremque odio repudiandae libero?
+        </div>
+    </div>
+    <div class="gambar">
+        <div class="thumbnail">
+            <img src="../CaptainAmerica.jpg" alt="">
+        </div>
+        <div class="thumbnail">
+            <img src="../christin-hume-mfB1B1s4sMc-unsplash (1).jpg" alt="">
+        </div>
+        <div class="thumbnail">
+            <img src="../clay-banks-hRwBBTqZWZ0-unsplash (1).jpg" alt="">
+        </div>
+        <div class="thumbnail">
+            <img src="../clay-banks-PXaQXThG1FY-unsplash.jpg" alt="">
+        </div>
+        <div class="thumbnail">
+            <img src="../d.jpg" alt="">
+        </div>
+        <div class="thumbnail">
+            <img src="../download2.jpg" alt="">
+        </div>
+    </div>
+    <div class="besar">
+        <div class="card">
+            <div class="header"></div>
+            <div class="tulisan">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo nobis, exercitationem tempora quod quidem veritatis odio eos atque odit minus?</p>
+                <button>Buy Now !</button>
+            </div>
+        </div>
+        <div class="card besarr">
+            <div class="header"></div>
+            <div class="tulisan">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo nobis, exercitationem tempora quod quidem veritatis odio eos atque odit minus?</p>
+                <button>Buy Now !</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header"></div>
+            <div class="tulisan">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo nobis, exercitationem tempora quod quidem veritatis odio eos atque odit minus?</p>
+                <button>Buy Now !</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="kotak">
+        <div class="box">
+                <p>Hello World! dunia baru adalah</p>
+        </div>
+    </div>
+</body> 
+</html>

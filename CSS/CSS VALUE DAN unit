@@ -1,0 +1,121 @@
+           <- CSS Value dan unit ->
+Nilai & satuan pada CSS
+        Sampai saat ini kita sudah sering menggunakan nilai dan satuanini , tapi di vidio kali ini kita akan membahas secara lengkap apa saja nilai dalam CSS dan satuannya juga , karena saya yakin pasti ada beberapa nilai dan satuan ini , teman teman belum tau atau belum pernah pakai , buat yang masih bingung mengenai nilai dan satuan coba kita lihat dulu contoh sederhana mengenai ini , misalkita punya sebuah selector dan syntax sederhana seperti ini 
+             .selector {
+                width: 80%;
+                height: 500px;
+             }
+        kalau kita lihat disini kita punya width: 80%; dan height: 500px; , angka 80 ini bisa kita sebut dengan nilai , sedangkan persen (%) dan unit kita bisa sebut sebagai unit , jadi ini dulu yang harus kita pahami di awal , karena kita tahu banyak baget yah unit ini , teman teman bisa kasih % , px , ada em , dan bahkan gak ada satuannya , ada deg , lalu nilai nya bisa pecahan , ada 0, dan bisa -(minus) nilai nya , jadi banyak yah , jadi nanti kita akan bahasa satu persatu , okey .. 
+
+
+                nah sekarang mari kita bahas dulu mengenai CSS value (nilai) ini simple aja nilai yang bisa kita kasih atau CSS value , jadi nilai yang bisa kita kasih itu ada <- beberapa ->
+        -> Integer (bilangan bulat)
+        -> number (bilangan pecahan (, koma koma gitu))
+        -> percentage (atau % (persen gampangnya))
+        -> dimension (menurut saya paling penting , kalau ini adalah nilai yang digabungkan dengan satuan) , ada nilai satuan namanya dimension 
+
+                1. Integer 
+atau bilangan bulat , nilainya bisa positif/negatif ingat ini hanya angka nya saja , saya tau kalian pernah menggunakan z-index, z-index itu bisa postif , bisa juga negatif tanpa pakai unit (nilai saja) postif membuat elementnya berada di depan secara sumbe Z, sedangkan negatif membuat elementnya berada di belakang secara Sumbu Z , kita bisa kasih postif atau negatif tanpa satuan , kalau kalian pakai flex misalkan , ada juga namanya order , nilainya juga urutanya kita bisa kasih nilai hanya bilangan bulat , gk boleh , (koma koma) kalau kalian pakai  grid system juga sama / atau CSS grid juga sama kita punya , grid-column-start:2; atau grid-row-end:-4; misalkan ini boleh postifi , boleh juga negatif tapi gk boleh pakai koma , kalau untuk integer sih , saya yakin kalian pernah pakai , begitu pula dengan Number
+
+
+                2. Number
+tipe number ini hanya angka tapi boleh pecahan , ini contohnya bisa kalian pakai misalkan kalian pakai opacity 
+.contoh {
+        opacity:0.6;
+        transform:scale(2.5);
+}                
+opacity itu kan hanya angka nya saja 1. untuk membuat gambar nya menjadi solid , terlihat secara penuh dan 0 , untuk membuat gambarnya transparan , jadi gk kelihatan (hilang gitu ya) , kalian bisa kasih nilai di tengah tengah nya 0. ; berapa , jadi ingat ya teman teman , kalau kalian opacity , 0 nya bisa di hilangkan , jadi kalian jangan kaget kalau misalkan ada nilai CSS yang nilainya titik (.) 5, atau titik (.) 7 , itu artinya 0.7 atau 0.5 , gitu ya atau misalkan contoh lain kita pakai property, transform:scale(2.5); ini artinya perbesar ukuran scale 2.5 kali dari ukuran aslinya , oke jadi itu number sama ,saja dengan integer gk ada belakangnya , kita juga bisa kasih percentage (%)
+
+                3. percentage (%)
+ini merepresentasika sebagian dari nilai tertentu % selalu relative terhadap nilai yang lain , gimaan maksudnya , coba kita lihat yah , contohnya kalau misalkan kita punya sebuah elemen , kita kasih div. yang nama class nya 
+.box besar {
+        width:80%;
+        height:200px;
+        background-color:salmon;
+}                
+kita fokus dengan widthnya , 80% ini maksudnya apa , 80% dari elemen pembungkusnya , jadi kalian lihat , divnya punya parent , div yang lain , atau divnya berada di dalam body ? , kalau itu berarti 80% ini 80% dari body , atau windownya lah gitu  , makanya kalian bisa lihat di sini tidak penuh ya 80% dari lebar body , sehingga kita perbesar lebar bodynya itu dia akan berusaha selalu 80% dari window , dari lebar body nya ,jadi persen % pasti relatif terhadap nilai yang lain , dalam kasus ini relatif terhadap body (window nya) , jadi kalau misalkan kita punya elemen yang lain , contohnya , misalkan di dalam div.box-besar
+kita bikin lagi div.box-kecil {
+        width:50%;
+        height:100px;
+        background-color:royalblue;
+}
+ini akan seperti ini hasilnya , 50% box-kecil akan relatif terhadap pembungkusnya ,dalam kasusnya relatif terhadap box-besar
+, sama ya sama yang tadi , tapi bedanya , pembungkus nya sekarang bukan body tapi box besar , jadi makanya dia akan selalu 50% dari box besar , dan kalau kita kecilkan windownya dia akan selalu 50% setengah nya dari box-besar , itu kalau kita kasih nilai persentage (%)
+        gitu ya simple saja , integer , number , dan persentage 
+
+                4. dimension
+menurut saya ini yang paling penting , karena didalam dimension ada turunannya lagi , mungkin kalian sering pakai tapi kalian tidak sadar kalau ini masuk kedalam kategori dimension , kita lihat , jadi apa itu dimension , dimension adalah number yang memiliki satuan di belakang , jadi ada angka , boleh bulat , boleh satuan, yang punya satuan di belakangnya 
+        didalam dimension ini terbagi lagi beberapa kategori 
+        1. lenght
+        2. angle
+        3. time
+        4. resolution
+kita akan bahas lenght belakangan , karena di belakang lenght ada lagi turunanannya jadi lebih kompleks lagi , kita akan mulai dari angle aja 
+
+        2. angle
+jadi kalau angle kalian sudah tau terjemahannya , sudut ya , dan saya rasa kalian juga sudah pernah pake , kalian pake transform:rotate(20deg); , salah satu satuan untuk sudut adalah deg , sekarang degre (berapa derajat) sering pake , saya juga tipa pake tipe angle ini saya pasti pake yang deg , tapi ternyata teman teman ada yang lain , ada rad (radian) ,dan ada grad (gradian) dan ada turn(berapa putaran yang kita inginkan) ini seru yah apalagi teman teman bikin sesuatu pake CSS , untuk menerjemahkan persamaan Mate matik misalnya , karena persamaan mate matik itu ada rumusnya gak melulu pake derajat , ini masing masing kalau di konversi jadi seperti ini
+
+-> Vidio CSS VALUE dan Unit 11:25
+
+        3. Time
+dan saya juga yakin kalau kalian pernah pake , kalau bikin transisi atau animasi itu ada yang namanya , sekon (s) ( detik), atau ms (milisekon) , jadi kalau kalian tulis 1.s sama saja dengan 1000.ms , jadi boleh pilih yang mana saja 
+contohnya kalian bikin transisi lah 
+.box {
+        transition:300ms;
+}
+transition:300ms; sama saja dengan 0.3s , sama saja 
+itu untuk time gampang saja 
+
+        4.resolution
+ini untuk menentukan resolution dari website kalian ini biasa digunakan kalau kalian mau mencetak sesuatu , ada yang namanya nya dpi (dot per inch) jadi berapa titik untuk setiap inchi nya , ada dpcm (dot per centimeter) dan ada dppx (dot per pixel) kenapa dot , karena ini tujuannnya untuk desain printin 
+
+        contoh penggunaannya ketika kita media query
+
+@media print and (min-resolution:300dpi){
+
+}
+
+        1. Lenght
+kenapa kita bahas lenght terakhir karena , lenght itu punya turunannya lagi
+jenis jenis lenght ada 2
+- Absolute -> Font-size
+- Relative        
+
+CSS Value & unit 14:46
+
+        em ->> Relatif terhadap ukuran font yang sedang digunakan
+dia akan mengikuti atau relatif terhadap font-size yang digunakan oleh parentnya , misal kita punya h1 dan font size parentnya menggunakan size 40px, maka saat kita kasih 1 em , itu berarti 40px , dan kalau kita kasih 2em , artinya 2x kali dari 40px .. (ukuran relatif dengan parent / bukan <html> or <body>)
+
+        rem ->> Relatif terhadap ukuran font "root" biasanya ukuran font yang paling atas (ukuran dari induk utamam / <html> or <body>) 
+
+margin dan padding -> juga bisa kita atur , dengan berapa em , width juga bisa
+
+        ch ->> Relatif terhadap lebar karakter '0' dari font yang sedang di gunakan
+fungisnya untuk membatasi karakter (kosakata) paragraph agar tidak lebih dari yang nilai yang kita inginkan misal 
+.box {
+        width:60ch;
+}       
+artinya kita membatasi karakter tulisannya tidak lebih dari 60 karakter , walau pun tulisan kosa katanya tidak rapih , karena di kasus ini kita pakai sans-serif dia bukan monospes
+
+        vh ->> Relatif terhadap tinggi dari viewport
+        vw ->> Relatif terhadap lebar dari viewport
+        vmin ->> Relative terhadap dimensi terkecil sebuah viewport
+        vmax ->> Relative terhadap dimensi terbesar sebuah viewport
+
+                Unit unit ini , berhubungan dengan ukuran layar yang sedang kita lihat
+
+        vh & vw(viewport width) -> tapi ini hanya contoh vw (viewport heigh) 
+.box {
+        background-color:lightblue;
+        height: 100vh;
+}        
+100vh artinya , 100% dari viewport height (tingginya) mau kita buka dari mana pun websitenya , dari laptop, tablet, atau heandphone , website ini akan selalu memenuhi tinggi dari layar laptop,tablet or heandphone kalian , cuma kalau kita scroll , kebawah sedikit saja , maka dia tidak akan memenuhi viewport dari layar kita lagi, intinya dia cuma memenuhi layar , tapi tidak untuk semua scroll , dan kalau kita refresh lagi dia akan penuh lagi , cuma penuh nya hanya di viewport height dari layar saja , sangat bermanfaat sekali kalau kita membuat website yang responsive  ... Untuk Yang vw (VIewport width) sama saja 
+
+        vmin ->> Contoh kasusnya
+.box {
+        background-color: lightblue;
+        height: 100vmin;
+        width: 100vmin;
+}        
+100vmin (artinya 100%) height dan width 100vmin , aritnya misalkan kita buka di ponsel , untuk lebar dan tingginya akan sama , lebar nya dan tinggi akan sama ukurannya , jadi setengah dari heandphone misalnya , dan kalau kita kasih ,
+100vmax , maka lebar dan tinggi nya juga akan tetap sama , cuma bedanya karena 100vmax lebar dan tinggi nya , dia jadi bisa di scroll ke samping , dan semuanya memenuhi layar 
