@@ -1,0 +1,31 @@
+            <<== Special Function & Keywords ==>>
+    apa saja special function & keywords nya 
+1. repeat() ->> Untuk menentukan ukuran grid track secara berulang
+    (cara pakai)
+    .container {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+    } => Tanpa menulis semua ukuran kolom 1 persatu , otomatis 9 itemnya jadi 1fr , or atau bisa juga 
+    grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr); => artinya kita mau bikin 4 columns 1fr dan 5 columns nya lagi  1.5 fr
+2. min-content & max-content ->> Untuk menentukan seberapa besar ukuran grid track berdasarkan content pada sebuah item 
+    (Cara pakai)    
+    .container {
+        display:grid;
+        grid-template-columns: min-content | max-content ;
+    } beda antara min dan max content , adalah pada tulisannya bila tulisan nya di min content panjang lebih dari 2 kata , maka kata yang panjang yang di letakkan di aatas dan yang sedikit akan diturunkan kebawah, namun jika max content maka dia akan di cukupkan dan tulisannya jadi horizontal tanpa di turunkan ... ukuran pada width di grid tack kalau di kasih min or max content , maka besarnya width columns akan sebesar content nya
+3. minmax() ->> menentukan ukuran minimal dan maksimal dari grid track 
+(cara pakai) 
+.container {
+    display: grid ;
+    grid-template-columns: minmax (200px, 300px) ;
+} 
+    penjelasan: 200px representasikan apabila kita kecilkan layarnya maka ukuran nya akan pass 200px dan kalau layar di besarkan ukurannya akan jadi 300px jadi responsive
+4. auto-fill & auto-fit ->> untuk menentukan jumlah item untuk berada pada grid track 
+(cara pakai)
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px) ;
+}
+    penjelasan: dengan menggunakan auto-fill kita bisa membuat elemen kita misal 100px width grid tracknya , biasanya ada ruang kosong di bagian containernya karena masih memeiliki sisa dan elemen yang lain yang tidak muat untuk 100px tadi akan turun kebawah , tapi lihat dengan kita memberikan auto-fill , saat kita lebarkan layar kita maka secara otomatis , elemen yang dibawah tadi akan mengisi ruang kosong yang ada di sebelahkanannya , jadi sebenarnya auto-fill akan memberika atau mengizinkan elemen di bawahnya naik apabila size ukurannya muat , jadi otomatis bisa naik elemen di bawahnya , namun jika kita menggunakan auto-fit sebenarnya tampak luar tidak ada perbedaanya , dan sama saja , namun jika kita lihat inspek elemen menggunakan firefox kita bisa melihat , kalau garis solid grid containernya akan berakhir tepat di elemen terakhir nya , bila elemennya lebih sedikit dibanding lebar dari containernya (tidak ada di bawah lagi elemenya) namun jika kita pakai auto-fill maka garis solid grid container nya akan berakhir di 100px lebar dari elemen yang lain, seakan akan mengatakan kalau ini masih bisa muat 1 kolom lagi , sangat berguna untuk responsive bila kita meng inginkan ada ruang kosong 1
+
+        

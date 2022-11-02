@@ -1,0 +1,12 @@
+            <<- Istilah-Istilah di CSS grid ->>
+    * Grid container ->> Adalah element pembungkus grid, didefinisikan dengan menuliskan display:grid;   
+    * Grid item ->> Element-Element yang berada (1level) didalam Grid container
+    * Grid line ->> adalah Garis Horizontal (Kolom) atau vertikal(baris) yang memisahkan grid menjadi beberapa bagian dan di tandai dengan angka -> Grid line pasti lebih 1 dari pada kolom dan baris , kalau kolom dan baris misal ada 3 , maka Grid line di tandai angka 4
+    * Grid cell ->> Perpotongan / pertemuan antara baris dan kolom di dalam grid (1 kolom dan baris = 1 cell) kita juga bisa membuat 4 cell , dengan menggabungkan 4 cell jadi 1 cell / area dan tidak boleh bolong 1 atau loncat tidak boleh . harus jadi kotak / 1 area
+    * Grid area ->> Kumpulan lebih dari satu grid cell yang membentuk kotak , penjelasannya sudah jelas di Grid cell 
+    * Grid track ->> Ukuran atau jarak antara 2 grid line, bisa horizontal (kolom) atau vertikal (baris) / ukuran dari Grid cell / grid areanya bisa diatur mau berapa / atau kalau di table cell padding contohnya
+    * Grid gap ->> kebalikan dari Grid track , adalah Jarak antar Grid track / cell ruang nya atua kalau di table namanya cellspaccing
+
+
+            Jadi ini adalah istilah istilah pada CSS grid  
+                Dan CSS grid , sudah di Support oleh browser Populer  

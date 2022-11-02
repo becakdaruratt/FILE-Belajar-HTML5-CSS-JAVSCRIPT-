@@ -1,0 +1,71 @@
+                <<-- Grid Area & Grid gap -->> 
+
+        1. Grid-template-area =>> Mendefinisikan grid template menggunakan
+                                  nama dari area yang di tulis pada property
+                                  grid-area pada item / di gunakan di container 
+                                  dan di item juga
+                Cara pakai => .container {
+                                grid-template-areas:
+                                " <nama-area> | none | '.' "
+                                " <nama-area> <nama-area> "
+                                    }                    
+                    Cara pakai item atau templatenya tapi belum ditempelkan
+                    ke itemnya
+                     .container {
+                        grid-template-areas: 
+                            'header header header'
+                            'sidebar  content content'
+                            'sidebar content content'
+                            'footer footer footer'
+                         ;
+                     }            
+                        =>> Tempel kan di classnya ada contoh cara penggunannya
+                         
+                          .content {
+            grid-area: content;
+            background-color: green;
+        } =>> cara menempelkan grid areanya 
+        grid-template-areas: 
+                'header header header'
+                'sidebar content content'
+                'sidebar content content'
+                'footer footer footer'
+            ; =>> cara membuat nya di container gridnya
+
+         dan kerennya kita juga bisa memindah mindahkan sidebar atau contentnya
+
+
+                        <<-- grid-template -->>
+        =>> adalah shorthand Mendefinisikan singkatan dari 3 grid-template yaitu            
+            1. grid-template-rows
+            2. grid-template-columns
+            3. grid-template-areas  
+                    = Dalam 1 deklarasi 
+
+                        
+                        <<-- Grid-gap -->>
+            sebenarnya untuk grid gap bisa tidak Horizontal dan vertikal sekaligus
+kita bisa pisah , cara penulisannya mau horizontal atau vertikal saja bisa,
+yang kita coba tadi itu adalah cara lama = grid-gap: ; , makanya monolisin sudah di coret                         
+
+            =>> Cara baru monoliskin nya 
+        .container {
+            # Cara baru
+            column-gap: <line-size> ;
+            row-gap: <line-size> ;
+            gap: ;
+
+            # Cara Lama
+            grid-column-gap: <line-size> ;
+            grid-row-gap: <line-size> ;
+            grid-gap: ;
+        }
+                            <<-- Grid -->>
+               <<=>> Sebuah Shorthand untuk mendefinisikan properti-properti
+               dalam satu deklarasi 
+    1. grid-teplate-rows               
+    2. grid-teplate-columns               
+    3. grid-teplate-areas               
+    4. grid-auto-rows               
+    5. grid-auto-columns               
+    6. grid-auto-flow               

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px auto ;
+        }
+        .container {
+            width: 80%;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+            margin: auto;
+            border: 10px solid white;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px , 1fr));
+            grid-gap: 5px;
+        }
+        img {
+            width: 100%;
+        }
+        li {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Gallery</h1>
+    <ul class="container">
+        <li>
+            <img src="../../9.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../CaptainAmerica.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../christin-hume-mfB1B1s4sMc-unsplash (1).jpg" alt="">
+        </li>
+        <li>
+            <img src="../../clay-banks-PXaQXThG1FY-unsplash.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../9.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../9.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../9.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../9.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../9.jpg" alt="">
+        </li>
+        <li>
+            <img src="../../9.jpg" alt="">
+        </li>
+        
+    </ul>
+</body>
+</html>

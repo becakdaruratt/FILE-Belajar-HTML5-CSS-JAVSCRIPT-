@@ -1,0 +1,46 @@
+                <-- Grid Area -->
+    untuk menentukan nama area pada item sesuai dengan template yang sudah dibuat sebelumnya melalui properti grid-template-areas , bisa digunakan sebagai shorthand untuk grid-column-start,grid-column-end , grid-row-start dan grid-row-end ...  
+            ada yang lebih keren lagi grid area bisa menyingkat grid column start dan end , row start dan end , dalam 1 deklarasi
+                    (cara penggunaannya di grid-area)                
+
+        .item {
+            grid-area: <name grid-template-areas> | <row-start> / <column-start> / <row-end> / <column-end> ;
+        }   => Gk boleh ketukar urutannya
+            => bila tidak pakai nama grid-template-areas
+                .item {
+                    grid-area: 2 / 1 / 4 / 3 ;
+                }             
+                
+                    <<- justify-self ->>
+
+Adalah untuk mengatur posisi pada sebuah item = mengatur posisi item pada sebuah cell terhadap sumbu horizontal = berarti cell nya bukan item didalm cell nya 
+kalau justify-item yang di atur itemnya bukan cellnya 
+                (Cara pakai)
+            .item {
+                justify-self: start | end |center | stretch ;
+            }
+            start -> rapat kiri 
+            end -> rapat kanan 
+            center -> rapat tengah
+            stretch -> memenuhi width = nilai default
+
+                cara pakai adalah ruang kosong pada lebar column dan yang dapat kita atur adalah item (elemnnya itupun elementyang spesifik seperti penggunaanya , align self di Flexbox)
+             
+                <!-- untuk width pada column nya harus fixx , bila tidak fixx tidak akan bekerja dan width pada itemnya harus lebih kecil dari jumlah column hanya untuk justify-items -->
+
+                <-- Align-self kebalikan dari justify-self -->
+        mengatur secara vertikal        
+        (Cara pakai)
+        .item {
+            align-self: start | end |center | stretch ;
+        }
+
+            Ctt: justify-self & align self = berlaku untuk contentnya bukan columnnya , berlaku di ruang kosong dari column dan rows 
+
+                    <<-- place-self -->>
+        sebuah shorthand posisi item pada sebuah cell terhadap sumbu vertikal dan sumbu horizontal dalam 1 deklarasi     
+        
+        (Cara pakai)
+        .item {
+            place-self: <align-self> <justify-self> ;
+        }

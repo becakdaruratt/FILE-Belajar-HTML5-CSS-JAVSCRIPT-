@@ -1,0 +1,28 @@
+            <<- Prperty Item didalam Grid kita ->>
+    4 property pertama 
+            1. grid-column-strat            
+            2. grid-column-end 
+            3. grid-row-start 
+            4. grid-row-end
+        adalah tempat menentukan dari grid item dengan mengacu pada nomor atau nama grid line yang spesifik
+                (cara pakai)
+                .my-item {
+                    grid-column-star: 1 ;
+                    grid-column-end: 3 ;
+                    grid-row-start: 2 ;
+                    grid-row-end: 4 ;
+                }
+                    contoh kasus lain
+                    .my-item {
+                        grid-column-start: -1 ;
+                        grid-column-end: -2 ;
+                        grid-row-start: -4 ;
+                        grid-row-end: -1 ;
+                    }
+                    row -1 tidak di hitung lagi karena colum nya cuma ada 3 
+                    dan rows ada 3 juga 
+                     penghitungannya dimulai dari grid line , seperti yang kita tahu grid line selalu bablas kelebihan 1 dari column dan row  , column dan row di grid line , horizontal kanan itu nilanya biasa 1-4 , dari rows nya juga 1-4 , tapi ada nilai negatif diambil dari kanan ke kiri column untuk nilai negatif dan dari bawah ke atas untuk row nilai negatif , jadi membentuk box atau kotak 
+
+                            Ctt: acuan dari row adalah pada column start dan end dari row adalah tarikan garis dari column end
+
+                            kalau menggunakan span akan memanjang 2 column, yang tadi berakhir di 2 jadi berakhir di tiga (nambah 1)

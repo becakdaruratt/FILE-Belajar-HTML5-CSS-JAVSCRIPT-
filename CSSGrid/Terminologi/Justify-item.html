@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            border: 2px solid black;
+            width: 80%;
+            background-color: #333;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr) ;
+            grid-template-rows: repeat(2,200px);
+        }
+        .my-itemm {
+            place-self: start end;
+            background-color: orange;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .my-item {
+            width: 50px;
+            background-color: lightblue;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item my-itemm">11</div>
+        <div class="item my-item">11</div>
+        <div class="item my-item">11</div>
+        <div class="item my-item">11</div>
+        <div class="item my-item">11</div>
+        <div class="item my-item">11</div>
+        <div class="item my-item">11</div>
+        <div class="item my-item">11</div>
+        <div class="item my-item">11</div>
+    </div>
+</body>
+</html>

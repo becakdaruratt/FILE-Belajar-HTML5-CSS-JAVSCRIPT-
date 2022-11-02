@@ -1,0 +1,82 @@
+            Property pada CSS grid 
+Property untuk container di css grid itu banyak , dan ada juga property untuk grid itemnya
+
+        <<- Property untuk mengatur column dan baris Di containernya bukan di itemnya ->>            
+
+        * grid-template-columns
+        * grid-template-rows
+        * grid-auto-columns 
+        * grid-auto-rows 
+        * grid-auto-flow 
+            
+            Apa itu grid-template-columns & grid-template-rows ->> Untuk mendefinisikan kolom / baris dengan cara menuliskan nilai di pisahkan oleh spasi , nilai mempresentasikan ukuran grid tack dan spasi mempresentasikan grid line 
+    misalkan mau bikin 3 colom , colom pertama mau berapa spasi colom kedua mau berapa spasi dan colom ketiga mau berapa
+    dan begitu juga dengan rows , rows pertama mau berapa spasi rows kedua mau berapa spasi dan rows ketiga mau berapa       
+    
+            Ctt: nilai yang kita kasih (comol 1 berapa) itu merepresentasikan untuk ukuran grid tracknya (cellpaddingnya) dan spasi itu untuk menentukan grid linenya 
+    -> Nilai grid-track => px , % , auto , fr(fraction)            
+    -> line-name => namanya boleh bebas
+
+            => Cara pakai column dan rows 
+    .container {
+        width: 600px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 25% auto 50px;
+        grid-template-rows: 50px 100px auto:
+    }
+        Auto di ambil nilai sisa setelah dihitung of left and right size of elemenya
+        for rows juga same , rows autonya akan menyesuaikan dengan tinggi dari contentnya
+
+    ->> Ada 2 hal ada explicit dan ada implicit
+    => explicit adalah column dan rows yang kita atur manual
+    => implicit adalah column dan rows yang secara otomatis di atur 
+
+        cara untuk melihatnya kita bisa menggunakan firefoxx atau mozilla , inspek elemen , explicit di tandai 
+        1. dengan garis solid di bagian container kapan dan berakhir nya garis solid berarti berapa column dan berapa rows
+        
+        2. garis putus putus secara vertikal dia menjadi explicit itemnya 
+        
+        3. sedangkan titik titik vertikal itu implicit karena kita tidak memberika rows pada container gridnya 
+
+                >=> Dua property tambahan <=<
+        * grid-auto-columns: <track - size> ;   =>> untuk mengatur implicit track yang belum kita kasih nilai width nya 
+        * grid-auto-rows: <track - size> ; =>> untuk mengatur implicit track yang belum kita kasih nilai pada height atau tinggi rowsnya 
+
+                Ctt: akan relevan dengan nilai auto-rows/columns akan selalu di pakai di implicit jika sudah di tentukan sizenya
+        
+        * grid-auto-flow =>> mengatur penempatan item/cellpada grid track termasuk di tulis secara implicit , agar grid yang secara horizontal (column) nya tidak turun kebawah tapi membuat ke column berikutnya , karena defaultnya jika kita buat cuma 3 column, makan column implicitnya akan kebawah 
+
+    Cara penggunakan => mirip seperti flex-box flex-wrap grid-auto-flow :
+        .container {
+            grid-auto-flow: row | column | row dense | column dense;
+        }    
+
+            row => akan turun kebawah apabila columnnya berlebih (tidak diatur) / implicit
+            column => akan membuat column baru apabila cuma ada 2 column yang diatur sizenya sedangkan yang implicitnya akan membuat baru cuma dengan nilai default ukuran size 
+
+                    Ctt: kebalikan dari columns , kalau columns angka nya terurut 1-seterusnya , namun jika kita kasih grid-auto-flow: column;
+                    maka saat kita kasih grid-template-rows: 2 ;maka yang column memanjang tadi , akan 1, turun dulu , baru naik , turun lagi , dan naik , turun lagi seperti itu
+        
+            <<= fr(fraction) =>> Sangat bermanfaat di responsive
+            cara pakai 
+                grid-template-columns: 1fr 2fr 3.5fr ;
+                grid-template-rows: 2fr 1fr 5fr ;
+                    Penjelasan: 1fr = 1 bagian , 2 fr = 2x kalinya , 3.5fr itu = 3 setengahnya  , jadi yang dilakukan adalah , dijumlahin dulu ini semuanya 1 + 2 + 3.5 , barulah lebar total akan di bagi dari penjumlahan 1 + 2 + 3.5 dan di bagi dengan -> (width dari containernya) nanti barulah akan dapat hasil 1 fr nya , tinggal sisanya di kalkulasi , dan kerennya kalau width dari containernya kita kasih persen , maka dia akan ngatur sendiri
+
+                        Cara pakai :
+                         .container {
+            width: 60%;
+            margin: 50px auto;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr 2fr 3.5fr;
+        }
+                or 
+                 .container {
+            width: 60%;
+            margin: 50px auto;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr 2fr 50px;
+        } => di hitung dulu nilai fix nyalalu untuk fractionnya di hitung belakangan

@@ -1,0 +1,64 @@
+            <<-- Grid Alignment -->>
+    1. Justify-items ->> Mensejajarkan grid-items pada sumbo horizontal 
+    (Cara pakai) 
+    Justify-items: start | end | center | stretch ;
+        -> Nilai defaultnya adalah stretch (berlaku jika tidak kasih width atau  lebarnya dan heightnya)
+    hanya bisa apabila itemnya lebih kecil dari lebar dari grid-template-column nya 
+
+        seperti ini =>> 
+         .container {
+            border: 2px solid black;
+            width: 80%;
+            height: 700px;
+            background-color: #333;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-auto-columns: 50px;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(3, 100px);
+            /* align-items: center; */
+            /* place-items: center;
+             */
+            justify-items:start;
+        }
+        .item {
+            height: 100px;
+            width: 20px;
+            background-color: lightblue;
+            border: 2px solid;
+        }
+
+        -> Start -> jika widthnya tidak di atur maka lebarnya akan sesuai contentnya
+
+            <<-- align-items -->>
+    adalah lawannya dari Justify-items, yaitu Mensejajarkan grid-items pada sumbu vertikal (sama seperti kayak alig-item di flexbox)
+    cara penggunaanya juga sama bedanya cuma ini di vertikal sedangkan Justify-items di horizontal
+
+            <<-- place-items -->>            
+        shorthand untuk menulis Justify-items dan align items dalam satu deklarasi    
+        (cara pakai)
+            .container {
+                place-items: <align-items> <Justify-items> ;
+            }
+            1. align items dulu baru Justify-content urutan penulisan nya
+
+            <<-- Justify-content di grid -->>
+    adalah untuk mengatur posisi seluruh grid container pada sumbu horizontal, ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran containernya, biasanya ketika grid items nya menggunakan yang fixed (px)  
+
+           <- Property Justify-content di grid ->          
+        * Justify-content: start | end | center | stretch | space-between | space-arount | space-evenly ; 
+            -->> Akan terjadi jika kita punya ruang sisa atau offset di ruang containernya (seperti di flex-box justfiy-content)
+
+            <- Property align-content ->
+        sama seperti justify-content , bedanya justfiy-content untuk horizontal sedangkan align-content untuk yang vertikal , nilai nya juga sama 
+
+                =>> Place Content <<=
+    Adalah shorthand untuk menulis justfiy-content dan align-content dalam satu deklarasi (menulis ke dua 2 nya sekaligus)
+        (Cara pakai)
+        .container {
+            place-content: <align-content> <justify-content>  ;
+        }
+                
+
+            Ctt: bedanya antara Justify-item dengan content , kalau yang item itu relatif terhadap lebar dari columns dan rows nya , sedangkan yang cotent relatif terhapad container ruang kosongnya (relatif terhadap tinggi container dan height dari container)
