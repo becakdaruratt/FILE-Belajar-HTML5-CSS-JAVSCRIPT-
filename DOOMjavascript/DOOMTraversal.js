@@ -27,10 +27,18 @@
     x.forEach(function(el){
         el.addEventListener('click',function(e){
             e.target.parentElement.style.display = 'none';
+              // Prevent Default
+              e.preventDefault();
         });
     });                  
     
-    const nama = document.querySelector('.nama');
-    console.log(nama.previousElementSibling);
+    // const nama = document.querySelector('.nama');
+    // console.log(nama.previousElementSibling);
+
+
+
+              
+
+                
 
 

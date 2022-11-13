@@ -1,5 +1,16 @@
             <== Prevent Default ==>
 adalah cara kita menghentikan aksi default dari element web kita            
+ dan Prevent Default adalah sebuah method yand ada di dalam object event atau parameter di event addEventListener  isi dari parameter nya atau e yang mana tujuannya adalah untuk menghentikan aksi default yang dilakukan oleh sebuah element , misalkan di studi kasuskita kan .close itu adalah element span ,nah kalau kita ganti jadi a (link) dan link nya kosong , walaupun javascriptnya tidak kita ganti , saat kita click close nya maka tidak hilang , seperti berkedip istilahnya cardnya , itu karena ada aksi default yang dilakukan oleh a ini , tag a itu kan hyperlink saat kita click dia akan berpindah ke halaman lain , yaitu halaman yang kita tulis di attribute href . dan skarang karena kita tidak tulis apa apa ini artinya pada saat kita click akan kembali ke halaman semula jadi otomatis dia akan merefreshlagi halamannya , sebenarnya cardnya hilang cuma karena ada aksi default jadi di refresh halamannya dan cardnya muncul lagi .. dan caranya kita gunakan method preventDefault
+            1. e.preventDefault();
+ el.addEventListener('click',function(e){
+
+    x.forEach(function(el){
+        el.addEventListener('click',function(e){
+            e.target.parentElement.style.display = 'none';
+              // Prevent Default
+              e.preventDefault();
+        });
+    });   
 
 
             <== Event bubling ==>

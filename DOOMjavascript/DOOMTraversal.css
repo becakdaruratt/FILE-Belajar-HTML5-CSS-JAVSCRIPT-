@@ -50,6 +50,9 @@ body {
     font-size: 16px;
     color: #aaa;
 }
+.close {
+    text-decoration: none;
+}
 
 .card .close {
     font-size: 24px;
