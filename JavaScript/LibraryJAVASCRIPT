@@ -1,0 +1,86 @@
+1. pasrseInt(); => inputan user akan jadi Integer = prompt('');
+2. Math.random(); => membangkitkan bilangan random dari 0 - 1
+3. Math.floor(); => Cara pakai -> Math.floor(Math.random() * 10) + 1;
+    Membulatkan kepada nilai yang lebih rendah
+4. charAt(); => untuk menampilkan karakter pada Javascript => cara pakai 
+    var nama = "Sofyan Tanjung";
+    console.log(nama.charAt(5)); = n (karena mulai index 0)
+5. .length => untuk menangkap panjang String (caracter) jumlah elementnya beda dengan index pasti lebih 1 length nya
+6. arguments => menangkap argument yang dikirim ke parameter
+    cara pakai :
+    function tambah(){
+        var hasil = 0;
+        for(var i = 0; i < arguments.length; i++){
+            hasil += arguments[i];
+        }
+        return hasil;
+    }
+    console.log(tambah(5,10));
+7. window. => mengacu kepada global scope
+8. "use strict"; => mencegah agar function scope membuat variable di global secara otomatis
+9. .join() => adalah method yang menggabungkan seluruh isi array dan mengubahnya jadi sebuah string , kalau tidak mau ada pemisahnya koma , mkaa bisa di isi dalam kurung buka dan tutup dengan '-' harus dibungkus dengan string  
+10. .push => menambah atau mendorong ke array terakhir dari sebuah array bisa       banyak elementnya
+arr.push('Dony' , 'Fitri');
+11. .pop => menghilangkan element terakhir dari array , harus satu satu jika ingin menghapus tidak bisa sekaligus
+arr.pop();
+12. unshift => menambah atau mendorong ke array pertama dari sebuah array bisa banyak element nya 
+arr.unshift('awal' , 'akhir');
+13. shift => menghilangkan element pertama dari array , harus satu persatu
+arr.shift();
+arr.shift();    
+console.log(arr.join());
+14. setInterval(function() {
+    
+}, interval);  => adalah fungsi melakukan sesuatu selama berulang ulang selamat 
+waktu interval berlangsung kita bisa memasukkan waktunya di akhir },
+dengan angka , 1000 artinya 1 detik 100 aritnya 0,1 detik atau cara pakai =>
+setInterval(function(){
+    imgComputer.setAttribute('src', '../' + gambar[i++] + '.jpg');
+    if(i == gambar.length) return i = 0;
+}, 
+
+15. new Date().getTime(); => untuk mendapatkan waktu saat ini saat di jalankan
+16. clearInterval => memberhentikan waktunya
+17. setTimeout(() => {
+    
+}, timeout); => menunggu dulu dengna menset timeoutnya , jika 1000 artinya 1detik 
+
+
+
+            
+                    // Method pada array
+    // 1. .length
+    // 2. .join()
+        var arr = ['roof' , 'chair' ,'stree'];
+        // 3. push => menambah atau mendorong ke array terakhir dari sebuah array bisa banyak elementnya
+        arr.push('Dony' , 'Fitri');
+        // 4. pop => menghilangkan element terakhir dari array , harus satu satu jika ingin menghapus tidak bisa sekaligus
+        arr.pop();
+        // 5. unshift => menambah atau mendorong ke array pertama dari sebuah array bisa banyak element nya 
+        arr.unshift('awal' , 'akhir');
+        // 6. shift => menghilangkan element pertama dari array , harus satu persatu
+        arr.shift();
+        arr.shift();    
+        console.log(arr.join());
+        // 7. slice => mengiris array digunakan ketika ingin mengambil beberapa bagian pada array untuk menjadi array yang baru
+                // Contekan slice(awal,akhir dikurangi -1)
+        var baru = arr.slice(1,3);  
+        console.log(baru.join('-'));              
+                // Ctt: slice menghasilkan array Baru
+        // 8. splice => menyambung atau menambal menyisipkan elemen di tengah tengah element array
+                // Contekan splice(indexAwal, maudihapusBerapa, elementBaru1 , elemenBaru2)
+        arr.splice(2,0, 'elemenBaru1' , 'elemenBaru2');
+            // Menghapus element itu dimulai dari index yang dipilih dan dihitung dari index yang dipilih contoh
+        arr.splice(2,1,);            
+
+        // 9. forEach => digunakan untuk melakukan looping pada array tapi ini lebih keren dari pada for biasa , dengan menggunakan kedua method ini kita bisa melakukan sesuatu kepada element element yang ada didalam arraynya
+            // Contoh cara pakainya ada dibawah 
+
+        // 10. map =>  sama seperti forEach tapi map lebih baik karena , map ini mengembalikan array sedangkan forEach tidak
+            // Contoh map
+        var elementangka = [1,10,20,2,4,12,9];
+            var angka2 = elementangka.map(function(e){
+               return e * 2;
+            });
+            console.log(angka2.join('-'));
+                    // Ctt: benar benar menghilangkan elemtnnya tidak mengubah jadi undefined

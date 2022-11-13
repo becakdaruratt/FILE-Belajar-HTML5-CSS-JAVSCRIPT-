@@ -1,0 +1,80 @@
+                            <== Object ==>
+sebelum kita membahas Object kita ingat ingat dulu pelajaran kita yang lain 
+        1. Array = Kumpulan nilai, yang memiliki index / variable lebih sakti 
+        2. Object = Kumpulan nilai, tidak punya index tapi nama 
+
+                atau Object adalah array, yang lebih sakti 
+           <=> Kenapa pakai Object ?
+                jika pakai var biasa :
+                    var namaMhs = 'Sandhika Galih';
+                    var umurMhs = 31;
+                    var lulus = true;
+         var IPSemester = [2.90,3.10,3.25,2.88,3.04]; => variable dengan array
+                
+                
+                cara pakai Object :
+        var mahasiswa = {
+            nama : 'Sofyan Tanjung',
+            lulus : true ,
+            Pekerjaan : mahasiswa,
+            IPSemester : [2.90,3.10,3.25,2.88,3.04];
+            IPKumulatif : funtion(){
+                var total = 0;
+                var ips = this.IPSemester;
+                for(var i = 0; i < ips.length; i++){
+                    total += ips[i];
+                }
+                return total/ips.length;
+            }
+        };      
+            cara panggil Object
+                mahasiswa.IPKumulatif();   
+
+                        Penjelasan : 
+                           1. nama , lulus , Pekerjaan = adalah variable didalam object di sebut dengan properti dan dipisahkan dengan , koma
+                           2. bisa menggunakan function expresion didalam sebuah object = function didalam object disebut dengan method
+    cara buat object :
+        var mhs = {};
+
+                Sebenarnya ada banyak cara membuat Object salah satunya 
+            1. Secara Literal => yaitu cara yang sudah kita lakukan sebelumnya
+            2. function Declartaion => Membuat object dengan function
+            3. Constructor Function(keyword new) => cara ini yang akan banyak kita pakai = ini Khusus membuat sebuah object
+            4. Object.create() => prototype
+     
+                    //  Membuat Object
+     //Object Literal 
+     var mhs1 = {
+        nama : 'Sofyan Tanjung' ,
+        nrp : '043040023' ,
+        email : 'sofyan.tanjung7923@gmail.com' ,
+        jurusan : 'Teknik Informatika'
+     };
+
+     var mhs2 = {
+        nama : 'Doddy' ,
+        nrp : '033040007' ,
+        email : 'doddy@gmail.com' ,
+        jurusan : 'Teknik Industri'
+     };
+    //  Function Declaration
+    function buatObjectMahasiswa(nama, nrp ,email, jurusan){
+        var mhs = {};
+        mhs.nama = nama;
+        mhs.nrp = nrp;
+        mhs.email = email;
+        mhs.jurusan = jurusan;
+            return mhs;
+    }
+        var panggilan = buatObjectMahasiswa('Sofyan Tanjung' , '089912' , 'Teknik Sepeda Motor');
+        alert(panggilan);
+
+    // Constructor sebenarnya sama saja , yang membedakannya hanya huruf besar awal nya saja
+        function Mahasiswa(nama , nrp , email , jurusan){
+            this.nama = nama;
+            this.nrp = nrp;
+            this.email = email;
+            this.jurusan = jurusan;
+        }
+                    // Cara panggilnya
+            var Mhs4 = new Mahasiswa('Erik' , '013040321' , 'erik@cloud.com', 'Teknik Mesin');

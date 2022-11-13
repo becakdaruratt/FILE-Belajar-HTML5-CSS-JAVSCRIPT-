@@ -1,0 +1,44 @@
+        - Operator Js 
+OPERATOR dalam javascript adalah sebuah simbol yang digunakan untuk melakukan operasi 
+        Jenis-Jenis 
+        1.Aritmatika (mati-matika) = + , - , * , / , %= modulo atau sisa bagi     
+        2.penugasan => adalah sama dengan (=)
+            contoh analogi x = 10 (artinya angka 10 akan tersimpan nilai 10)
+            contoh lain => += , -= , *= , /= , %= 
+            contoh analogi lain => 
+            x = 10
+            x += 5 hasilnya 15 (karena bukan di timpa tapi di jumlahkan dulu)
+        3.perbandingan => untuk membandingkan 2 buah operand 
+        contoh operator perbandingan -> == , != , === , !== , > , < , >= <=
+            =>menghasilkan boolean true and false
+        4.logika => ||(true - false = true) ! &&(true - true = true) (or not and) 
+        5.string => + (jika operand nya angka akan jadi aritmatika tapi jika string maka akan jadi penggabung string) , jika aritmatika angka ditambah + dengan string angka maka hasilnya pasti akan jadi string angka 
+
+        6.kondisional => digunakan untuk melakukan pengecekan pada sebuah kondisi dan menentukan nilai yang di hasilkan ketika kondisinya bernilai true atau false => Cara pakai 
+        (kondisi) ? benar : salah => jika kondisi nya benar , dia akan ambil atau eksekusi yang benar <== tapi kalau salah akan eksekusi atau ambil nilai sebelah kanan ==> bahkan kita bisa ubah benar dan salah bisa boolean , bisa function juga
+
+        7.typeof => Untuk mengetahui tipe data apa yang digunakan cara pakai 
+        typeof(operand) 
+                analogi cara pakai 
+                    typeof(10) = number 
+                    typeof("10") = string 
+                    typeof(true) = boolean
+
+
+
+                Akan kita bahas 1 persatu 
+                operator bynary adalah 1-5 sedangkan kondisional ternary dan typeof disebut juga unary 
+
+                    BINARY membutuhkan 2 operand
+                operand1 operator operand2 
+        analogi    =  operand1 = 1 , operator = + , operand2 = 2 
+
+                        unary membutuhkan 1 operand
+                operator operand1
+                    atau 
+                operand1 operator 
+
+                        ternary membutuhkan 3 operand 
+
+                        urutan pada mati-matika = () * / + -
+

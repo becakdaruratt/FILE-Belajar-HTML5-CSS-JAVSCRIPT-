@@ -1,0 +1,15 @@
+        <-- popup box / dialog box -->
+adalah sebuah window kecil pada browser kita yang bisa kita  munculkan agar user bisa berdialog pada halaman web
+                Jenis Jenis pop up box 
+            1. alert => alert('Hello World'); (pesan)
+            2. prompt => prompt('masukkan nama'); (punya teks box) mengembalikan nilai didalam inputannya , masukkan prompt ke variable supaya disimpan
+    cara pakai : 
+        var nama = prompt('tuliskan nama anda');
+            alert(nama);
+            3. confirm => confirm('Kamu yakin'); => digunakan untuk confirmasi dari user = biasanya digunakan mau delete data = mengembalikan nilai boolean = true jika oke dan false jika cancel
+        cara pakai : 
+        var tes = confirm('Kamu yakin');
+alert(tes);
+                    akan tampil , berbeda di setiap browser tapi fungsinya sama menampilkan pesan
+                         
+                        bisa juga membuat alert banyak dalam 1 halaman

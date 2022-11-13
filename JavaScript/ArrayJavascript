@@ -1,0 +1,48 @@
+                <<== Array ==>> tipe data Object
+seacara umum array terminologi adalah "susunan sistematis dari objek-objek yang serupa" 
+        array di dunia komputer adalah "tipe data yang digunakan untuk mendiskripsikan kumpulan elemn(nilai atau variable), yang tiap tiap elemennya memiliki index"                
+
+            array secara sederhana adalah sebuah variable yang lebih sakti , karena array bisa menampung lebih dari satu nilai , nilai yang bisa di simpan , bisa string, bollean , dan integer 
+
+                cara menggunakan array : 
+                dengan ==> [] <==
+                    var senin = ['senin','selasa' , 'rabu'];
+                        console.log(senin[2]);
+                    atau  
+
+                    var selasa = [];
+                        selasa = [
+
+                        ];
+
+                        alasan kenapa pakai array! 
+                . mudah di kelola dan disimpan
+                    . penelusuran dan pencarian
+                . Manajemen memori
+                
+                
+    Array 
+. Variable jamak, yang mempunyai banyak elemen dan diacu dengan nama yang sama 
+. kumpulan pasangan key dan nilai / key and value pair 
+. key adalah index pada array dengan tipe integer yang dimulai dari 0
+. Array pada javascript bertipe Object 
+. Array pada javascript memiliki fungsi / menthod length untuk menghitung jumlah elemen didalamnya
+. Elemen pada array boleh memiliki tipe data yang berbeda
+
+
+                    Ctt :
+                        Fungsi didalam Object disebut dengan method 
+                        Element dengan index berbeda , index dimulai dari 0 sedangkan Element dimulai dari 1
+
+                        function ekspresion juga bisa di masukkan didalam array , array didalam array juga bisa (array multi dimensi)
+
+
+
+
+
+                  =>> Manipulasi Array <<=
+        1. Menambah element pada array 
+            
+        2. menghapus element pada array 
+        3. Menampilkan seluruh isi array 
+

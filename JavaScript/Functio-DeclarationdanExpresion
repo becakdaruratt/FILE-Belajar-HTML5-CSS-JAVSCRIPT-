@@ -1,0 +1,17 @@
+        <== Declaration / Expression ==>
+                parameter itu opsional
+1. Declaration 
+        - lebih Fleksibel (dapat di tulis dimanapun)
+    * bisa ditampilkan dulu baru di panggil functionnya       
+    function tambah(nama){
+        alert('Halo' + nama);
+    }   
+2. Expression 
+        - Harus didefinisikan terlebih dahulu sebelum dipanggil
+        - lebih powerFull
+            .Sebagai closure 
+            .Sebagai argumen untuk Function lain 
+            .IIFE(immediately Invoked Function Expression)(JS yang kompleks)
+    var fungsi = function(){
+
+    }       

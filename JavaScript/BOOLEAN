@@ -1,0 +1,30 @@
+
+            <<-- BOOLEAN --> 
+                    =>> Semua nilai di javascript mengandung nilai boolean <<=
+
+    adalah sebuah tipe data yang digunakan untuk merepresntasikan
+    logika true dan false
+            
+            biasanya digunkan pada statement pengkondisian, untuk menentukan
+            aksi yang berbeda beda dan mengatur alur kendali program 
+
+                aksi yang kita lakukan tadi itu diconsol , namun di javascript 
+                cara pakai seperti ini 
+
+                    Boolean(10 < 20) =
+                        true
+
+                            Dan boleh juga satu nilai 
+                            Boolean(10) = true 
+                            Boolean("sofyan tanjung") = true
+                            Boolean(0) = false 
+                            Boolean(-1) = true 
+                                kenapa 0 jadi false ? karena menyimpan nilai 
+
+                                truthy | falsy 
+                               true       false 
+                               non-zero    0
+                               "string"    ""
+                               object      undefined
+                               arrays      null 
+                               functions   NaN 

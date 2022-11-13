@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan DOOM</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body {
+            text-align: center;
+        }
+        .kotak {
+            width: 25px;
+            height: 25px;
+            margin: 10px auto;
+        }
+        .Merah {
+            background-color: red;
+        }
+        .Hijau {
+            background-color: green;
+        }
+        .Biru {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bermain Dengan Warna</h1>
+    <button type="button">Tombol Di click</button>
+    <br>
+    <div class="kotak Merah"></div>
+    <input type="range" name="sMerah" min="0" max="255">
+    <div class="kotak Hijau"></div>
+    <input type="range" name="sHijau" min="0" max="255">
+    <div class="kotak Biru"></div>
+    <input type="range" name="sBiru" min="0" max="255">
+    
+    <script src="LatihanDOOM.js"></script>
+</body>
+</html>

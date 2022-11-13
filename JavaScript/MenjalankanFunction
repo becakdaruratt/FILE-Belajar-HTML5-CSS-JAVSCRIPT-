@@ -1,0 +1,55 @@
+            <== Membuat / menjalankan Function =>>
+secara umum fungsi function 
+
+                =>> function ada 2 pembuatan dan pemanggilan
+
+    input - Function - output 
+        function "yang baik adalah yang mengerjakan 1 hal saja"   
+            
+            block code function bisa dipanggil berulang ulang kali
+
+            cara buat function => 
+                function namaFunction -> kasih nama function dengan jelas <- (tempat argumen atau parameter) -> nilai yang dikirim dari luar yang digunakan didalam function (variable khusus dalam function) <- {
+
+
+                    return -> biasanya mengembalikan nilai di ikuti nama yang dikembalikan apa <- (kita telah selesai mengerjakan sesuatu dan inilah hasilnya) = dan return ini juga cara untuk menghentikan function dan mungkin saja ada 2 return
+                }
+                parameter boleh ada atau tidak , tapi kurungnya harus tetap ada
+
+                // Parameter dan Argument 
+    adalah bahabaku atau material didalam Function 
+    1. parameter adalah variable yang di tulis didalam kurung pada saat function dibuat, digunakan untuk menampung nilai yang dikirimkan saat function dipanggil                
+                argument => nilai yang dikirimkan ke paramter saat fungsi dipanggil 
+contoh :
+ function tambah(a,b){
+    return a + b;
+ }               
+    var coba = tambah(5,10);  => argumen
+
+
+                // Bagaimana jika parameter dan argumentnya tidak sesuai = jika parameternya lebih sedikit dari argumentnya, maka argument kelebihannya akan diabaikan
+            -> contoh nya 
+    function tambah(a,b){
+        return a + b;
+    }
+    var coba = tambah(5,10,20); -> angka 20 tidak akan dipakai
+
+                // jika parameter lebih banyak dari argument, maka parameter kelebihannya akan diisi dengan nilai undefined
+            -> contoh nya 
+    function tambah(a,b,c){
+        return a + b;
+    }            
+    var coba = tambah(5,10); => nilai c (parameter) adalah undefined 
+
+
+                // arguments
+    array ==> arguments <== yang berisi nilai yang dikirimkan saat fungsi dipanggil                 
+
+                // Refactoring
+adalah sebuah proses mengubah kode agar menjadi lebih baik tanpa mengubah fungsionalitasnya dari program 
+    alasan kenapa pakai Refactoring 
+    1. program mudah dibaca oleh orang lain 
+    2. mengurangi duplikasi variable 
+    3. saat pengujian 
+    4. performance 
+    5. mudah dikelola dan dikembangkan                    

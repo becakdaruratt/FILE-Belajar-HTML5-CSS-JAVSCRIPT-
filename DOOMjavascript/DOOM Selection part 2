@@ -1,0 +1,5 @@
+                     <<= Part 2 DOOM Selection =>>
+    4. querySelector() => element 
+    5. querySelectorAll() => NodeList 
+
+        Query artinya menanyakan selector = selector CSS

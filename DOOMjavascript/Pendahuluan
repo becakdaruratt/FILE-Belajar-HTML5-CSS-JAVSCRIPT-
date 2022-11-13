@@ -1,0 +1,36 @@
+                <== Pendahuluan DOOM (Document Object Model) ==>
+kita butuh DOOM untuk berinteraksi secara langsung dengan HTML , kalau di javascript dasar yang sudah kita bahas kita berinteraksi dengna console ...                
+
+        DOM adalah antar muka pemrograman untuk HTML yang mempresentasikan halaman web, sehingga program dapat mengubah dan memanipulasi strukturnya
+        -Mozilla;
+
+            kalau kita perhatikan kata perkata kepanjangan DOOM 
+            1. document = tampilan putih isi dari website bukan element HTML 
+            2. Object = object contohnya nilai atau tipe data di javascript seperti yang sudah kita pelajari di javascript Dasar 
+            3. Model = Representasi element HTML pada docoment menjadi sebuah object
+            atau model dari element HTML kita 
+
+                    DOOM tersimpan sebagai Pohon hirarki DOOM(DOOM tree)
+    analogi nya adalah 
+        1. tag terluar adalah <HTML> didalamnya ada tag <head> dan <body>                 
+        2. dan semua tag HTML itu berada di bawah DOCUMENT 
+        3. dan berada Window diatas Document
+            window =  lebih sakti lagi , dia tau posisi cursor , dia tau lebar browsernya dll , karena window lebih besar lagi semuanya
+
+                * => DOOM membuat seluruh komponen dari halaman web dapat di akses & dimanipulasi
+                  => * Element HTML
+                     * Atribut
+                     * Text
+                     * dll 
+                  => DOOM dapat dimanipulasi(dibuat, diubah ,dihapus) menggunakan Javascript   
+    didalam tag <body> ada yang namanya node dan node itu ada dua tipe atau jeni 
+                node = adalah simpul salah satu yang manapun di DOOM tree (1 kotak)
+        1. node tag = element 
+        2. node isi dari tag = "text node" atau simpul yang berisi text 
+        3. node href = atribut
+        dll. attribut sudha di tinggal kan karena sudah masuk ke element 
+        dan yang akan kita bahas adalah 
+                
+            1. element 
+            2. Text 
+            3. Document 

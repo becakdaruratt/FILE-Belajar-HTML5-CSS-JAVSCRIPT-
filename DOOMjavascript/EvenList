@@ -1,0 +1,52 @@
+            <== Macam Macam Event dalam DOOM ==>
+1. Mouse Event = ketika mouse dikclick , double click , dan ada juga digeser 
+                pointernya
+2. Keyboard Event = ketika keyboard ditekan , dilepas dll 
+3. Resources Event = ketika halaman diload , 
+4. Focus Event = penting saat buat Font ketika teks atua inputan di click 
+                masuknya ke focus
+5. View Event 
+6. Form Event 
+7. CSS Animation & Transition Event 
+8. Drag & Drop Event 
+9. dll           
+
+        .after(namaElement); => Setelahnya
+        => cara bangkitkan warna random dengan method 
+        
+         button.addEventListener('click' , function(){
+        const r = Math.round(Math.random() * 255 + 1);
+        const g = Math.round(Math.random() * 255 + 1);
+        const b = Math.round(Math.random() * 255 + 1);
+        console.log(r);
+        document.body.style.backgroundColor = 'rgb('+ r +','+ g +','+ b +')';
+    });
+
+            => Kategori di Mouse Event 
+            .   click
+            .   dblclick
+            .   mouseover
+            .   mouseenter
+            .   mouseup
+            .   wheel
+            .   ....
+
+            => Kategori Keyboard Event 
+            .   keydown
+            .   keypress 
+            .   keyup
+
+            => View Event 
+            .   resize
+            .   scroll
+
+            => Form Event 
+            .   reset 
+            .   submit
+
+=> Event untuk slider input type='range'; ada Event 'change'            
+
+
+
+Nodelist Bisa kita perlakukan sebagai array sedangkan
+HTML Collection tidak

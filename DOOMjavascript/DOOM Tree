@@ -1,0 +1,32 @@
+                <== DOOM TREE ==>
+        *   NodeList 
+                vs 
+        *   HTMLCollection
+
+Node = adalah 1 element di DOOM tree (1 kotak)                                        
+NodeList = adalah adalah lebih dari 1 Node (beberapa Kotak) ikut dengan text nodenya
+
+    sedangkan 
+
+HTMLCollection = itu khusus node untuk htmlnya aja 
+
+    dan ini akan menentukan cara mengelolanya
+
+
+                NodeList vs. HTMLCollection
+        *   keduanya merupakan kumpulan dari Kode
+        *   Struktur datanya mirip array
+        *   NodeList dapat berisi node apapun, sedangkan HTMLCollection harus berisi element HTML
+        *   HTMLCollection bersifat live sedangkan NodeList tidak
+
+                    => Struktur Hierarki DOOM
+    . Root Node 
+        . node yang menjadi sumber dari semua node lain di dalam DOOM yang secara default Node tersebut adalah 
+        . Document
+    . Parent Node 
+        . node yang berda 1 tingkat node yang lain
+        . body adalah parent dari h1,p,p,div dan a 
+    . Child Node 
+        . node yang berada 1 tingkat dibawah node yang lain
+        . h1 adalah child dari body dan tidak peduli tipe node nya apa mau text atau element 
+        . child Node yang memiliki parent yang sama (saudara kandung)                           

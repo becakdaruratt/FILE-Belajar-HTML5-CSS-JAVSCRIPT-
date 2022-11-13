@@ -1,0 +1,19 @@
+        <-- Pengulangan table penelusuran -->
+kita akan coba menelusuri dari while 
+    
+         perbaiki Program dari 
+         var angkot = 1;
+while(angkot <= 10){
+    console.log('Angkot' + ' No.' + angkot + ' beroperasi dengan baik.');
+    angkot++;
+};  
+       ==> menjadi <==
+        var jumlahangkot = 10;
+        var noangkot = 1;
+while(noangkot <= jumlahangkot){
+    console.log('Angkot' + ' No.' + noangkot + ' beroperasi dengan baik.');
+    noangkot++;
+};
+
+            <== Tabel penelususran ==>
+adalah untuk mengetahui perubahan dari variable dalam perulangan kita             

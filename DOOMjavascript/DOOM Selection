@@ -1,0 +1,16 @@
+            <== DOOM Selection ==>
+    adalah cara menelusuri pada DOOM
+        ada beberapa method yang bisa digunakan
+    .   getElementById() => Berdasarkan id dan id cuma ada 1 di elementnya (sama id nya tidak boleh sama)                    
+    .   getElementByTagName() => mungkin saja banyak
+    .   getElementByClassName() => Nama class tertentu (bisa dimiliki lebih dari 1 element)
+    .   querySelector() => digunakan untuk mencari element dengan selector  dan selector sama dengan saat kita mencari element dengan CSS 
+    .   querySelectorAll() => digunakan untuk mencari element dengan selector  dan selector sama dengan saat kita mencari element dengan CSS 
+
+
+                    yang dihasilkan oleh element tersebut
+            1. getElementById() => element
+            2. getElementsByTagName() => HTMLCollection 
+            3. getElementsByClassName() => HTMLCollection
+            4. querySelector() => element 
+            5. querySelectorAll() => NodeList 

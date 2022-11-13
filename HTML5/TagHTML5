@@ -1,0 +1,38 @@
+    <input type="range">
+    range itu adalah sebuah slider , di HTML 5, kalau browser tidak support maka range nya akan seperti input biasa 
+
+    // Menyeleksi slider dengna atribute name
+    const sMerah = document.querySelector('input[name=sMerah]');
+
+<input type="range" name="sMerah" min="0" max="100">
+    .value; = untuk mengambil nilai yang ada pada input apapun value inputnya
+    mau combo box , mau radio button dll 
+
+    Event 'input' = untuk slider real time gk ada jeda jika di tahan atua click
+
+    Event 'mousemove' => ketika mouse bergerak didalm body jika , yang di target body
+
+
+    // Diatas jika menggunakan Slider , namun di bawah ini kita akan coba dengan cursor ketika cursor digerakkan warna berubah yang mana kita akan berkerja dengan posisi dari mouse , dan cursor tadi akan realatif terhadap lebar dan tinggi dari mouse nya
+    document.body.addEventListener('mousemove' , function(e){
+        // ada 2 hal yang kita cari tahu 1. Posisi mouse sumbu x dan sumbu y
+        e.clientX
+        // clientX ini akan bekerja jika kita tempelkan ke sebuah parameter 
+    });    
+
+    console.log(window.innerWidth); => digunakan untuk mengukur dari lebardari window yang warna putih (lebar document) tapi karena di kelola oleh window makanya di tulis dengan window. = itu jika .innerWidth            
+
+
+    const xPos = Math.round((e.clientX / window.innerWidth) * 255); => Untuk membuat kada rgba nya tetap 255, kita membuat clientX dibagi dengan window.innerWidth = 0 , lalu di * 255 , makanya untuk widthnya tidak akan pernah lewat dari 255 valeunya
+
+    clientX = posisi cursor berapa lebarnya
+    innerWidth = lebar browsersaat ini 
+
+     const xPos = Math.round((e.clientX / window.innerWidth) * 255);    
+
+        const yPos = Math.round((e.clientY / window.innerHeight) * 255);
+
+        innerHeight = tinggi
+        innerWidth = lebar 
+
+        elemnt.className = untuk mendpatkan nama classnya

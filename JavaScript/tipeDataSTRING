@@ -1,0 +1,18 @@
+                <<-- Tipe data STRING -->>
+    digunakan untuk merepresentasikan data tekstual(plain text) => untuk melakukan string gampang nya kita dengan membungkus data , bisa dengan = "" or '' = hasilnya sama saja ,  contoh "sandhika" , 'Galih' = awali dengan kutip yang sama 
+
+         escape caracter =>> berfungsi menampilkan karakter yang di implementasikan berbeda dalam sebuah bahasa pemrograman yaitu = \" or \' 
+         \n = untuk turun satu baris
+
+                Concatenantion (Konkatenasi) = + (operator String)
+                "Sandika Galih" == "sandika galih"
+                               false                               
+                     huruf besar dan kecil beda       
+
+                            .lenght = menghitung panjang string 
+                    cara pakai :
+                        "Sandhika Galih".lenght //14 = spasi juga di hitung juga bisa disimpan dalam variable 
+                        cara pakai 
+
+        var nama = "Sofyan Tanjung"  //14
+            nama.lenght = 14

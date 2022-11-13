@@ -1,0 +1,10 @@
+        <== Variable Scope ==>
+adalah bagaimana sebuah variable dapat di akses dalam program 
+        ada 2 jenis scope 
+    1. block scope 
+    tidak dapat mengakses apapun didalam scope {} biasa digunakan di C atau java 
+    sedangkan di javascript bisa mengakses dalam {} asal tidak didalam sebuah function
+    2. function scope  
+    kita tidak bisa mengakses dari luar function ke dalam scope function tapi dari dalam scope function kita bisa akses ke luar function , urutannya adalah , dicek dulu ada tidak di local scope function kalau ada ambil kalau tidak ada naik 1 keluar dari local baru ke global
+
+        kalau tidak pakai var , misal a = 2; maka a akan dibikin di global , atau diluar sehingga ktia bisa akses dari global ke function scope dengan syarat harus tidak menggunakan var , karena javascript akan mengira kalau a tersebut ngacunya ke variable global jika tidak ada di scope variablenya , dan bila di global juga tidak ada variable nya maka secara otomatis akan dibuatkan

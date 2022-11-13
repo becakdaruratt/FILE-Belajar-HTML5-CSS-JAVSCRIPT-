@@ -1,0 +1,45 @@
+                    <-- Function -->
+adalah kunci utama pada javascript, yang membuat javascript powerfull , 
+functio juga adalah sebuah program didalam program lainnya yang dapat di panggil di bagian lain pada program 
+    * Merupakan Struktur dasar pembentuk dari javascript
+    * Disebut juga sebagai prosedur(kumpulan statement untuk melakukan tugas atau menghitung sebuah nilai)
+    * untuk dapat menggunakannya, kita harus membuat terlebih dahulu function tersebut, lalu memanggilnya
+    * termasuk kedalam First-class Object 
+
+            dengan function kita bisa melakukan
+        1. Method
+        2. Class 
+        3. Constructor 
+        4. Module    
+
+                return total; => Jika tidak di buat maka hasilnya undefined
+                    
+                <-- Kenapa Function -->
+            * penggunaan ulang program yang sama (panggil berulang ulang)    
+            * Modularitas 
+
+            <<== Kategori function==>>
+        1. Built-in Function => functio yang sudah di buatkan di javascript = tinggal di panggil saja 
+        2. user Function => Function yang di buat sendiri    
+        3. function dapat return value atau tidak
+
+                        => Cara membuat function user ada 2
+        1. deklarasi 
+        <!-- function deklarasi -->
+        function jumlahDuaBuahBilangan(a , b){
+            var total;
+            total = a + b;
+            return total;
+        }
+        var asli = jumlahDuaBuahBilangan(10,10);   
+        console.log(asli);
+        2. ekspresi     
+         <!-- Function expression -->
+        var jumlahbilangan = function(a , b){
+             var total;
+             total = a + b;
+             return total;
+         }
+         var asli = jumlahbilangan(10,40);   
+         console.log(asli);                   
+                

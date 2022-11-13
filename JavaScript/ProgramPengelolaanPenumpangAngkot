@@ -1,0 +1,18 @@
+               <<== Latihan Function & Array ==>>
+        Program dari latihan Pengelolaan Penumpang
+    . Penumpang naik
+        . tambah Penumpang()
+    . Penumpang Turun 
+        . hapus Penumpang
+
+                .Rules 
+                    . Jika angkot kosong, Penumpang duduk dikursi pertama 
+                    . Penumpang berikutnya di kursi selanjutnya secara berurutan 
+                    . jika ada kursi kosong (karena Penumpang turun), Penumpang yang naik berikutnya duduk di kursi kosong terlebih dahulu 
+                    .asumsi kursi tidak akan penuh dan akan bertambah terus jika ada penumpang naik 
+                    . nama Penumpang tidak boleh sama, untuk menghindari kebingungan ketika nanti penumpang turun   
+
+                .Rules hapus Penumpang()
+                    . jika angkot kosong, tampilkan pesan bahwa angkot kosong
+                    . jika ada penumpang yang namanya sesuai, hapus penumpang pada array dengan memberi nilai undefined
+                    . jika tidak ada penumpang yang namanya sesuai, tampilkan pesan kesalahannya

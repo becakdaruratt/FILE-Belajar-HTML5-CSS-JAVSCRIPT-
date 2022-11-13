@@ -1,0 +1,20 @@
+            <== DOOM Traversal ==>
+sebtulnya dengan menggunakan DOOM Traversal yang kita lakukan adalah menyeleksi sebuah element terlebih dahulu dengan DOOM selection baru setelah element sudah di target , kita akan memilih element yang lain berdasarkan element yang sudah kita pilih , atau menelusuri elementnya berdasarkan DOOM yang sudah kita seleksi di awal 
+    misalkan kita ingin menyeleksi tag a tapi dari tag p yang ada hubungnanya, pasti bisa kita telusuri , dan untuk bisa menyelusuri DOOM Traversal ini kita harus paham dulu tentang konsep silsilah kelaurga
+
+
+        pertanyaannya adalah Kenapa harus ditelusuri ? kalu kita ingin ngambil tag a mending langsung ambil atau seleksi saja dengan DOOM Selection tag a nya kenapa susah susah dari tag p lalu DOOM Traversal ke a , itu nanti akan masuk akal ketika kita masuk kedalam contoh ... kalau kita lihat dari studi kasus kita , kapan kita gunakan DOOM Traversal kalau ternyata DOOM Selection saja sudah bisa menyelsaikan kasusnya , ini akan terlihat saat card kita ada banyak ... kalau dengan DOOM Selection itu hanya berkalu pada card pertama saja , lalu bagiamana jika kita ingin ,yang terhapus itu card yang kita click saja atau mengambil semuanya   .... kalau dengan DOOM selection kita harus menarget 2 element yang mana kit aubah adalah element ke 2 yaitu parentnya , dengan menggunakan parent Traversal kita bisa seleksi dulu close atua yang kita target , lalu kita hapus parent dari close caranya dengan menggunakan method DOOM Traversal 
+        sehingga kita tidak butuh 2 element , tapi hanya 1 element yang di target saja
+        
+        yaitu  = Elementyangditarget.parentElement.style.display = 'none';
+
+
+    beberapa method DOOM Traversal =
+    1. .parentNode  = belum tentu node
+    2. .parentElement = element HTML => untuk mendapatkan parentnya => mengembalikan element 
+    3. .nextSibling = saudara kandung dari element yang kita pilih dan next adalah element setelahnya => mengembalikan node
+    4. .previousElementSibling => mengambil saudara kandung dari element yang kita pilih dan element nya sebelum dari element yang kita pilih tersebut .. dan kalau tidak punya saudara lagi maka nilai nya adalah null atau error. jiak di previousElementSibling lagi karena sudah tidak ada lagi
+    
+    
+    jika kita console ,parentnode dengan parent elementnya , maka tampak hasilnya dengan parent yang sama akan terlihat bed ajika kita gunakan method yang lain
+    , jika kita ingin ngambil kakeknya kita tinggal tambahkan lagi .parentElementnya satu kali lagi  dan kalau kita tambhakan lagi dia akan naik lagi 1 kali lagi ke parent nya , perlu diingat SAAT kita menggunakan NEXTSIBLING  lucunya yang tampil adalah Text, dan textnya adalah enter , lucunya juga itu terjadi karena ada jarak spasi , saat kita hapus spasinya sehingga tidak berjarak maka baru lah terlihat saudara kandung next elementnya . dan ternyata karena kita mengambil node dan kita enter sekali dan enternya ke ambil sama dia kecuali kalau enternya kita hapus atua spasi nya baru lah dapat elementnya itulah bedanya antara node dengan element

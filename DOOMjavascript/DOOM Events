@@ -1,0 +1,27 @@
+                    <== DOM Events ==>
+sebuah topik untuk menggabungkan Materia yang sudah kita pelajari , perlu diingat Events (kejadian) != Even = (genab) 
+
+        * Event pada Javascript merepresentasikan sebuah kejadian yang terjadi didalam DOOM , dan kejadiannya yang paling simple bisa dilakukan oleh user, (ketika mouse di click , ketika tombol di tekan , mengisi sesuatu pada prompt(input) , menggerakkan mouse dll)                    
+
+            ataupun Event ini juga bisa dilakukan secara Otomatis oleh API
+            (ketika animasi dijalankan menggunakan CSS , animasi selesai dijalankan halaman selesai diload, dll)
+
+=> Cara 'Mendengarkan' Event ada 2 cara 
+1. Event Handler
+    . inline HTML attribute = langsung di HTMLnya
+    kita sisipkan sebagai property di tag HTMLnya seperti membuat id or class bedanya ini adalah on<namaEventntnya> = "NamaFunctionya()";
+   => contoh =  onclick="ubahWarna1()"
+    . Element Method = dengan method langsung di seleksi 
+    caranya langsung tulis di Javascript nya  = 
+    elementYangsudahDiseleksi.on<namaEventnya> = namaFunctionya ; =tidak usah pakai kurung buka dan tutup karena nanti menjalan Functionya 
+2. addEventListener() => lebih baru dari Event Handler
+    // addEventListener ada 2 parameter diterima nya 1. Eventnya 2. functionnya atau yang mau dijalankan apa 
+    const p4 = document.querySelectorAll('p')[3];            
+    p4.addEventListener('click' , function(){
+        console.log('Hello World');
+    });
+
+                cara Memanggil Event Handler
+            * on<Event> = namaFunctionya ; ada banyak Eventnya beberapa jenis nya     
+ 
+    >== Perbedaan antara Event Hendler dengan addEventListener adalah ketika kita memberikan lebih dari satu perubahan pada sebuah Event jika kita menggunakan event hendler perubahan terakhir dilakukan akan menimpa perubahan baru , sedangkan addEventListener dia akan menambah perubahan nya

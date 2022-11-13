@@ -1,0 +1,5 @@
+                    <<= This =>>
+    -> Konsep this = ada keyword this , defaultnya adalah window atau object global 
+        1. this mengembalikan object global = function declaration
+        2. this mengembalikan object yang bersangkutan atau local jika console.log(this); didalam function object nya = function literal
+        3. this mengembalikan object yang baru dibuat = Constructor function 

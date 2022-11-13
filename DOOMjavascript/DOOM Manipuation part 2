@@ -1,0 +1,51 @@
+            <== DOOM Manipulation part2 ==>
+DOOM Manipulation Method 
+1. Manipulation Element 
+2. Manipulation Node = Memungkinkan kita menambahkan node Baru atau element baru pada DOOM bahkan mengganti element dengan yang Baru            
+
+        ada beberapa Method untuk Manipulation Node 
+    . document.createElement() = membuat Elementnya
+    . document.createTextNode() = membuat isi dari elementnya atau textnya
+    . node.appenChild() = tempat menyimpan nya di akhir dari parentnya
+    . node.insertBefore() = tempat menyimpannya sebeleum element => cara pakai
+
+    const liBaru = document.createElement('li');               
+    const textliBaru = document.createTextNode('item Baru');
+    liBaru.appendChild(textliBaru);
+                // Untuk menggunakan insertBefore(); kita harus tangkap dulu parent nya , baru kita ingin simpan sebelum element apa
+    const li = document.querySelector('section#b ul');
+    const li2 = li.querySelector('li:nth-child(2)');
+    li.insertBefore(liBaru,li2);
+    
+    
+    . parentNode.removeChild() = menghapus nodenya =>
+
+
+    // removeChild() = jika kita ingin meremove ada 2 hal 1. parentnya siapa 2.element yang mau kita removenya
+    const a = document.getElementById('a');
+    const linkNya = document.getElementsByTagName('a')[0];
+            // Cara meremovenya kita rangkai juga  panggil parentnya lalu node yang ingin Kita Remove apa
+    a.removeChild(linkNya);
+
+
+    . parentNode.replaceChild() = menghapus dan mengganti node => 
+
+    // replaceChild(); ada 2 hal juga sama dengan removeChild();      1. Tangkap parent nya terlebih dahulu 2. Tangkap Element yang mau diganti 3. rangkai element baru atau createEelement() 4. buat tulisan Elementnya atau createTextNode(); 5. gabungkan element dengan "text" 6. Letakkan atau tempelkan ke tempat yang sudah di target , dibawah adalah cara pembuatannya
+
+    const induk = document.getElementById('b');                
+    const elementnya = induk.getElementsByTagName('p')[0];
+
+        const h2 = document.createElement('h2');
+        const texth2 = document.createTextNode('Judul Baru');
+        h2.appendChild(texth2);
+                // Setelah kita rangkai baru kita tangkap parentnya replaceChild(); menerima 2 parameter 1. node barunya 2. node yang di replace atua diganti dibawah cara menggunakannya
+    induk.replaceChild(h2,elementnya); 
+
+    
+    . dll        
+            yang mana node nya akan kita ganti nanti dengan element yang kita target yang sudah kita pelajari di Manipulation Element 
+
+            Ctt: perlu kita perhatikan yang terjadi ketika kita menuliskan element baru pada DOOM ada 3 hal 
+            1. kita buat dulu elementnya (misal <p></p>)
+            2. kita menuliskan Tulisan(isinya) didalam p , jadi kita menuliskan nya nanti terpisah(dirangkai)
+            3. kita minta agar tulisannya dipidnahkan kedalamnnya dan terakhir kita suruh javascriptnya menyimpan element atau node baru kita ke tempat yang kita target 

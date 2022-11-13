@@ -1,0 +1,48 @@
+            <-- Variable -->
+               = deklarasi Variable =
+               1. var
+               2. let
+               3. const
+adalah sebuah tempat / wadah yang memiliki nama, yang digunakan 
+untuk menyimpan nilai = tempat menyimpan nilai bisa , angka ,boolean dan bisa tulisan dll   
+            Untuk paham variable harus paham 3 hal ini = deklarasi, inisialisasi, assignment
+            1. deklarasi => adalah mendaftarkan variable ke dalam lingkup yang sesuai 
+            2. inisialisasi => adalah proses menyediakan memori untuk variable 
+            3. assignment => untuk menetapkan nilai yang spesifik ke dalam variable     
+                    contoh : 
+    var x; //deklarasi & inisialisasi = setelah di daftarkan dalam lingkup sesuai lalu akan di pesan 1 buah memori untuk nanti kita menyimpan nilai di dalamnya 
+    
+    x = 20; // artinya prosess assignment , kita menyuruk angka 20 untuk disimpan ke variable x 
+                Ctt: agar wajib melakukan 3 hal tersebut
+                        <<== nama variable yang boleh dan tidak =>>
+                1. var ga boleh pake spasi;
+                2. var 1gaboleh(pake angka);
+                3. var boleh1(boleh angka belakang);
+                4. var ini_juga_boleh;
+                5. var boleh$;
+                6. var $_$;
+                7. var iniBolehBanget;
+                
+                
+                8. var namaVariablePanjang; //camel Case 
+
+                        <== kata yang tidak boleh ==>
+                    keywords & reserved word 
+
+
+                        <<= shorthand menyingkat variable =>>
+            var nama;
+            var umur;
+            var lulus;
+                nama = "sandika";
+                umur = "21";
+                lulus = true;
+
+                        <== variable scope ==>
+                        
+
+
+
+
+                        untuk membuat deklarasi variable 
+        var <nama variable>;                        

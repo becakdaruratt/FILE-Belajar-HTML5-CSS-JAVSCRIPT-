@@ -1,0 +1,29 @@
+        <-- Pengulangan While -->
+dengan menggunakan Pengulangan kita bisa melakukan hal yang sama berulang kali
+tanpa copy paste samapi sebanyak yang kita inginkan 
+        Cara pakai : 
+            while(kondisi){
+                aksi
+            }
+        => selama kondisi bernilai true , maka lakukan aksi didalam block jika false maka aksi tidak dilakukan
+
+            Infinite loop , ada bisa dihentikan oleh user , atau tidak  == Itu adalah contoh jika kita yang menghentikan program tersebut
+
+    2. dihentikan oleh program                 
+            aturan nya harus begini 
+
+                nilai awal 
+                while(kondisi terminasi(kapan loop nya berhenti)){
+                    aksi 
+
+                    increment(penambahan) / decrement(pengurangan(penyebab loop berhenti) terhadap nilai awal
+                }
+    cara pakai : 
+        var nilaiAwal = 1;
+        while(nilaiAwal <= 5){
+            console.log('hello world');
+            nilaiAwal++; => penambahan 1 setiap pengulangan
+        }
+
+        cara agar 1 nya nambah sampai kondisi 
+            console.log('hello world' + nilaiAwal + 'x');

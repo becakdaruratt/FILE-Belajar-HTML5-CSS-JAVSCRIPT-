@@ -1,0 +1,31 @@
+            <== Rekursif ==>
+rekursi / recursior adalah sebuah fungsi yang memanggil dirinya sendiri 
+    * semua looping(for) bisa di buat rekursif, tapi tidak sebaliknya
+
+          =>>  implmentasi Rekursif
+        1. Menggantikan looping(perulangan)
+        2. Fiboonacci
+        3. Pencarian dan penelusuran pada struktur data list dan tree 
+        4. bahasa pemrograman yang tidak memiliki pengulangan
+        5. dll
+            <== Base Case ==>            
+adalah kondisi akhir dari Rekursif yang menghasilkan nilai 
+    cara pakai :
+        if( n === 0) {
+            return;
+        }
+            <== Faktorial ==>
+    5! = 5 x 4 x 3 x 2 x 1
+    
+         // Faktorial dengan rekursif
+function ajinamoto(n){
+    if(n === 0) return 1;
+    return n * ajinamoto(n-1);
+}
+console.log(ajinamoto(5)); 
+        // Hasil 120 karena setelah
+        // 5 x 4 x 3 x 2 x 1 dilanjutkan dengan 
+        // 2 x 1 x 3 x 4 x 5 = 120
+
+        // Faktorial dengan Looping(for)
+    

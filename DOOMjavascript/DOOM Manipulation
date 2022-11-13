@@ -1,0 +1,36 @@
+                     <<= DOOM Manipulation =>>
+Setelah kita tahu bagaimana Menyeleksi element element tersebut sekarang kita Akan mencoba untuk Memanipulasinya 
+        DOOM Selection 
+1. getElementById()                             
+2. getElementsByTagName()
+3. getElementsByClassName()
+4. querySelector()
+5. querySelectorAll()
+
+            cara Menyeleksinya kita bagi jadi 2 
+1.  Manipulasi Element = Tagnya
+2.  Manipulasi Node = Menyisipkan Node atau memanipulasi Node nya 
+
+        Method Method yang kita gunakan
+    *  element.innerHTML = mengubah text HTMLnya atau isi dari tag nya dana sebetulnya kita juga bisa mengIsikan tag HTML lagi didalamnya
+    *  element.style.<property> = Mengubah Css 
+    *  element.setAttribute() = membuat attribute baru cara buatnya setAttribute('namaAtribut' , 'nilaiAtribute');
+    *  element.getAttribute() = fungsi untuk mendapatkan atau mencari tahu attribute cara pakainya getAttribute('namaAtributenya')
+    *  element.removeAttribute() = Untuk menghapus sebuah attribute cara Pakainya 
+    removeAttribute('namaAttributenya')
+    *  element.classList = Untuk mengelola class / menambah class di class yang sudah ada / kalau element.classList kita lihat dari consol dia akan memperlihatkan class apa saja di dalamnya
+        ada pembagian dari classList
+        * .add('classPertama' , 'classKedua') = Menambah class
+        * .remove('NamaClass yang Mau dihilangkan') = menghilangkan Class yang sudah ada
+        * .toggle('namaClass yang mau ditambahkan jika sudah ada dihapus') = jika tidak punya classnya ditambahkan jika sudah punya dihilangkan
+        * .item(2) = untuk mengetahui nama class tertentu dalam sebuah element misal ada 3 class kita ingin tahu class ke 3 nya apa , valuenya adalah angka integer dan nghitungnya dari 0 seperti array
+        * .contains('namaClassnya') = mengecek dalam sebuah element punya gk sebuah class tertentu jawaban dari console adalah true and false, jika true artinya ada jika false artinya tidak ada 
+        * .replace('class yang mau di ganti' , 'nama class barunya') = mengganti class yang sudah ada dengan class yang baru 
+    *  element.removeAttribute() =
+
+            attribut adalah Sesuatu yang menempel pada tag HTML = misal kalau di <a> yang menempel itu href maka atributnya href atau ada juga id, dan class
+
+
+    setAttribute itu menimpa class yang ada sehingga class yang lama hilang tapi jika kita ingin menambahkan class di class yang sudah ada ,maka kita tidak memakai setAttribute tapi menggunakan Method lain yang gunanya untuk mengelola class 
+
+            Ctt: document dan body tidak perlu kita gunakan getElement karena dia sudah punya nodenya sendiri
