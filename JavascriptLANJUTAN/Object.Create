@@ -1,0 +1,66 @@
+            <== Object.Create() ==>
+adalah salah satu cara untuk membuat sebuah Object == {}; dan bedanya dengan Object
+.create() kita bisa menyimpan parameter didalamnya yang mengacu ke parent objectnya
+atau seperti pewarisan , jadi dengan memasukkan argument kedalam parameter 
+Object.create(); kita bisa mewariskan apapun yang dimiliki argumen yang ktia 
+masukkan
+
+    kalau kita lihat kembali cara dalam pembuatan sebuah Object
+1. Object literal => Problemnya adalah tidak efektif jika membuat sebuah 
+                     Object yang banyak 
+2. Function Deklarasi => Sebetulnya kita bisa mengelminasi problem yang tadi ,
+                     karena kita cukup menulis 1 function yang memiliki object 
+                     lalu kita panggil dengan nilai yang berbeda beda , dan 
+                     problemnya adalah kalau kita lihat dibelakang layar 
+                     2 function yang kita panggil function yang sudah di deklarasi 
+                     kan tadi itu ternyata tetap di panggil padahal , kita hanya 
+                     melakukan pemanggilan tapi tetap dibuat functionya , sehingga 
+                     memakan memori , jadi dengan menggunakan function deklarasi 
+                     pun melakukan duplikasi ,, 
+        Ctt: ada solusinya dengna mmebuat sebuah object terpisah dan tinggal kita
+             acu saja   dividio JAVASCRIPT LANJUTAN | 1.2 Object.create() min 4:00                                     
+             dan walaupun lebih efektif namun tetap ada problem lagi , kita jadi 
+             manual mendaftarkan method didalam object dan menghapus , karena 
+             kita skarang punya 2 buah object tetapi alangkah lebih baik nya jika 
+             ada cara otomatisnya , jadi kita gk perlu harus hafalin , yaitu dengan
+             Object.create();
+
+                    // Perbaikan Function Deklarasi dengan Object.create();
+    const objectlagi = {
+        makan : function(porsi){
+            this.energi += porsi;
+            console.log(`Halo ${this.nama} , Selamat Makan!`);
+        },
+
+        main : function(jam){
+            this.energi -= jam;
+            console.log(`Halo ${this.nama}, Selamat Bermain!`);
+        },
+
+        tidur : function(jam){
+            this.energi += jam * 2;
+            console.log(`Halo ${this.nama} Selamat Tidur!`);
+        }
+    };
+
+
+    function berkibar(nama,energi){
+        let bende = Object.create(objectlagi);
+        bende.nama = nama;
+        bende.energi = energi;
+        // Harus dipanggil jika tidak menggunakan Object.create(); or manual gitu
+        // bende.makan = objectlagi.makan;
+        // bende.main = objectlagi.main;
+        // bende.tidur = objectlagi.tidur;
+
+        return bende;
+    }       
+    let soal = berkibar('Indonesia' , 76); 
+                     
+
+
+                     Kembali ke problemnya , Sebetulnya kita cuma butuh Mahasiswa 
+    tidak perlu ada object baru yang kita bikin sendiri , tapi tetap saja kita 
+    punya object 1 untuk mendukung object intinya dan Sebetulnya ada caranya agar 
+    kita tidak perlu menggunakan object lain pendukungnya yaitu dengan , menggunakan 
+    prototype walaupun kita menghemat memori tapi tetap saja , ada 2 object                     

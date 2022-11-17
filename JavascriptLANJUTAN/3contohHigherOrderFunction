@@ -1,0 +1,23 @@
+                    <== Filter , map & reduce ==>
+3 contoh dari Higher Order Function yang sering digunakan                    
+      =>>  3 method(Function) ini merupakan prototype dari array   
+    1. Array.prototype.map();       
+                    menghasilkan array baru sedangkan forEach tidak dan kita bisa hitung karakter dari array nya juga
+    2. Array.prototype.filter();   
+                -> Bisa memfilter bahan makanan misal kita punya nama nama makanankita bisa memfilter khusus untuk sayuran saja dan dia menghasilkan array baru 
+    3. Array.prototype.reduce(); => Parameternya ada 2 , argument atua paraemet 1. accoumulator yaitu hasil dari prosesnya atau penjumlahannya 2. currentValue (element array yang sedang di looping) nama parameternya bebesa
+                -> Menyatukan potongan tadi , bisa kita Higher order functionkan setelah di potong sama map kita gabungkan dengan .reduce(); => ini juga menghasilkan array yang baru / Melakukan sesuatu terhadap seluruh element arraynya 
+
+                const angka = [-1 , 8 , 9 , 1 , 4 , -5 , -4 , 3 , 2 , 9];
+                const param = angka.reduce((accoumulator, currentValue) => accoumulator + currentValue ); => kita bisa tambahkan nilai awal di bawah contohnya
+                const param = angka.reduce((accoumulator, currentValue) => accoumulator + currentValue,10 ); => dengan kita buat atau set nilai awalnya 10 maka dia akan menambahkan 10 juga , jikahasil yang pertama itu 26 maka hasil yang ke dua adalah 36 dan defaultnya kalau tidak di tulis adalah 0
+
+    4.  Method Chaining =>menggabungkan fungsi fungsi pada Higher order function  ini dalam satu kali eksekusi tanpa disimpan dalam variable dengan titik .
+                    cara pakai =>
+
+        const hasil = angka.filter(a => a > 5) 
+    .map(b => b * 3) => bisa kita bagikan lagi terserah 
+    .map(b => b / 2)
+    .reduce((acc , cur) => acc + cur);
+    console.log(hasil);
+                    Method chaining di representasikan dengan titik .

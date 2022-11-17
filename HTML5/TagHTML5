@@ -36,3 +36,10 @@
         innerWidth = lebar 
 
         elemnt.className = untuk mendpatkan nama classnya
+
+
+
+        Ukuran didalam tag HTML 5 itu 2em , sedangkan html 5 lama 1,5 em tag paragraph nya
+
+    letter-spaccing = jarak antar huruf 
+    sama dengan widh 100ch (karakternya)

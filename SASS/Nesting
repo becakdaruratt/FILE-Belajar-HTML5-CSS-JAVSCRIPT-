@@ -1,0 +1,53 @@
+                    =<< Nesting >>=
+membuat syntax bersarang
+    jika kita ingin agar SCSS nya dibuatkan folder tersendiri 
+    bukan difolder saat kita buat , maka kita masuk ke configurasi
+    1. masuk settings ctrl + ,
+    2. cari bagian extension live sass compiler
+    3. bagian formats pilih
+    4. edit settings json
+    5. savePath = ganti jadi css
+
+Nesting itu simple saja kita bisa menyimpan selector css didalam 
+selector yang lain     
+
+    -> Mendaftarkan selector sekaligus di scss atau sass 
+    .main, footer {
+        h1, p{
+
+        }
+    }
+        artinya , kita pilih class main dan footer yang didalamnya
+        ada h1 dan p (yang kita target untuk bekerja)
+        kita bisa gunakan nesting untuk hal seperti ini juga
+
+
+    fungsi - adalah penghubung saja jadi dua class 1 dan 2
+
+            => ada 1 caracter di SASS yang keren yaitu => & (parent selector)
+    maksudnya adalah jadi kita bisa mentarget element parent pada saat kita melakukan nesting
+
+    .main, footer {
+        .container & { => dengan & kita bisa akses parentnya
+        jadi kalau kita lihat di css nya jadi ketukar 
+            border: 1px solid black;
+        }
+    // Parent Selector juga bisa kita gunakan untuk menambahkan sudo class
+    
+    cara pakai  nya =>
+    &:hover{
+        background-color: yellowgreen;
+    }
+    jadi & itu ngacunya ke parentnya yaitu .main dalam kasus ini
+
+    dan terakhir dari parent Selector (&) kita bisa mengenerate 
+    otomatis dari nama dari parent selector nya
+
+ .main {
+        & &-heading { => & itu ngacunya secara otomatis menyamakan dengan .main => perlu di ingat nama parentnya harus sama karena jika tidak sama maka celasnya akan beda 
+            font-size: 4em;
+        }
+       & &-paragraph{ => cara kernya & itu .main-paragraph , dan & ke dua .main jadi hasilnya => .main .main-paragraph
+            font-size: 2em;
+        }
+    }

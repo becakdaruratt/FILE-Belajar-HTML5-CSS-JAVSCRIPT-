@@ -1,0 +1,60 @@
+                            <== Arrow Function ==>
+                = Cara lain Menulis Function Namun Lebih ringkas =
+Arrow Function adalah Bentuk lain yang lebih ringkas 
+dari Function expression. - MDN                    
+
+        => Function expression 
+        let tampilPesan = function(nama){
+            alert(`Halo ${nama}`);
+        }
+        alert('Sofyan');
+        =>  Lebih Ringkas Dengan Arrow Function dengan 1 parameter
+        let tampilPesan = (nama) => {
+            alert(`Nama ${nama}`);
+        }
+        tampilPesan('Jakarta');
+        => jika paramter nya satu kita bahkan bisa tidak bikin kurung buka dan tutup
+        let tanapKurung = nama => {
+            return `Halo ${nama}`
+        };
+        => Kerennya lagi jika isinya hanya return saja kita bisa gk gunakan return 
+        dan kurung kurawalnya 
+        let tanapKurungan = nama => `Halo, ${nama}`;
+        console.log(tanapKurungan('Kota')); => ini disebut Implisit Return , jadi 
+        returnnya gk usah ditulis karena secara otomatis return nya ditulis gitu 
+        => Jika parameter Arrow Function ada 2 
+        let tampilPesan = (nama,waktu) => {
+            return `Selamat ${nama} , ${waktu}`
+        }
+        console.log('Sibolga', 'malam');
+
+                dan ada beberapa hal yang berbeda dari arrow Function
+        =>  Jika tidak memiliki parameter maka wajib menuliskan ()
+        let gkPakeParameter = () => 'Hello World';
+        console.log(gkPakeParameter());
+
+
+                // Studi kasus
+let mahasiswa1 = ['Sandhika Galih' , 'Doddy Ferdiansyah' , 'Erik'];
+        // Dengan function biasa eksekusi
+                // let jumlahHuruf = mahasiswa1.map(function(nama){
+                //     return nama.length
+                // });
+                // console.log(jumlahHuruf);
+        // Dengan Arrow Function lebih ringkas dalam bentuk array
+        // let jumlahHuruf = mahasiswa1.map(nama => nama.length);
+        // console.log(jumlahHuruf); => Jangan di jalankan karena kalau dijalankan()
+        // akan error karena dalam bentuk array kita kembalikan bukan object
+
+            // Arrow function tapi dalam bentuk Object
+        let jumlahHuruf = mahasiswa1.map(nama => ({ nama:nama , jmlHuruf:nama.length}));
+         => ({}) , kalau kita tidak tulis dengan seperti itu maka saat kita {} <== Javascriptnya mikir kalau kita ingin return makanya kita bungkus dengan () jadinya ({}) gitu ..
+         console.log(jumlahHuruf); => kalau mau rapi lagi gunakan table 
+         console.table(jumlahHuruf);
+                // let mahasiswa2 = ['Sandhika Galih' , 'Doddy Ferdiansyah' , 'Erik Tohir'];
+                // let jumlahAngka = mahasiswa2.map(nama => ({ nama:nama, jumlhhuruff:nama.length }));
+                // console.table(jumlahAngka);
+
+        dan kalau properinya sama dengan nilainya kita gk usah tulis propertinya cukup satu saja bigini =>
+            let contoh = jumlahHuruf.map(nama => ({ nama, satuaja:nama.length }));
+            console.table(contoh)

@@ -1,0 +1,15 @@
+.main .main-heading {
+  font-size: 4em;
+}
+.main .main-paragraph {
+  font-size: 2em;
+}
+
+.footer .footer-heading h1 {
+  color: red;
+  font-size: 5em;
+}
+.footer .footer-paragraph p {
+  color: lightblue;
+  font-size: 2em;
+}/*# sourceMappingURL=Nesting.css.map */

@@ -1,0 +1,23 @@
+ .main {
+        & &-heading {
+            font-size: 4em;
+        }
+       & &-paragraph{
+            font-size: 2em;
+        }
+    }
+    .footer {
+        & &-heading {
+            h1 {
+                color: red;
+                font-size: 5em;
+            }
+        }
+        & &-paragraph{
+            p {
+                color: lightblue;
+                font-size: 2em;
+            }
+        }    
+        
+    }

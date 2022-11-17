@@ -1,0 +1,80 @@
+        <== SASS ==>
+Atau Syntactically awesome style Sheets => jika syntaxnya adalah syntax css maka Tulisan nya akan sama atau tidak di compiler atau di terjemahkan karena memang syntax css
+
+    Variable Pada CSS  =>   
+        :root { => artinya semua element punya akses ke sini :root 
+            --primary-color: #333 ;
+            --secondary-color: #eee ;
+            --text-color: crimson;
+            --warna-Tulisan: red;
+        }
+            => Cara manggil Variable css nya 
+        h1 {
+            background-Color: var(--primary-color);
+        }
+            => contoh lagi cara manggil variable css nya 
+        p {
+            color: var(--text-color) ; => di tandai dengan --dan nama variableny dengan tipe data var 
+        }
+    // Cara menuliskan variable dengan -- dan nama variable itu bebas dan variable bisa lebih dari satu 
+
+        salah satu kelebihannya adalah kalau kita ingin mengubah kedua warna nya yang menggunakan variable yang sama kita tinggal ubah value dari variable nya 
+
+    Variable Pada SASS =>
+        Cara penulisannya sangat simple sama seperti syntax php 
+    $primary-color: red ; => di tandai dengan $ - dan nama variableny lalu valuenya 
+        
+    $text-color: blue ;
+    $secondary-color: #f2cc8f ;
+            // Cara panggil variablenya
+        h1{
+            background-color: $text-color ;
+        }
+        p{
+            color: $secondary-color ;
+        }
+            hasilnya di compile oleh SASS dengan css biasa
+
+    Perilaku sass pada variable 
+        1. Sass akan menganggab sama saat kita menggunakan - atua dash sebagai pemisah kata di variablenya dengan andscore _ sama hasilnya
+        2. variable punya scope juga Sama seperti di bahasa pemrograman 
+            1. kalau diluar kita buat maka disebut variable global sama seperti studi kasus barusan yang kita buat , makanya bisa di akses dari manapun 
+            2. kita bisa buat variable Local yaitu variable yang hanya bisa di akses oleh element tertentu saja 
+
+        contohnya => body {
+                            $studikasus : crimson ;
+                        } => artinya variable studikasus hanya bisa di akses oleh element yang ada didalamnya beserta nestingnya , diluarnya tidak bisa
+                        misalkan
+            h1 {
+                background-color: $studikasus ; => tidak bisa karena berada diluar block scope dari bodynya , kecuali kita pindahkan masuk kedalam block scope bodynya baru bisa  {} harus bersarang
+            }
+                namun ada caranya jika kita ingin membuat variable local menjadi global yaitu dengan keyword !global 
+        contoh nya => 
+        body {
+            $studikasus : crimson !global; => merepresntasikan variablenya bisa diakses secara global walaupun didalam scope body 
+        }
+    Ctt: karena ada 2 variable scope dan global , lalu kita panggil variablenya , maka variablenya adalah variable yang berbeda
+        1. variable global dengan nama sama !=
+        2. variable local dengan nama sama !=
+            berbeda walaupun namanya sama tapi warnanya nanti berbeda 
+    namun jika kita buat atua ubah variable local jadi global dengan !global maka isi dari variable global nya akan di timpa oleh variable local 
+
+
+
+
+3. didalam Sass ada 1 fitur untuk menyimpan beberapa nilai kedalam variable 
+        // ada yang disebut Map bagaimana kita memapping key dan value atau index dan nilai mirip array asosiative atua mirip dengan object 
+    => Cara pakainya 
+
+    $namaVariableBebas: (
+        'danger' : red ,
+        'success' : green ,
+        'warning' : orange ,
+    ); => tidak dengan buka kurung {}tapi () cara membuatnya 
+
+    // Cara panggilnya
+    h1 {
+        color: map-get($namaVariableBebas,'warning');
+    } => di ikuti dengna map-get lalu() nama variablenya koma dan nilainya atua valuenya
+    
+

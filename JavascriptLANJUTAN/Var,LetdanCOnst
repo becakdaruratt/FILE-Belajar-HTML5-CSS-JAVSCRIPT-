@@ -1,0 +1,58 @@
+                <== Var,Let & Const ==>
+Quick Tip => 
+           . Var 
+           studi kasus var i = 10; => kalau kita lihat hasilnya i console.log(i)
+           adalah 10 , namun jika kita tidak pakai keyword var =  cuma i = 10 aja 
+           lalu kita console. maka hasilnya tetap saja sama  yaitu 10 karena secara otomatis di tambahkan keyword var di belakangnya 
+    studi kasus :
+                for (var i = 0; i < 10; i++){
+                    console.log(i); => hasilnya 0-9 
+                }
+                console.log(i); => saat perulangan ke sepuluh sudah false dan di tangkap oleh console.log(i) , makanya hasilnya jadi 10 karena console.log(i) itu bisa menangkap di bagian block for nya , padahal di bahasa pemrograman lain itu eror tidak bisa tapi  karena itu disebut dengan block scope {} , di javascript blockscope bisa di tangkap tapi function scope {} baru tidak bisa di tangkap 
+
+    IIFE => immediately invoked Function Expression =>  
+     atau 
+    SIAF => Self Invoking Anonymous Function 
+                    yaitu sebuah function expression yang di panggil langsung ketika dibuat supaya kita menjaga variable yang ada didalam functionnya tidak bisa di akses dari luar 
+    function Anonymous adalah fungsi tidak bernama menggunakan function expression => cara penggunaanya jadi functionnya langsung dijalankan tanpa kita panggil 
+            (function(){
+                for(var i = 0; i < 10; i++){
+                    console.log(i);
+                }
+            }());
+                console.log(i); => i ini tidak bisa ngakses function Anonymous karena itu function scope , ini adalah cara ngakalinnya yaitu cara lama ada cara baru yaitu dengan menggunakan let 
+
+    for(let i = 0; i < 10; i++){
+        console.log(i);
+    }                
+        console.log(i); => hasilnya sama tidak bisa akses kedalam for scopenya , karena skarang saat kita menggunakan let dia sudah menganut block scope {} bukan lagi function scope 
+           . Let 
+            => Sudah menganut block scope 
+           . Const 
+            => Sudah menganut block scope 
+                const i ;
+                    sama dengan let bedanya nya Const ini kita yakin kalau nama variablenya dan nilainya tidak akan kita ubah lagi 
+                        contoh mengubah 
+                        const i = 10;
+                        i = 11; => tidak bisa karena kita mengubha nilainya 
+                gunakan let hanya ketika menggunakan for saja , karena nilainya berubah
+
+    alasan dari kita menggunakan Const untuk meminimalisir perubahan state (aliran)                
+            kita bisa  ubah Const hanya ketika yang kita ubha itu objectnya 
+        contoh 
+        
+            Const Mhs = {
+                nama : 'sofyan tanjung',
+                umur : 21
+            }
+            Mhs.umur = 31; => Ini bisa kita ganti karena cuma objectnya kita ganti
+            Mhs = {
+                jurusan : 'Teknik Informatika', => Kita ganti jadi object baru 
+            } => Ini tidak bisa eror 
+
+                    di array juga seperti itu 
+            Const i = [1,2,3,4];
+                i = [1,2,3,4,5]; => eror jadi kita gk bisa tambabkan walau cuma satu 
+                i.push(4); => ini bisa karena kita menambahkan nilai baru di akhir indexnya dengna menggunakan method dan nilai awalnya tidak berubah
+
+                            

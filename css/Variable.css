@@ -1,0 +1,16 @@
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: orange;
+}
+
+.container .header h1, .container .header p {
+  background-color: lightblue;
+  border: 2px solid black;
+}
+
+.header p {
+  font-size: 3em;
+}/*# sourceMappingURL=Variable.css.map */

@@ -1,0 +1,68 @@
+                    =<< SASS >>=
+        Jenis jenis pre Processor 
+        1. SASS 
+        2. less 
+        3. stylus
+sebelum kita masuk ke SASS kita harus tau dulu apa itu CSS pre Processor 
+    alur flow normalnya 
+            Kenapa disebut pre Processor => karena file yang kita edit akan    
+                        di edit sebelum CSS
+    1. kita punya HTML lalu HTML di hubungkan ke CSS (normal)                    
+    2. dengan SASS kita tidak lagi mengeditnya di CSS tapi melalu compiler , dan 
+        compiler tadi lah yang akan menerjemahkan ke file CSS nya dan CSS inilah 
+        yang akan di hubungkan ke file HTML kita 
+
+        Alasan Pre Processor muncul karena dirasa ada 'kekurangan' pada CSS
+    dulu 
+        1. tidak ada variable (dulu)
+        2. tidak ada function
+        3. tidak ada modularisasi
+        4. tidak bisa melakukan operasi & logika pemrograman
+        5. banyak duplikasi code 
+    skarang sudah ada Solusi
+        1. Variable 
+        2. Mixin (serangkain style bisa di pakai berulang = seperti function)
+        3. Import & Uses => file terpisah
+        4. Operator & Built-in Function
+        5. Nested CSS (inner) atau bersarang
+
+
+                Alasan menggunakan SASS 
+1. mempermudah penulisan
+2. mempermudah pengelolaan 
+3. memiliki banyak fungsi built-in
+4. kita dapat membuat fungsi sendiri (dengan mixin)
+5. kita dapat memodifikasi framework CSS 
+    contohnya Bootsrap / materialize
+6. banyak perusahaan menggunakan SASS 
+
+                        ada dua pilihan 
+                1. SASS 
+                 OR 
+                2. SCSS => lebih mirip CSS 
+
+                    yang manapun kita nulisnya akan tetap di compile jadi CSS
+        perbedaannya kalau SASS Tidak pake {} sedangkan SCSS pake {}
+
+    => Cara menuliskan variable di SASS 
+    $namaElement  : <value>; => cara penulisan variablenya seperti php $ 
+
+    contoh nya  : =>
+    $myColor : salmon;
+    header {
+        background-color: lightblue;
+        h1{
+            font-size: 3rem;
+        }
+        p {
+            color : $myColor;
+        }
+    }
+
+            => Alasan tidak menggunakan SASS 
+        1. Banyak fitur SASS yang sekarang sudah dimiliki oleh CSS
+        2. tidak untuk project kecil 
+        3. Styled Components / CSS in JS 
+        
+                    
+        

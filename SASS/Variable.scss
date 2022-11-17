@@ -1,0 +1,28 @@
+$warna-yo : lightblue ;
+$background : orange ;
+:root{
+    font-size: 16px;
+}
+body {
+    background-color: $background;
+    $fannyglobal: 2px solid black !global ;
+}
+.container {
+    .header {
+        h1 , p{
+            background-color: $warna-yo;
+            // font-size: 2em;
+            border: $fannyglobal;
+        }
+    }
+}
+ $ukuranFont : (
+    'kecil' : 3em,
+    'sedang' : 5em,
+    'besar' : 10em
+ );
+ .header{
+    p{
+        font-size: map-get($ukuranFont , 'kecil' );
+    }
+ }

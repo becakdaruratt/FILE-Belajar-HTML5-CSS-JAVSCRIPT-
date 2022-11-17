@@ -50,3 +50,5 @@
 
 Nodelist Bisa kita perlakukan sebagai array sedangkan
 HTML Collection tidak
+
+.src = untuk mendapatkan attribute srcnya atau isinya

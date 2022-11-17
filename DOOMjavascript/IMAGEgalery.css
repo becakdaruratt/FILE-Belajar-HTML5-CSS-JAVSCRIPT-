@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+body {
+    background-color: #ccc;
+    text-align: center;
+}
+.jumbo {
+    width: 600px;
+    height: 600px;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+.anak {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid white;
+}
+.anak:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.gambar2 {
+    display: flex;
+    flex-wrap: wrap ;
+}
+.container {
+    width: 600px;
+    margin: auto;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.active {
+    opacity: 0.5;
+}
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}

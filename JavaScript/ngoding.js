@@ -1,14 +1,15 @@
 function test(){
-    var a = 10;
-    var b = 24;
+    var a = 75;
+    var b = 33;
     
     console.log('a awal =' , a);
     console.log('b awal =' , b);
 
-        a -= b; 
-        b += a;
-        a = b - a;
+        // a -= b; 
+        // b += a;
+        // a = b - a; => Cara dari bang dea 
 
+        [a,b] = [b,a]; => cara jitu
 
         // Coding
         // gimana cara nya supaya nilai b jadi nilai a

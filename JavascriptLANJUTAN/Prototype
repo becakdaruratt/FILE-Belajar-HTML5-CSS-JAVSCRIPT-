@@ -1,0 +1,11 @@
+                <== Apa itu prototype ==>
+dan bagaimana implementasi nya didalam JAVASCRIPT kalau kita lihat di materi kita 
+sebelumnya kita membahas tentang Object.create(); yang mana fungsi nya kita 
+menggabungkan dengan object yang lain atau istilahnya pewarisan ...
+
+    dengan menggunakan prototype kita bisa membuat studi kasus kita function deklarasi 
+    lebih efektif lagi => yaitu dengan mengubah function deklarasi dengan constructor 
+    Function jadi kita gk butuh return dan dan objectnya tapi harus menggunakan 
+    kata kunci new 
+
+                        //Setiap object di Javascript itu pasti punya Prototypenya dan pasti punya function dan objectnya Penjelasan Lengkap ada di JAVASCRIPT LANJUTAN 1.3 Prototype (sandika galih) 14:35

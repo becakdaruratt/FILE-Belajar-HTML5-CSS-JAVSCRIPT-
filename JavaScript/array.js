@@ -44,6 +44,7 @@ var myarray = ['teks' , 2 , false , fungsi , [4,5,6]];
 
 
                     // Method pada array
+                    // .reverse(); =fungsinya untuk mengurutkan tapi dari akhir
     // 1. .length
     // 2. .join()
         var arr = ['roof' , 'chair' ,'street'];
@@ -105,7 +106,7 @@ var myarray = ['teks' , 2 , false , fungsi , [4,5,6]];
             console.log(angkaindex.join('-'));
                     // Hasilnya ada banyak nilai tapi jika dengan find cuma 1 nilai itu pun tidak boleh .join()menggabungkan string
         // 13. find => find tidak menghasilkan array tapi mengembalikan 1 nilai sedangkan filter mengembalikan banyak nilai , join itu untuk menggabungkan array di find tidak jalan karena tidak menghasilkan array
-        var angka00 = [1,2,10,5,20,3,6,8,4];
+        var angka00 = [1,2,5,20,3,6,8,4];
             var angkaindexx = angka00.find(function(x){
                 return x > 5;
             });

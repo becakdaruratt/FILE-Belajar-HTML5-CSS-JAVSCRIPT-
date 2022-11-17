@@ -1,0 +1,29 @@
+                   <== Closures ==> 
+Closure Merupakan kombinasi antara function dan lingkungan leksikal (leksikal scope)
+didalam function tersebut. - MDN 
+
+Closure adalah sebuah function ketika memiliki akses ke parent scopenya, meskipun parent scopenya sudah selesai di eksekusi. - w3school 
+
+Closure adalah sebuah function dikembalikan oleh function yang lain, yang memiliki akses ke lingkungan saat ia diciptakan. - Code Fellow 
+
+Closure adalah sebuah function yang sebelumnya sudah memiliki data, hasil dari function yang lain. - Techsith 
+
+                   Closure = Inner Function
+
+    Studi kasus =>
+            function init(){
+                        let nama = 'Sandhika'; => local Variable
+                        function tampilNama() { => inner Function (closure*)
+                            console.log(nama); => akses ke parent Variable 
+                            // Dia cari dulu ada gk nama didalam tampilNama kalau tidak ada dia akan terus ke atas sampai ketemu object global nya yaitu window => dalam kasus ini nama ada pada parent Function tampilNama, 
+                            jadi ini disebut leksikal scope , yaitu ketika function tampilNama Punya akses ke variable nama padahal ada di dluar functionnya , begitu kasus ini terjadi innerFunction  membutuhkan variable di parent scopenya maka innerFunction ini dinamakan closure  
+                            dan kalau variablenya didalm functio inner , ini bukan leksikal scope karena tidak menggunakan leksikal scope
+                        }
+                        tampilNama();
+                    }
+                        console.log(init());
+
+    #Alasan Kenapa kita menggunakan Closures 
+                    1. Untuk membuat Function Factories 
+                    2. Untuk membuat Private Method  
+

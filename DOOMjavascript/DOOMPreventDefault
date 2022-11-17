@@ -14,3 +14,36 @@ adalah cara kita menghentikan aksi default dari element web kita
 
 
             <== Event bubling ==>
+adalah gelembung seperti kita melihat gelembung air  .. secara default saat kita memberika Event pada sebuah element secara default akan berlaku pada pembungkus nya juga , dan akan berlaku juga pada pembungkus setelahnya juga , jadi seperti gelembung air makin ke atas makin ke atas begitu 
+, jadi kalau kita lihat dari studi kasus kita , maksud dari Event bubling adalah saat kita punya Event pada tombol close kita dan parentnya yang card juga kita punya Event maka yang terjadi adalah yang card atau parentnya dulu di jalankan barulah tombol close atau childnya , jadi di tambahkan nya , begitu juga sampai ke atas ke atas sampai gelembung nya pecah sudah tidak ada pembungkus nya lagi , kita ingin nya saat kita pencet tombol close , card nya atau parentnya tidak jalan jadi kita stopkan bubling nya atua gelembungnya maka kita harus menambahkan 1 buah method lagi yaitu 
+
+ // saat menggunakan eventnya lebih bermanfaat karena kita bisa tau informasi bermanfaat macam macam eventnya adalah   .target => mendapatkan informasi dari yang kita click
+
+el.addEventListener('click',function(e){
+
+    x.forEach(function(el){
+        el.addEventListener('click',function(e){
+            e.target.parentElement.style.display = 'none';
+              // Prevent Default
+              e.preventDefault();
+              e.stopPropagation();            
+        });
+    });  
+
+    dan untuk Event bubling ini bisa kita manfaatkan perilaku nya karena sebenarnya perilakunya sudah jalan normal tapi kurang efektif 
+    dan kaau kita lIHAT kembali event kita sebenarnya masih memiliki kekurangan 
+    1. kita seleksi seluruh class yang memiliki element ada 4 di kasus kita dan setiap elementnya kita tambahkan sebuah Event yang namanya 'click'
+    2. Permasalahannya akan terlihat saat kita menambahkan card baru di consolenya , begitu kita tambahkan tombol close atau card berikutnya yang terakhir tidak bisa di click karena , yang masih jalan di visual studio code kita baru 4 sedangkan kita menambahkan 1 card lagi jadi belum masuk ke script nya harus di reload , tapi kali ini kita membuat nya dari console karena mungkin saja nanti kita mengaturnya itu langsung di console nya bukan dari visual studio codenya ..
+
+    3. kalau tag nya <a></a> hilang sedangkan <span></span> tidak hilang lalu gimana cara membenarkannya ?
+    4. // Cara Membenarkan sedikit cardnya dengan menjadikan parentnya jadi event lalu menggunakan .target kita bisa tau apa yang sedang kita click dan informasi laiinya bisa kita dapatkan 
+    const induk = document.querySelector('.container');
+    induk.addEventListener('click',function(e){
+        if(e.target.className == 'close'){
+            e.target.parentElement.style.display = 'none';
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
+        // Penjelasannya adalah jika e (containernya) .target (apapun yang kita click) di dalam containernnya , dan class nya sama dengan close maka container nya yang kita click tadi ambil induknya lalu ubah stylenya dengan display none   
+                    // lebih sederhana tambah 2 event dan javascript tidak peduli kalau ada tambahan di consolenya , karena yang pertama di cek oleh javascriptya adalah containernya bukan element barunya jadi tetap eventnya sudah terpasang

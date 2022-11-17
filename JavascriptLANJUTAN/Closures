@@ -1,0 +1,64 @@
+            <== Execution Context, Hoisting, Scope ==>
+    1.  ada 2 fase pada Execution Context pada saat program di jalan kan 
+        .   creation 
+        .   Execution
+
+                Studi kasus 
+                    console.log(nama); => error karena tidak ada variable nama 
+                    // Kita tulis variable Nama 
+                    var nama = 'Sofyan Tanjung'; => Hasilnya malah undefined
+                    padahal kita sudah definisikan Nilai variable kita ? itu karena ada yang namanya fase creation phase = fase pembentukan dalam conteks global 
+    yang dicek pertama adalah apakah ada function atau variable didalam codingannya , dan dia tidak pedulikan dulu consolenya dulu , nah kaalu ada dia akan membuat nama variable nya undefined , var = undefined; , lalu kalau ada function itu akan di isi oleh kode functionya = fn() ... 
+            consep ini disebut dengan Hoisting 
+
+    1. var = undefined
+    2. function = fn();
+                    
+                sederhananya : yang di cek pertama adalah function atau variable pertama bukan console setelah dapat lalu di naikkan ke atas 
+
+                    itulah yang terjadi pada Execution conteks di fase creation
+    window = global object 
+    this = window                     
+
+
+
+    . Execution phase 
+        console.log(nama);    
+            var nama = 'Sofyan Tanjung'; 
+             setelah var nama = diisi jadi undefined; dia dinaikkan ke atas lalu consolenya menangkap var nama , tapi yang di tangkap adalah var nama yang undefined kecuali kita menurunkan console nya ke bawah setelah var nama , barubisa ditangkap kalau var nama itu 'Sofyan Tanjung'; jadi istilahnya console jadi 2x menangkap nama gitu , tangkapan pertama undefined lalu tangkapan ke dua itu 'Sofyan Tanjung';
+
+
+    Contoh lain dari Execution conteks
+
+    console.log(sayHello()); => Functionya jalan normal karena dia String yang masalah adalah var => isinya undefined 
+        var name = 'Sandhika';
+        var umur = 31;
+        function sayHello(){
+            return `Halo Nama Saya adalah ${this.name} dan umur saya ${this.umur}`
+        }
+        dan alasan kenapa nama kita undefined di Function itu karena saat pase creation phase itu mengeksekusi isi dari functionya lalu di naikkan ke atas , saat proses eksekusi var nya itu undefined jadi gk di eksekusi gitu , makanyalah nama dan umur kita jadi undefined 
+
+ //  function juga membuat local Execution context 
+//   yang didalamnnya terdapat creation dan execution phase juga
+//  kalau dari local selain bisa akses window
+// kita juga bisa akses yang namanya arguments
+// didalamnya ada hoisting juga => ada var gk kalau ada naikin ke atas dengan isi undefined 
+// atau didalam function ada function lagi gak kalau ada dia akan melakukan local execution lagi dan hoisting dan kalau ada var isi dulu dengan undefined pada pase creation 
+
+
+                kalau console nya ada di bawah maka yang di eksekusi atau di cek dulu adalah console nya dulu barulah ke function , barulah ke consolenya sekali lagi intinya setiap function di panggil akan membuat Execution conteks baru 
+        Ctt: kalau argument di kirim tapi tidak ada parameter yang nangkap maka tidak akan di eksekusi tapi masuk nya akan ke object arguments => .arguments => method
+
+
+                    ctt:: Function berjalan normal walaupun consolenya tidak di definisikan var nya , normalnya seperti akses secara global dari atas kebawah , walaupun kita eksekusi dari bawah consolenya , karena jika dia tidak ada di local dia akan naik ke global  dan global itu seluruh codingan yang tidak didalam local !
+Hoisting adalah di naikkan seperti penggerek bendera
+
+    studi kasus yang terjadi di belakang layar 
+
+        var i;
+        console.log(i);
+        i = 10;
+
+                    akan eror jika kita gunakan let or const karena hoisting tidak bekerja lagi , dan perilakunya jadi sama dengan bahasa pemrograman lain , karena sebelum kita mendefinisikan sesuatu pastikan variablenya di definisikan dahulu 
+    
+

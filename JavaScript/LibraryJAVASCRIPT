@@ -83,4 +83,83 @@ setInterval(function(){
                return e * 2;
             });
             console.log(angka2.join('-'));
+
+                        // COntoh lain menggunakan map
+     const angka = [-1 , 8 , 9 , 1 , 4 , -5 , -4 , 3 , 2 , 9];
+const baru = [];
+    // lebih besar sama dengan 3 dan array baru 
+for(let i = 0; i <= angka.length; i++ ){
+        if( angka[i] >= 3){
+            baru.push(angka[i]);
+        }
+    }
+    console.log(baru.join('-'));
+
+            // COntoh lainnya lagi
+            let mahasiswa2 = ['Sandhika Galih' , 'Doddy Ferdiansyah' , 'Erik Tohir'];
+            let jumlahAngka = mahasiswa2.map(nama => ({ nama:nama, jumlhhuruff:nama.length }));
+            console.table(jumlahAngka);
+
+
+
+            bisa juma memetakan karakter dari sebuah string dengan map 
+            caranya : =>
+                let mahasiswa = ['Sandhika Galih' , 'Doddy Ferdiansyah' , 'Erik'];
+                let jumlahHuruf = mahasiswa.map(function(nama){
+                    return nama.length
+                });
+                console.log(jumlahHuruf); => harus dalam keadaan object jangan dijalankan karena kalau di jalankan () akan erorr karena kita mengem
+                balikannya dalam bentuk array bukan object
                     // Ctt: benar benar menghilangkan elemtnnya tidak mengubah jadi undefined
+                    <== Object.Create() ==>
+                    adalah salah satu cara untuk membuat sebuah Object == {}; dan bedanya dengan Object
+                    .create() kita bisa menyimpan parameter didalamnya yang mengacu ke parent objectnya
+                    atau seperti pewarisan , jadi dengan memasukkan argument kedalam parameter 
+                    Object.create(); kita bisa mewariskan apapun yang dimiliki argumen yang ktia 
+                    masukkan
+
+console.dir(); =>menampilkan object        
+
+.reverse => fungsinya sebagai method di array menghitung dari belakang ke depan
+
+                undefined di ++ jadinya nan
+
+                    // Cara cepat balikan angka 
+                let a = 19;
+                let b = 29;
+                
+                    [a,b] = [b,a];
+                    console.log(a);
+                    console.log(b);
+
+                    // cara manual balikkan angka
+        let satu = 'size';
+        let dua = 'caption';
+
+        satu = tempt ;
+        satu = dua ;
+        dua = tempt;
+
+                        First class function = function class pertama
+                        inti dari Javascript adalah function
+
+
+                        3. Array.prototype.reduce(); => Parameternya ada 2 , argument atua paraemet 1. accoumulator yaitu hasil dari prosesnya atua hasil penjumlahannya 2. currentValue (element array yang sedang di looping) nama parameternya bebes
+                        -> Menyatukan potongan tadi , bisa kita Higher order functionkan setelah di potong sama map kita gabungkan dengan .reduce(); => ini juga menghasilkan array yang baru / Melakukan sesuatu terhadap seluruh element arraynya 
+                    // COntoh dari reduce
+                    const angka = [-1 , 8 , 9 , 1 , 4 , -5 , -4 , 3 , 2 , 9];
+                    const param = angka.reduce((accoumulator, currentValue) => accoumulator + currentValue ); => kita bisa tambahkan nilai awal di bawah contohnya
+                    const param = angka.reduce((accoumulator, currentValue) => accoumulator + currentValue,10 ); => dengan kita buat atau set nilai awalnya 10 maka dia akan menambahkan 10 juga , jikahasil yang pertama itu 26 maka hasil yang ke dua adalah 36 dan defaultnya kalau tidak di tulis adalah 
+
+
+    4.  Method Chaining =>menggabungkan fungsi fungsi pada Higher order function  ini dalam satu kali eksekusi tanpa disimpan dalam variable dengan titik .
+                    cara pakai =>
+
+        const hasil = angka.filter(a => a > 5) 
+    .map(b => b * 3) => bisa kita bagikan lagi terserah 
+    .map(b => b / 2)
+    .reduce((acc , cur) => acc + cur);
+    console.log(hasil);
+                    Method chaining di representasikan dengan titik .
+
+                                        
