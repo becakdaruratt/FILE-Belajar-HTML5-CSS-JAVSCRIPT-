@@ -1,0 +1,110 @@
+                <== Mengatur alur kendali dari script SASS ==>
+
+FItur ini sangat keren karena mirip dengan bahasa pemrograman 
+        keyword yang bisa kita gunakan ada 4 terutama
+        1. @if, @else, @else if => Untuk percabangan
+        2. @for 
+        3. @while 
+        4. @each => Ketiga ini 2,3,4 kita gunakan untuk perulangan atau looping
+    cara pakai @if =>
+     @mixin profile-pic($size, $ukuran:false){
+        width: $size;
+        height: $size;
+        border: 5px solid white;
+        box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .3);
+        
+        @if $ukuran = true { => jika variable ukuran kitaberikan nilai true maka berikan border radius 50% , kita juga bisa ketik $ukuran <- ini sama saja dengan true 
+            border-radius: 50%;
+        }
+    }
+    cara panggilnya 
+    .square-profile {
+        @include profile-pic(200px, $ukuran: true); => defaultnya adalah false , kita harus isi 2 parameternya karena jika tidak akan eror kecuali kita berikan nilai default seperti pada kasus ini $ukuran nilai defaultnya false
+    }
+
+
+# Contoh kasus kita buat dark mode 
+@mixin color-mode($light-mode: true){
+    @if $light-mode{ => Jika true
+        background-color: $light-bg;
+        color: $light-text;
+    }
+    @else { => Jika false
+        background-color: $dark-bg;
+        color: $dark-text;
+    }
+}
+    // Parameternya false artinya kita ingin dark mode
+    .nav { => Parameternya false otomatis yang di isi adalah else 
+        @include color-mode($light-mode: false);
+    }
+
+    // else if kali ini kita ingin buat triangle yaitu icon segitiga
+.triangle {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 2em;
+    border-right-color: black ;
+    border-left-color: #ddd ;
+    border-top-color: salmon;
+    border-bottom-color: lightblue ;
+}
+lebar border widthnya 2 em , tapi karena border jadi setengah dari bordenya 
+
+    => Jika kita menggunakan @else if 
+    // else if kali ini kita ingin buat triangle yaitu icon segitiga
+@mixin triangle ($size,$color,$direction){
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+    @if $direction == up {
+        border-bottom-color: $color ;
+    } @else if $direction == right {
+        border-left-color: $color ;
+    } @else if $direction == down {
+        border-top-color: $color;
+    } @else {
+        border-right-color: $color ;
+    }
+}
+.right {
+    @include triangle(4em,black ,up )
+}
+
+
+
+ Perulangan for => 
+  @for $i from 1 to 10 { => penjelasannya adalah , variable i lakukan perulangan dari 1 to(sampai) 10 
+        li:nth-child(#{$i}){
+#{$i} => artinya interpolasi mengambil variable $i nya
+        }
+    }
+
+    Element CSS pasti dimulai dari index 1 beda dengan pemrograman index dimuali dari 0
+
+
+//each => untuk sebuah map yang variable nilainya banyak map yang dimaksud disini adalah di SASS yang sudah kita bahas sebelumnya agar kita bisa menyimpan key dan value didalam variable dan variablenya ada banyak
+
+$social-colors: (
+    youtube: #ff0000,
+    facebook: #3b5998,
+    twitter: #1da1f2 ,
+    instagram: #ffbf34 ,
+    twitch: #8134af,
+);
+.socials {
+    font-size: 2em;
+    font-family: Arial;
+    font-weight: bold;
+    @each $social, $color in $social-colors { => variable pertama $social untuk menangkap key variable yang ada dalam nya , variable ke dua $color untuk nilai dari variable map nya , $social-colors function mapnya
+        .#{$social} { => artinya kita memberikan nilai dan key secara otomatis dengan classnya 
+            color: $color;
+        }
+    }
+}

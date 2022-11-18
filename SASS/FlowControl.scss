@@ -1,0 +1,123 @@
+
+body {
+    min-height: 1000px;
+}
+// if
+    // Kita buat mixin dulu dengan 2 parameter
+    @mixin profile-pic($size, $ukuran:false){
+        width: $size;
+        height: $size;
+        border: 5px solid white;
+        box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .3);
+        
+        @if $ukuran  {
+            border-radius: 50%;
+        }
+    }
+    .square-profile {
+        @include profile-pic(200px,$ukuran: false);
+    }
+    .circle-profile {
+        @include profile-pic(80px, $ukuran: true )
+    }
+// Else 
+    // Sekaligus membuat dark mode dan light mode
+        // Variable pagi
+$light-bg: #eaeaea ;
+$light-text: #333 ;
+        // Variable malam
+$dark-bg: #999;
+$dark-text: #ddd ;
+
+@mixin color-mode($light-mode: true){
+    @if $light-mode{ 
+        background-color: $light-bg;
+        color: $light-text;
+    }
+    @else {
+        background-color: $dark-bg;
+        color: $dark-text;
+    }
+}
+    // Parameternya false artinya kita ingin dark mode
+    .nav {
+        @include color-mode($light-mode: false);
+    }
+
+// else if kali ini kita ingin buat triangle yaitu icon segitiga
+@mixin triangle ($size,$color,$direction){
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+    @if $direction == up {
+        border-bottom-color: $color ;
+    } @else if $direction == right {
+        border-left-color: $color ;
+    } @else if $direction == down {
+        border-top-color: $color;
+    } @else {
+        border-right-color: $color ;
+    }
+}
+.right {
+    @include triangle(4em,black ,up )
+}
+
+// Perulangan for pada SASS Ide nya adalah semakin kebawah semakin gradasi atau pekat
+$color: blue ; 
+.gradient {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @for $i from 1 to 11 {
+        li:nth-child(#{$i}){
+            padding: 4px;
+            background-color: lighten($color, $i * 3%);
+        }
+    }
+}
+// Kalau pakai nth-child pasti sangat repot skali karena kita mengganti color nya sedikit demi sedikit namun akan lebih mudah kalau kita menggunakan for nya SASS
+
+
+        // didalm SASS ada sebuah function yang fungsinya untuk mengelola warna namanya lighten dan darken
+        // lighten($color: salmon, $amount: 10%); => artinya kita ingin warna salmon nya akan terang sebanyak 10%    
+
+//         $color: salmon ; => variablenya akan ngacu ke dalam perulangannya gk bisa didalam kita buat salmonnya
+// .gradient {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     @for $i from 1 to 11 {
+//         li:nth-child(#{$i}){
+//             padding: 4px;
+//             background-color: lighten($color, $i * 2%); => artinya  variable $i akan di kalikan sebanyak 2% setiap perualngan dilakukan , awlanya 2% lalu dikalikan 2% x 2% begitu seterunya
+//         }
+
+//Diganti dengan darken juga bisa dia makin gelap gitu , itu kalau kita menggunakan looping
+
+
+//while sepertinya kita sudah bisa dengan for saja kalau mau dengan while bisa tonton vidio => Tutorial SASS | Flow Control menit ke 27:00  <==
+
+//each => untuk sebuah map yang variable nilainya banyak map yang dimaksud disini adalah di SASS yang sudah kita bahas sebelumnya agar kita bisa menyimpan key dan value didalam variable dan variablenya ada banyak
+
+$social-colors: (
+    youtube: #ff0000,
+    facebook: #3b5998,
+    twitter: #1da1f2 ,
+    instagram: #ffbf34 ,
+    twitch: #8134af,
+);
+.socials {
+    font-size: 2em;
+    font-family: Arial;
+    font-weight: bold;
+    @each $social, $color in $social-colors {
+        .#{$social} {
+            color: $color;
+        }
+    }
+}
+

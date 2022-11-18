@@ -1,0 +1,10 @@
+.footer ul {
+    @include inline-block();
+    li {
+        background-color: salmon;
+        padding: 1em;
+        a {
+            color: white;
+        }
+    }
+}

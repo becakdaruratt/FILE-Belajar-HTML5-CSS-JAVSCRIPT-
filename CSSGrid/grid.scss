@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+    $border : 2px solid black ;
+    @mixin list-style {
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+.container {
+    border: $border;
+    width: 100%;
+    margin:  auto;
+    height: 700px;
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'saidebar main main'
+        'saidebar main main'
+        'footer footer footer'
+    ;
+    .header{
+        border: $border;
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        background-color: blue ;
+        @include list-style();
+        h1 {
+            padding: 10px;
+        }
+        ul {
+            margin-right: 30px ;
+
+            li{
+                margin-right: 40px;
+                padding: 20px;
+                background-color: salmon;
+                border: 2px solid white;
+            }
+        }
+    }
+    .saidebar {
+        border: $border;
+        grid-area: saidebar;
+        background-color: yellow;
+    }
+    .main {
+        border: $border;
+        grid-area: main;
+        background-color: crimson;
+    }
+    .footer {
+        border: $border;
+        grid-area: footer;
+        background-color: #ccc;
+    }
+}

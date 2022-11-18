@@ -1,0 +1,38 @@
+                    <== Mixin ==>
+adalah kumpulan style yang dapat kita gunakan berulang ulang atau di bahasa pemrograman ini disebut funtion walau tidak sama persis dengan function 
+    ada 2 
+        1. @mixin => saat kita membuat mixin nya 
+        2. @include => saat kita memanggil mixin nya 
+
+    cara pembuatan dan pemanggilan// Mixin
+    // SImple Mixin
+    @mixin  inline-block { => nama mixin bebas
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+        }
+    }
+    .header ul {
+        @include inline-block(); => cara manggil bisa juga ada parameternya
+    }
+    kemudahannya adalah ketika kita manggil yang lain dengan valeu yang sama 
+
+        => Argument pada Mixin atau parameternya 
+        cara penggunaannya ->
+     @mixin  flex-box ($direction){ => direction di tangkap parameter nya 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: $direction;
+        }
+    .container {
+        @include lebar();
+        @include flex-box(row-reverse); => argument di kirim ke parameternya 
+
+        , kalau argument tidak di isi maka akan error , kecuali kita memberika parameter default 
+
+        bigini contohnya 
+            @mixin flex-box($direction: row) <-
+            jika ingin parameter nya 2 ada contohnya di Mixin.css

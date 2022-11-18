@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border: 2px solid black;
+  width: 100%;
+  margin: auto;
+  height: 700px;
+  display: grid;
+  grid-template-areas: "header header header" "saidebar main main" "saidebar main main" "footer footer footer";
+}
+.container .header {
+  border: 2px solid black;
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+}
+.container .header li {
+  list-style: none;
+  display: inline-block;
+}
+.container .header a {
+  text-decoration: none;
+  color: white;
+}
+.container .header h1 {
+  padding: 10px;
+}
+.container .header ul {
+  margin-right: 30px;
+}
+.container .header ul li {
+  margin-right: 40px;
+  padding: 20px;
+  background-color: salmon;
+  border: 2px solid white;
+}
+.container .saidebar {
+  border: 2px solid black;
+  grid-area: saidebar;
+  background-color: yellow;
+}
+.container .main {
+  border: 2px solid black;
+  grid-area: main;
+  background-color: crimson;
+}
+.container .footer {
+  border: 2px solid black;
+  grid-area: footer;
+  background-color: #ccc;
+}/*# sourceMappingURL=grid.css.map */

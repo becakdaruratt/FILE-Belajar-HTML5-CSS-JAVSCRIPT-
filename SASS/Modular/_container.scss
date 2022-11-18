@@ -1,0 +1,13 @@
+   // Argument pada Mixin
+        
+   .container {
+    @include lebar();
+    @include flex-box(row-reverse , space-around);
+    .box{
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        background-color: #bada55;
+    }
+}

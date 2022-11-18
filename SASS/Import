@@ -1,0 +1,35 @@
+                <== Import ==>
+kali ini kita tidak mulai dari nol 0 tapi dari latihan Mixin.html yang telah
+kita buat
+
+        dengan menggunakan Import Kita bisa memisahkan bagian bagian pada SCSS kita , kita bisa membuat satu file terpisah khusus untuk mixin 
+        cara buatnya 
+
+1. _mixin.scss => kenapa kita pakai andescore karena agar scss nya tau kalau ini bukan file utama tapi yang lain , sehingga tidak melalu proses compilasi 
+2. kita bisa pindahkan @mixin nya kedalam file yang kita buat tadi _mixin.scss
+
+3.   @import 'mixin' ; => cara mengimport , aturannya kan ada andescore _ kita gk perlu tulis karena SASS nya cukup cerdas untuk nyari mixin nya , dan tidak perlu lengkap dengan .sass atau .scss nya karena di CSS nya juga ada import takut ketukar gitu
+
+4. kita bisa juga membuat file terpisah khusus header , tinggal caranya harus ingat dengan @import 'nama file';
+
+        Ctt: biasanya ini disimpan sesuai dengan posisi dia di HTML kalau mau penulisan importnya seperti itu 
+dan sesuaikan juga dengan penempatan Importnya agar tidak salah dalam compile duluan 
+
+        perlu di ingat link dari import itu relatif terhadap nama folder utamanya 
+        kita juga bisa buat jadi satu baru dengan , contohnya
+
+@import 'Modular/mixin' ,'Modular/header' , 'Modular/container' ,'Modular/footer' ;
+
+
+
+Penjelasan : Kekurangan dari Import , kenapa import lagi tidak disarankan bahkan oleh lagi SASSnya  , ada banyak kekurangan yang serius di Import 
+1. membuat variable secara global dapat di akses , akan menyulitkan saat website kita semakin besar codingan tambah banyak apalagi kita menggunakan tools framework pihak ke 3 jadi mencampur adukkan , dan mungkin saja nama variablenya sama takutnya jadi bentrok
+
+        !. Solusinya gunakan @use
+        walaupun ada kekurangan dan kelebihannya juga
+                problem pakai @use
+               1. Kan sass nya ada 2 tipe , 1. sass yang kita instal dari Visual studio code , dan ke 2
+               2. Sass yang kita instal di mesin computer kita atau CMD  
+
+               harus di dwonload dulu SASS nya di mesin computer jika ingin menggunakan versi @use
+        ada di vidio Tutorial SASS | Modules 15:00 menit

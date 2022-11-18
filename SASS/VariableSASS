@@ -76,5 +76,8 @@ Atau Syntactically awesome style Sheets => jika syntaxnya adalah syntax css maka
     h1 {
         color: map-get($namaVariableBebas,'warning');
     } => di ikuti dengna map-get lalu() nama variablenya koma dan nilainya atua valuenya
+
+
+      $lebar : width = 600px , height = 400px ,background-color = #eaeaea ;
     
 

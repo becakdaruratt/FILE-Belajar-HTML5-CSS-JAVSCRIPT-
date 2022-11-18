@@ -1,0 +1,22 @@
+@mixin lebar {
+    width: 600px;
+    height: 400px;
+    background-color: #eaeaea;
+   } 
+    @mixin  inline-block {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                text-decoration: none
+            }
+        }
+    }
+    @mixin  flex-box ($direction:row , $space: center){
+        display: flex;
+        align-items: center;
+        justify-content: $space;
+        flex-direction: $direction;
+    }
