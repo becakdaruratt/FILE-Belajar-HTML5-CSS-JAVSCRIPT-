@@ -1,0 +1,61 @@
+            <== Canvas ==>
+Element Canvas dapat di gunakan untuk menampilkan grafis, seni atau gambar secara langsung menggunakan script
+
+    untuk menggunkaannya simple 
+        <canvas></canvas> 
+    hal yang bisa di buat dengna canvas 
+            1. bisa kotak bentuk2 dimensi 
+            2. bisa lingkaran bentuk2 dimensi 
+            3. bisa segitiga bentuk2 dimensi 
+
+    canvas juga bisa membuat digital art 
+
+        canvas 
+    . Digunakan untuk menggambar grafis menggunakan javascript
+    . Biasa digunakan untuk membuat: animasi, game, visualisasi data, manipulasi foto dan pemrosesan vidio secara real-time
+    . Dapat berisi object 2D atau 3D 
+            untuk 2D 
+            . canvas API 
+            untuk 3D
+            . WebGL API
+
+
+    atribute canvas 
+1. width 
+2. height
+
+                Canvas API 
+    adalah cara kita menghubungkan canvas agar bisa di manipulasi dengan javascript
+-> Canvas API menyediakan cara untuk menggambar grafis 2D Menggunakan Javascript
+
+
+            yang perlu di ingat dari sebuah canvas adalah titik 0 gravitasinya itu ada dimana , di canvas 0 gravitasinya itu ada di atas kiri dari canvasnya 
+sumbu horizontal di sebut sumbo x dan sumbu vertikal di sebut sumbu y 
+            
+    jadi ketika kita memulai sebuah object kita harus tentukan dahulu titiknya mau mulai dari mana , kita tentukan mau dimana misalkan kita tentunkan 50,50 
+    itu artinya kita ingin ke kanan width nya 50 dan height nya juga 50 , jadi ketika kita ingin mulai membuat sebuah kotak mulai nya pada titik itu  , dan tinggal kita tentukan dimensi pada kotaknya berapa , lebarnya berapa tingginya berapa , jadi seperti 2x kita deklarasinya width dan heightnya , 1. untuk mulainya dari mana 2. pembentukannya
+
+
+            cara pakainya -> 
+            <canvas id="mycanvas"></canvas>
+                const mycanvas = document.getElementById( 'mycanvas');
+                <!-- Mengambil dahulu element canvasnya  -->
+                mycanvas.width = window.innerWidth;
+                <!-- Kita deklarasikan lebar dan tingginya , namun disini kita ingin lebar dan tingginya full satu layar bisa saja dengan 300px dll  -->
+                mycanvas.height = window.innerHeight;
+                <!-- sama dengan width -->
+
+                const с = mycanvas.getContext( '2d');
+                    <!-- Kita ingin menggunakan Contex API yang mana ? 2d atau 3d setelah kita pilih masuk ke variable c , jadi variable c inilah yang akan kita gunakan untuk memanipulasi canvasnya -->
+                
+
+
+ => Bentuk apa saja yang bisa dibuat oleh Canvas API ?
+            1. Rectangle (Kotaknya) ->
+        
+            2. Arc / Circle (Lingkaran)
+            3. Path (Bentuknya bebas tergantung kita)
+            4. Bezier & Quadratic Curve (Jika ingin membuat curva)
+
+
+            HTML 5 Terhenti di episode ke 5  Tentang canvas Menit 11:00 

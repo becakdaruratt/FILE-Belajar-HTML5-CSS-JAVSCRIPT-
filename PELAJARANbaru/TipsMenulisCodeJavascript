@@ -1,0 +1,59 @@
+                <== Clean ==>
+Code yang clean adalah code yang mudah dipahami oleh orang lain, mudah diperbarui, dan mudah dipelihara (maintain). Berikut ini 10 tips untuk menulis code JavaScript yang clean, mudah dibaca, & mudah di-maintain. Tips ini dapat juga diaplikasikan ke bahasa pemrograman lain.
+
+    #Tips 1 
+Gunakan bahasa Inggris
+
+    #Tips 2
+Gunakan Verb untuk fungsi, noun untuk variable
+* Verb = Kata kerja 
+    . contohnya 
+        1. get
+        2. add
+        3. delete
+        4. validate
+    (Gunakan Kata dasar)
+
+* Noun = Kata benda 
+    . contohnya 
+        1. user,users 
+        2. product,products 
+        3. category,categories 
+        4. plant,plants
+        5. zombie,zombies 
+
+    #Tips 3
+Gunakan kata jamak atau Plural untuk array
+    Singular = tunggal
+    Plural = jamak 
+
+    #Tips 4
+Penamaan variable saat iterasi array
+    gunakan singular = tunggal dari nama variabel array
+
+    #Tips 5
+Boolean Prefix => is-,has-,can-,should-
+
+                    <== Alasan bahas Variable karena ==>
+            pertama orang baca codingan itu dari variablenya dulu
+
+    #Tips 6
+Simpan kondisi kedalam Variable agar rapi , dan kalau kondisi nya ada banyak 
+simpan kedalam variable lagi sehingga di kondisi if() maksimal cuma 2 saja
+
+    #Tips 7
+Penamaan variable boolean harus positif = Gk boleh pake not (!) atua tanda seru
+
+    #Tips 8
+Hindari menamai Variable dengan -> data <-
+    Eksplisit itulebih baik dari pada implisit
+
+        explisit = terus terang tidak berbelit belit sehingga orang dapat menangkap maksudnya dengan mudah dan tidak mempunyai gambaran yang kabur 
+
+    #Tips 9
+1 fungsi 1 Tanggung jawab => jangan membuat 1 fungsi melakukan banyak hal sekaligus
+
+    kita pecah dan simpanke dalam variable untuk lebih sederhana
+
+    #Tips 10
+Gunakan Javascript Linter => Berfungsi mengkoreksi error pada code kita dan mengkoreksi code kita yang tidak konsisten

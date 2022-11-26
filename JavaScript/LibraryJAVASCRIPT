@@ -45,8 +45,40 @@ setInterval(function(){
     
 }, timeout); => menunggu dulu dengna menset timeoutnya , jika 1000 artinya 1detik 
 
+18. Array.from() => artinya kita mengubah nodelist menajdi array / arguments menjadi array
+19. .textContent => untuk mendapatkan text di HTML 
+20. includes('JAVASCRIPT LANJUTAN'); => tulisan didalamnya terdapat apa? gitu 
+21. .dataset => mengambil datanya dilanjutkan nama data nya .duration
+<li data-duration="15:27">Teknik Pomodoro</li>   <== contoh attributnya 
+22. .split(); => menghilangkan value : di element array 
+.map(waktu => {
+    // kita ubah 10:30 -> [10,30] = namanya di .split 
+    const parts = waktu.split(':');
+        // Kita coba hialngkan : dengan menggunakan method .split();
+    return parts;
+})
+23. .parseFloat(); => sama dengan parseInt mengubah nilai jadi int bedanya jika bilangannya sudah int maka parse float akan ubah jadi desimal , dan jika bilangannya mengandung desimal maka akan ditampilkan semua nilainya
 
 
+    .map() membuat array baru 
+    .forEach() Tidak membuat array baru , jika kita buat 2 parameter maka parameter pertama untuk value dan ke dua untuk key nya atua indexnya
+
+24. .entries() -> sebuah method yang bisa menampilkan sebuah index di for OF 
+    cara pakai =>
+    // Menggunakan method dan kurung siku destructuring assignment
+    const lop = ['sandhika','doddy','erik'];
+    for(const [s,w] of lop.entries()){
+        console.log(`${s} adalah mahasiswa ke- ${w + 1}`);
+    }
+25.  XMLHttpRequest(); -> object ajax 
+26.  $.ajax({
+
+}); => adalah method ajax
+27. mycanvas.getContext( '2d'); -> ada 3d juga untuk manipulasi canvas
+const c = mycanvas.getContext('2d');
+c.fillRect(25,25,100,100); <- untuk membuat lingkaran lebih lanjutnya baca di HTML5 Tentang canvas 
+
+        arguments => bukan sebuah array tapi object
             
                     // Method pada array
     // 1. .length
@@ -160,6 +192,28 @@ console.dir(); =>menampilkan object
     .map(b => b / 2)
     .reduce((acc , cur) => acc + cur);
     console.log(hasil);
-                    Method chaining di representasikan dengan titik .
+                    Method chaining di representasikan dengan titik .''
 
+
+    .concat(); => metode menggabungkan 2 buah array -> contohnya
+    const gabung1 = ['sibolga','medan','bandung'];
+    const gabung2 = ['jakarta','surabaya','sibuluan'];
+        const gabungan = [...gabung1,...gabung2];
+        console.log(gabungan);
+
+                // kalau seperti ini , ini salah karena array dalam array dibawha conthnya
+            // const gabungan = [gabung1,gabung2];
+    // Sebetulnya kita bisa menggunakan method .concat(); namun dengan spread operator bisa lebih fleksibel jika kita tambahkan element baru di tengah tengah nya 
+            const gabungan = gabung1.concat(gabung2);
+
+
+
+                // COntoh lain Filtering
+        function filterBy(type , ...values){
+            return values.filter(v => typeof v === type);
+        }
+
+                // Tugas kita adalah mana saja dari parameter yang dikirim ke filterBy yang bentuknya angka
+        console.log(filterBy('number',1,2,'Sandhika',false,10,true,'Doddy'));
+         // hasilnya bisa number karena 'number' <- kita memilihnya number
                                         

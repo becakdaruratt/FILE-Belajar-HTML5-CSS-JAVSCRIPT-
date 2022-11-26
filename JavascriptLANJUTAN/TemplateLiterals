@@ -1,0 +1,24 @@
+                    <== Template Literals ==>
+    atau String Template                    
+atau disebut juga dengan nama template String                     
+
+
+    - MDN Web Docs => Template Literal adalah string Literal yang memungkinkan adanya expression didalamnnya
+        => String Literal yang dimaksud adalah String yang biasanya kita gunakan 
+
+            Template Literal 
+        .   Hanya bisa digunakan `` Back tick 
+        .   Kita jadi bisa membuat multi-line String
+        .   Embedded expression
+        .   HTML Fragments
+        kita bisa membuat HTML cukup dengan 2 back tick di awal dengan di akhir , lebih mudah dari pada menggunakan string + '' ""
+        .   expression Interpolation
+
+
+                biasanya di String biasan jika kita ingin membuat baris baru kita menggunakan \n agar ada baris baru seperti <br> tetapi jika kita menggunakan backtik cukup kita spasi saja 1 bari sudah deh hasilnya sama 
+    didalam `${}` => kita bisa melakukan operasi matematika , atau memanggil function juga karena Function merupakan expression juga 
+        atau kita juga bisa menyimpan ternary operator didalam ${} karena ternary itu juga merupakan expression 
+            contoh jika dengan ternary =>
+            const x = 10;
+    console.log(`${(x % 2 === 0) ? "Genap!" : "Ganjil"}`;
+            

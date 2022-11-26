@@ -1,0 +1,17 @@
+                    <== For in dan For of ==>
+Adalah Sebuah Looping Baru pada Javascript (pada Modern Javascript)
+
+    For..of ->  Creates a loop iterating over iterable object => adalah sebuah looping yang bisa menelusuri yang iterable
+
+            iterable object 
+           .   String
+           .   Array
+           .   Arguments/Nodelist 
+           .   TypedArray
+           .   Map 
+           .   Set 
+           .   User-defined iterables
+    Nodelist adalah ketika kit melakukan query pada DOOM
+
+    For..In -> Creates a loop only iterating over enumerable , enumerable artinya property pada object 
+

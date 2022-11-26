@@ -83,3 +83,18 @@ $dark-text: #ddd ;
     border-top-color: salmon;
     border-bottom-color: lightblue ;
 }
+
+
+    di HTML sendiri kita bisa memberikan attribut yang naamnya data lalu - nama datanya apa contoh =>
+    <li data-duration="15:27">Teknik Pomodoro</li> => hASIL Attributenya adalah String
+
+        cara mengambil attribut 
+        const data =  document.querySelectorAll('[data-duration]');
+
+
+
+            kalau block tidak bisaa menggunakan transform();
+
+    beda nya antara div dan span 
+    div itu block line = menambahkan baris baru 
+    sendagkan span inline = tidak meanmbahakn baris baru 

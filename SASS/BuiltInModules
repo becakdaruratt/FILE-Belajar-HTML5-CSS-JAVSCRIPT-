@@ -1,0 +1,23 @@
+                <== Built In Modules ==>
+        yaitu fungsi fungsi bawaan dari SASS
+ada banyak salah satu jenis-jenisnya 
+    1. Color 
+    2. List 
+    3. Map 
+    4. Math 
+    5. Meta 
+    6. Selector 
+    7. String
+        yang akan kita bahas hanya 1 saja kali ini yaitu warna atua color 
+        ada banyak salah satu jenis jenisnya 
+    . adjust 
+    . complement
+    . darken
+    . lighten 
+    . saturate 
+    . desaturate
+    . grayscale
+    . mix 
+    . fade-in 
+    . fade-out
+                // Inti dari pembahasan color atau warna ini adalah kita bisa menambahkan gradasi warnanya , atau manipulasi warna misal kita punya warna cirmson kita bisa tambahkan warna orange gitu

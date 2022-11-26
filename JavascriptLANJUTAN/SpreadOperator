@@ -1,0 +1,9 @@
+                    <== Spread Operator ==>
+        Spread Operator vs Rest Parameter 
+    kedua hal tersebut di notasikan dengan representasi ... (titik 3 kali) walaupun
+    notasinya sama tetapi kedua hal tersebut berbeda
+
+            => Spread Operator adalah memecah (expand/unpack) iterables menjadi 
+                                single element yang tadi for Of nya banyak isinya
+                                dipecah jadi single element 
+                            

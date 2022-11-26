@@ -1,0 +1,85 @@
+v                <== Audio & vidio ==>
+    Tag audio -> Merepresentasikan suara atau aliran audio 
+        contoh tag nya ->
+        <audio controls src="audio/1.mp3/audio"></audio>
+    src =  tempat kita menyimpan file audionya
+    controls = untuk menambahkan play , pouse dan untuk menggeser posisi audio nya
+
+            -> atau lebih kompleks dengan menggunakan tag figure 
+    <figure>
+            <figcaption>
+              Dengarkan "Skyline - Anno Domini"
+            </figcaption>
+            <audio controls src='audio/1.mp3°'>
+              Browser tidak mendukung tag <code>audio</code>
+                {/* adalah penanda jika browser tidak mendukung audio yang muncul adalah ini */}
+            </audio>
+     </figure>
+
+        <audio> attributes /</audio>
+  . src = attributes wajibnya
+  . controls = agar user bisa mengendalikan controler defaultnya , karena jika tidak dibuatkan controls nya maka asumsinya di jalan kan oleh program atau javascript
+  . preload = membuat file audionya di load dulu sebelum di jalankan , karena default nya di load pada saat kita jalankan atau tombol play
+  . autoplay = menjalankan audio secara otomatis 
+  . loop = untuk mengulang audionya ketika sampai akhir 
+  . muted = Untuk membuat audio nya tidak bersuara 
+
+                    # Catatan Audio          
+            . Digunakan untuk menjalankan file audio 
+            . file yang didukung: .mp3, .wav, .ogg
+            . Bisa menggunakan tag <source> untuk memilih audio atau kita bisa membuat tipe file berbeda dan tag audio nya akan menjalankan tag audio yang pertama kali di temukan dan disupport filenya jadi kita bisa memasukkan 3 file yang berbeda tapi audionya sama , 1. mp3 2.wav 3.ogg
+    
+
+    -> jika dengan <source>
+
+<figure>
+  <figcaption>
+    Dengarkan "Skyline - Anno Domini"
+  </figcaption>
+  <audio controls>
+    <source src="audto/l.ogg" type="audio/ogg">
+        {/* File yang diputar adalah ogg karena pertama di temukan dan file ogg lebih ecil dari pada mp3 */}
+    <source src="audio/1.mp3" type="audio/mpeg">
+  </audio>
+</figure>
+
+
+                
+
+
+
+    Tag Vidio -> Element yang digunakan untuk menampilkan Vidio, film ataupun audio
+        Cara BIkinnya sama dengan audip 
+                simple -> 
+            <video src="video/1.mp4" controls width="400"></video>
+
+        Attribut vidio lebih banya dari audio 
+    . src 
+    . controls 
+    . poster = untuk menampilkan sebuah gambar yang akan menggantikan vidio jika tidak bisa tampil 
+    -><video controls width="400" poster="img/video-bg.png"></vidio>
+ poster ini mirip seperti thumbnail jika vidio tidak jalan maka poster yang di tampilkan , jika tidak kita kasih poster maka tampilannya layar hitam 
+
+    . preload = sama dengan audio 
+    . autoplay = di play sendiri , jika audio itu tidak bisa karena browser otomatis menghentikannya karena user tidka suka , namun kita bisa akali untuk vidio
+ <video controls width="400" poster="img/video-bg.png" loop autoplay muted></video>
+    kita gunakan muted agar , audio nya tidak jalan tapi vidionya tetap jalan , dan kita juga bisa hilang kan controls nya jadi bisa seperti background vidio gitu , background dari halaman vidio
+<video width="400" poster="img/video-bg.png" loop autoplay muted></video>
+    . loop = 
+    . muted =
+    . width = lebar vidio 
+    . height = tinggi vidio
+
+                extensi file 
+            vidio 
+            1. .mp4 
+            2. .webm => lebih kecil dari .mp4
+    bisa juga menggunakan source link 
+<video>
+    <source src="video/1.webm" type="video/webm">
+    {/* Tag yang digunakan adalah yang pertama di temukan jika webm jika error tag 1 maka yang akan di pakai yang ke dua , webm lebih kecil dari pada .mp4 */}
+    <source src="video/1.mp4" type="video/mp4">
+    Browser tidak mendukung tag <code>video</code>
+    {/* Jika keduanya tidak didukung maka yang tampil adalah ini  */}
+</video>
+    

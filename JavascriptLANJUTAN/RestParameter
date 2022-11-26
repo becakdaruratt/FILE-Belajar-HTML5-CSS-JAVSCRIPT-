@@ -1,0 +1,6 @@
+            <== Rest parameter ==>
+cara Pembuatan nya masih sama ... (titik tiga) dengan Spread Operator cuman 
+cara penggunaannya berbeda 
+
+    Rest parameter => adalah merepresentasikan argument pada function dengan jumlah
+                        Yang tidak terbatas menjadi sebuah array

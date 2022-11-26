@@ -1,0 +1,73 @@
+                    <== HTML 5 ==>
+Apa itu HTML 5? 
+    "Istilah HTML5 digunakan sebagai jargon yang mengacu pada teknologi web,
+    modern yang dikembangkan oleh WHATWG." -https://html.spec.whatwg.org
+
+        5 <- pada HTML bukan versi lagi 
+        WHATWG -> the web Hypertext Application Technology Working Group
+            isi dari WHATWG -> 
+    .   Komunitas berisi orang orang yang tertarik pada perkembangan teknologi web
+    .   Siapapun bisa bergabung
+    . Tugas mereka adalah membuat standart dan pengujian pada web Khusus nya HTML
+    .   dibentuk oleh orang orang dari Apple, Mozilla Fondation, dan opera di tahun
+        2004
+
+                alasan kenapa WHATWG dibentuk karena saat itu, W3C Tidak tertarik 
+    untuk mengembangkan HTML
+
+            -> Sejarah HTML                
+    . PERTAMA kali dibuat oleh TIM Berners-lee di CERN, pada tahun 1990
+    . Pengembangan HTML 2.0 dibuat pada tahun 1994
+    . Dikembangkan lagi HTML 3.0 dibuat pada januari 1997
+        - dikembangkan dan distandarisasi oleh W3C
+    . HTML 4.0 dibuat pada Desember 1997
+
+                . XHTML mulai dibuat pada 1999 => untuk menggantikan HTML
+                    - versi XML dari HTML
+                    - Mulai dari tahun ini Pengembangan HTML mulai ditinggalkan oleh
+    W3C, karena fokus di XHTML
+    . HTML5 mulai di usulkan pada tahun 2004
+        . Mozilla & Opera mengusulkan kembali pengembangan HTML
+        . ditolak karena W3C memilih untuk mengembangkan XHTML
+        . karena ditolak Apple, Mozilla & Opera memutuskan membuat WHATWG, yang fokus ke pengembangan HTML agar kompatibel juga untuk versi versi sebelumnya
+
+
+                . Pada tahun 2006, W3C kembali tertarik untuk mengembangkan HTML5
+                    - WHATWG mengijinkan agar spesifikasi HTML5nya dipublikasikan dengan lisensi dari W3C
+                . Selama bertahun tahun bekerjasama Untuk mengembangkan HTML 5
+    . Pada tahun 2011, Kembali terjadi Konflik
+        .   W3C ingin menyelesaikan versi HTML5 
+        .   WHATWG ingin membuat living standard untuk HTML (terus dikembangkan)
+            . jalan masing masing lagi
+    . Pada Tahun 2019, W3C & WHATWG menandatangani perjanjian kerja sama
+        .   WHATWG mengembangkan 'living standard' HTML
+        .   W3C yang memfasilitasi -> mengusulkan agar browser borwser menerapkan
+            standarisasi yang telah dibuat 
+
+
+
+
+
+            => Kalau kita kembali apa itu HTML5 ? 
+    Penjelasan WHATWG -> :
+            kedepannya WHATWG ini hanya akan mengerjakan HTML tanapa
+            perlu khawatir dengan versinya , kalau orang orang bicara tentang HTML
+            5 dengan konteks di WHATWG itu artinya adalah HTML dari versi terbaru 
+            bukan versi dari HTMLnya, dan ini membuat kemungkinkan tidak akan ada 
+            HTML6, karena HTML5 akan selalu di perbaharui
+
+
+
+
+    => Struktur Dasar HTML 
+    <!DOCTYPE html> = artinya kita ingin HTML Terbaru
+
+            ! Yang baru sekarang di HTML5 -> cukup banyak
+        kita akan pakai beberapa saja 
+    1. Semantic Elements (Element element baru dengan makna Semantic)
+    2. Media Elements bisa menyimpan tag - tag atau element element Untuk media 
+    misalkan gambar , vidio , audio
+    3. Canvas & SVG
+    4. Form Validations -> banyak yang bisa kita gunakan
+    5. Web Storage -> Menyimpan data dengan Web Storage
+    6. Accessibility

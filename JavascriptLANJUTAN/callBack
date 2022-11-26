@@ -1,0 +1,16 @@
+                <== Call back ==>
+adalah Function yang dikirimkan sebagai parameter pada Function lain
+    ada juga yang berpendapat
+adalah Function yang di eksekusi setelah fungsi lain selesai dijalankan
+
+    -> Synchronous callback itu eksekusi nya dari atas ke bawah jadi kalau ada macet 
+    maka yang di bawah nya tidak akan pernah di eksekusi
+    -> Asynchronous callback itu kalau misalkan ada macet di tengah dia akan tetap 
+    di eksekusi sambil nuggu tapi ada track lain yang eksekusi dibawah nya sehingga 
+    yang terakhir itu terlambat di eksekusi 
+
+
+
+    Manfaat Call Back 
+
+    kekurangan Call Back

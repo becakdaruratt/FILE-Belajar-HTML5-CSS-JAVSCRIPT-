@@ -1,0 +1,29 @@
+                <== FrontEnd Tips ==>
+        HTML Semantic Element (+SEO(Search Engine Optimization) accessibility) ->
+        yaitu langkah optimasi yang dilakukan agar website berada di hasil teratas mesin pencari, terutama Google.
+
+
+                => Ketika website kita di publik maka ada 3 pengunjung web kita
+        1. Web kita di kunjungi Manusia 
+        2. Web kita di kunjungi oleh bot (Program Computer) => seperti search engine
+        3. Web kita di kunjungi manusia dengan disabilitas => Biasanya content web kita di bacakan ke orang tunanetra dengan (Screen Reader) => sama dengan yang ke 2 tadi merupakan program Computer juga
+
+                . antara manusia dengan computer berbeda dalam membaca sebuah program web kita  , jika manusia bisa langsung tahu hanya dengan melihat secara visual 
+        berbeda dengan Program computer karena Program computer membacanya dari code HTML dari halaman web tersebut
+
+            Pertanyaan : 
+                Gimana ngasih tau ke search Engine/Screen Reader, mana yang content,mana yang saidebar dan mana yang footer dll
+                
+            Jawabannya : dengan menggunakan semantic element
+
+    Manfaat Semantic Element : 
+                        1. Search Engine mudah memahami web kita
+
+
+
+           <div class="navigation" role="navigation"></div>
+        kita tambahkan pada role nya role="" <- penjelasan yang akan di baca 
+        Screen Reader     
+          kita juga bisa memberikan informasi tambahan baru masuk navigation 
+        -> contohnya 
+<div class="navigation" role="navigation" aria-label="my-main-navigation"></div>           

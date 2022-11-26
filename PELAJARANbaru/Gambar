@@ -1,0 +1,45 @@
+            Gambar di Web, Gak Sesimpel Itu Ternyata! 😲
+
+        Tips #1
+cara coding agar gambar yang di bawah viewport atau layar tidak langsung di dwonload 
+agar lebih hemat kouta user dengan menambahkan attribute 
+
+        loading="lazy" <- di HTMLnya dilakukan jika ada di bawah vieport 
+
+        Tips #2
+    Jika gambar didalam viewport yang tampak langsung ke layar saat di load 
+        . jangan menggunakan default 
+        . lazy-load kalau langsung tamping di layar
+            tetapi pakai 
+                . Preload -> artinya kita memberikan perintah kepada browser kalau 
+gambar ini penting soalnya akan pertama kali dilihat oleh user 
+
+    analoginya gambarnya duluan di dwonload dari pada css dan javascriptnya sehingga
+    lebih cepat 
+        cara pakainya adalah => 
+                memberikan link pada htmlnya 
+        <link rel="preload" as="image" href="/doge.png"> ->artinya kita gunakan link 
+        gambar kita 
+
+                => Ini juga adalah salah satu cara agar dapat score LCP yang tinggi
+            Tips #3
+        gunakan file gambar 
+            . SVG  -> Memang Svg jika di zoom gk pecah 
+            . WEBP/AVIF -> 
+            dll 
+    kita bisa gunakan website = squoosh.app untuk mengkonfersi jadi file apa
+
+
+            Tips ke #4
+
+        Jika tidak kita definisikan lebar dari sebuah gambar maka yang terjadi
+    adalah akan ada pergeseran tata letak pada text kita dan gambar , jadi harus 
+    kita tentukan di html atua di CSS juga bisa
+
+            salah satu di sarankan oleh CLS (core web vital) jadi jangan di 
+            sepelekan
+
+            Tips ke #5 
+        Jangan lupa kasih penjelasan pada gambar , alt=""; ada banyak manfaatnya
+        salahsatu agar saat orang search di google , google mengkasih gambar kita 
+        jadinya orang jadi mengengunjungi browser kita

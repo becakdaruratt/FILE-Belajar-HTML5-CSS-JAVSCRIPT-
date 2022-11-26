@@ -1,0 +1,73 @@
+            <== Img Elements ==> 
+yang baru pada tag Img
+
+        <img src="" alt="" title=""> Attribute yang baru 
+    . src
+    . alt
+    . width & height 
+    . title -> menuliskan informasi tambahan pada gambar dan harus ada altnya dulu
+    . srcset
+            - untuk membuat halaman web responsive 
+            - mimilih gambar yang berbeda berdasarkan syarat tertentu
+            - Bisa berdasarkan lebar layar atau kerapatan pixelnya
+    contoh penggunaan ->
+            <img src="" srcset="img/cat-small.jpg 500w,
+                                img/cat-medium.jpg 750w,
+                                img/cat-large.jpg 1000w">
+                        tergantung lebar layar jika 500width yang di pake 
+                        yang small jadi kayak alternatif yang src defaultnya        
+        kalau di mozzila jika sudah 1000w lalu di kecilkan layar tidak berubah itu
+        karena sudah tersimpan di case jadi harus di refresh
+    . sizes -> Untuk mengatur ukuran gambar yang berbeda 
+    contoh penggunaan ->
+            <img src="" srcset="img/cat-small.jpg 500w,
+                                img/cat-medium.jpg 750w,
+                                img/cat-large.jpg 1000w" 
+                        sizes="(min-width: 1200px) 50vw">
+    Penjelasannya , kita ingin saat lebar layarnya 1200px maka kita ubah lebarnya
+        menjadi setengah dari viewport heightnya 
+    . loading -> Memntukan bagaimana gambar di-load oleh browser 
+    . bisa di isi 'eager' (defaultnya) atau 'lazy'
+            <img src="" srcset="img/cat-small.jpg 500w,
+                                img/cat-medium.jpg 750w,
+                                img/cat-large.jpg 1000w" 
+                        loading="lazy">
+            tidak menampilkan atua mendwonload gambar jika masih di bawah vieport
+
+    
+    . figure -> Merupakan gambar yang bisa berdiri sendiri di Halaman kita
+
+            - Merepresentasikan konten yang berdiri sendiri tanpa mempengaruhi flow 
+                halaman 
+            - Bisa gambar, ilustrasi, diagram, code snipet , audio juga 
+            - Biasanya gambar yang memiliki caption, menggunakan <figcaption>
+    contoh penggunaan -> 
+            
+            <figure>
+                <img src="" alt="Kucing abu-abu Pake kacamata itam ">
+                <figcaption>Kucing abu-abu pake kaca mata hitam</figcaption>
+            </figure>
+            sebuah tag yang membuat gambar beridiri sendiri dan ada penjelasan 
+            gambar atau caption di bawah gambar, biasanya sangat cocok untuk sebuah 
+            <article>
+    
+    . picture -> Merupakan cara kita menampilkan gambar khusus untuk gambar yang 
+                ditampilkan secara berbeda di lebar layar yang berbeda mirip seperti 
+                srcset tadi  pada img cuma ini lebih jelas penulisannya
+            - Bertujuan untuk optimasi halaman agar menghemat bandwitch dan 
+                mempercepat load time
+            - bisa digunakan juga sebagai art direction, untuk menampilkan gambar 
+                yang berbeda pada display / device yang berbeda 
+
+    contoh penggunaan ->
+<picture>
+     <source media=" (min-width: 960px)" srcset=" img/cat-large. jpg" sizes="50vw">
+     <source media=" (min-width: 600рх)" srcset=" img/cat-medium.j jpg">
+     <img class="example" src=" img/cat-small. jpg" alt="Kucing abu-abu">
+</picture>
+
+<video>
+    <source src="video/1.webm" type="video/webm">
+    <source src="video/1.mp4" type="video/mp4">
+</video>
+            -> jika linknya vidio

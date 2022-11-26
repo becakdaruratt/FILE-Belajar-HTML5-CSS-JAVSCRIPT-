@@ -1,0 +1,6 @@
+            <== Callback Latihan ==>
+Kita akan menggunakan CallBack untuk kasus yang lebih nyata lagi kita akan menggunakan ajax dan jQuery  
+
+        Kita akan menggunakan open API atau publick API yang namanya OMDb API yaitu data base yang sama dengan film
+    bahannya 
+    1. kita pake Postman = untuk mengconnectkan ke API 

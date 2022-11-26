@@ -1,0 +1,27 @@
+        <== Track ==>
+sebagai pendukung untuk vidio
+    track attribute
+  . src = sumber dari attribute nya 
+  . kind = berisi jenis tracknya 
+        1. subtitle => terjemahan dari vidio 
+        2. caption => terjemahan dari suara vidio nya apapun
+        3. chapter => bagian bagian dari vidio yang mau di tuju 
+        4. description => penjelasan tentang vidio dan berguna untuk screen reader 
+        5. title => judul dari caption atau subtitle ditulis dalam bahasa apa 
+        6. srclang => code bahasanya indonesia =id , english = en , jepang = jp 
+
+        cara pakai track  ->
+        <video controls width="400">
+            <source src="video/1-apa-itu-htm15.webm" type="video/webm">
+            <track src="captions/caption2.vtt" kind="captions" title="Bahasa
+            Indonesia" srclang="id">
+            <track src="captions/caption2.vtt" kind=*captions* title="English"
+            srclang="en">
+        </video>
+          
+
+
+
+
+
+        namun jika kita ingin langsung vidionya dari yt kita harus menggunakan teknik embed , yaitu kita copy dari share yang ada di yt pilih embed lalu copykan scriptnya dan pastekan code editornya

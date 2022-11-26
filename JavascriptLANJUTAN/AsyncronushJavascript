@@ -1,0 +1,65 @@
+                    <== Asyncronush Javascript ==>
+kita belajar Asyncronush adalah tujuan nya supaya kita tidak bingung dengan 
+.   Callback 
+.   Promise 
+.   ajax 
+.   Async & Await 
+                            // Untuk orang awam
+    Javascript -> adalah Bahasa pemrograman tingkat tinggi dan dinamis yang secara
+                    umum dapat berjalan pada browser 
+                    = ini adalah pemhaman orang awam 
+        
+
+                        // Untuk yang sudah advance
+        Javascript -> adalah is a single-threaded, non blocking, asynchronous and 
+                      concurrent languange
+                
+                1. single-threaded -> urutan eksekusi kode yang dapat dilakukan
+                                    secara bebas / independent satu sama lain 
+                    intinya Javascript hanya bisa melakukan satu hal pada satu 
+                    waktu tertentu
+                
+                            = Javascript script membaca baris perbaris dan memberes
+                                kannya
+        // Kesimpulan
+.  Single vs Multi Thread 
+    Lingkungan eksekusi task kita (di kerjakannya menggunakan 1thread atua banyak)
+.  Blocking vs Non-blocking
+    Teknik Ngoding (10 related)
+.  Syncrhronous vs Asynchronous
+    Teknik Ngoding (HTTP Request related) -> biasanya kalau kita mau menggunakan ajax
+.  Concurrent vs Parallel
+    Lingkungan eksekusi task
+
+                sederhananya jika task kita lama maka akan di skip sampai task 
+                yang berjalan itu selesai baru di tampilkan ini dinamakan
+        Asynchronous Callback 
+                    dan ada sesuatu yang namanya Event Loop 
+        yang fungsinya mencek di callbackQue ada antrian tidak kalau ada ambil
+        callback nya simpan kedalam stack , tapi prosessnya masuk ke API dulu 
+    
+Penjelasan lebih detailny ada di 
+            YT : JAVASCRIPT LANJUTAN | 9. Asynchronous Javascript
+        menit ke 15 : 00    
+
+
+        SYarat masuk callback ke dalam stack ketika didalm stacknya sudah tidak ada
+    kumpulan stack yang akan di eksekusi jadi harus kosong dulu baru Evant loop nya 
+    bisa memasukkan callback nya ek stack
+
+
+                    WEB API -> Punya nya Asyncronush callbacks
+            1. DOM 
+            2. ajax (XMLHttpRequest)
+            3. setTimeout
+            4. setInterval 
+            ... 
+                        callback seperti di high order Function
+                console.log bisa langusng ke stack karena dia bukan asynchronous API
+        
+    setTimeout -> tadi nunggu dulu di Web API nya selamat 5 detik baru masuk ke 
+                callback , dan eksekusi nya di lanjutkan sambil nunggu setTimeout
+                nya di eksekusi tapi di cek dulu sama Event loop 
+
+
+                

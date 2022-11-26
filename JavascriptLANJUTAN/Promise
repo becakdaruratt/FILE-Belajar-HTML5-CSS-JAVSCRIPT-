@@ -1,0 +1,30 @@
+                    <== Promise ==>
+Promise ini fungsinya sebagai solusi atau untuk menangani sebagai callback heal
+
+                -> Promise = janji
+        Promise adalah Sebuah object yang merepresentasikan Keberhasilan / kegagalan
+sebuah event yang asynchronous di masa yang akan datang
+
+    dan yang namanya janji ada 2 , (Terpenuhi / ingkar / pending)
+
+    hal ini disebut dengan states (Promise State)
+        1. kalau janji Terpenuhi = fulfilled
+        2. kalau tidak Terpenuhi = rejected
+        3. ada satu lagi namanya pending = waktu tunggunya sebelum janji nya terpenuhi atau tidak
+
+
+            dan untuk menjalankan keadaan ini ada 3 fungsi callback yang harus di ingat
+                    1. resolve = ini akan kita buat ketika janji nya terpenuhi
+                    2. reject = ini kita buat ketika janji nya tidak terpenuhi 
+                    3. finally = ketika waktu tunggunya selesai -> apapun diantara resolve dan reject yang telah di kerjakan finally dulu duluan baru salah satunya
+    perlu di ingat khusus finally tidak boleh salah urutan harus urutan pertama , kedua then, ke tiga catch 
+            dan terakhir didalam promise ini ada sebuah aksi yang kita lakukan
+    ketika janji nya terpenuhi atau tidak terpenuhi
+
+        kalau terpenuhi kita sebut dengan (then())
+        kalau tidak terpenuhi kita lakukan atau sebut (catch())
+
+            bisa juga dengan menggunakan finally => untuk animasi loading , begitu salah satu terpenuhi resolve dan reject sebelum di eksekusi matikan animasi loadingnya
+
+            fetch('http://www.omdbapi.com/?apikey=dca61bcc&s=avengers');
+            -- Untuk mengambil data url API nya atau link APInya

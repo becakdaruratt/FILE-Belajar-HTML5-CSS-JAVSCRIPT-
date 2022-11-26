@@ -1,0 +1,39 @@
+            <==  Destructuring Variable ==>
+atau ada yang menyebutnya  Destructuring Assignment juga kalau kita lihat di java
+script fitur ini menurut pak sandhika galih cukup unik kalau kita lihat definisinya 
+
+    adalah Expression pada Javascript yang membuat kita dapat membongkar nilai 
+    dari array atau property dari object kedalam variable yang terpisah
+ - MDN Web Docs 
+
+        -> berikut adalah contoh memisahkan array yang ada didalamnya 
+    const coba = ['satu' , 'dua' , 'tiga'];
+        const [a , b , c] = coba; -> Sehingga tiap tiap element pada array coba akan
+            dipetakan masuk ke array a , b , c tanpa perlu kita assign atau = satu 
+            persatu 
+        console.log(a); => satu
+        console.log(b); => dua
+        console.log(c); => tiga
+
+    -> Begitu pula jika dia object juga sama kita bisa memisahkan property didalam 
+        object nya 
+    
+            const mhs = {
+                nama: 'Sandhika Galih',
+                umur: 33,
+                email: 'pwdarurat@gmail.com'
+            };
+    const {nama , umur , email} = mhs;
+        console.log(nama); -> Sandhika Galih
+        console.log(umur); -> 33
+        console.log(email); -> pwdarurat@gmail.com
+        
+            #Kalau biasanya kita menggunakan mhs.<nama property> skarang kita tidak 
+perlu menggunakannya lagi cukup menuliskan syntax kurung kurawal pada variablenya 
+untuk object dan kurung siku untuk array , dengan begini saja kita sudah bisa 
+memisahkan isi dan property pada array dan objectnya 
+
+
+
+                # Dibawah adalah contoh dan jalan secara teori nya 
+     

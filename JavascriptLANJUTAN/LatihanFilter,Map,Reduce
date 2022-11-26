@@ -1,0 +1,44 @@
+    => Kita telah buat sebuah latihan menggunakan method Filter , map Dan reduce 
+    untuk menjumlahkan vidio dan total durasinya
+
+    // Langkah-langkah atau algoritma yang akan kita gunakan
+
+    // 1. ambil semua element vidio
+    const data =  document.querySelectorAll('[data-duration]'); => kita tidak bisa menggunakan map,Filter,reduce karena ke 3 itu adalah array kecuali kita menggunakan forEach untuk mengubah querySelectorAll nya menjadi array 
+    Array.from() => artinya kita mengubah nodelist menajdi array
+
+    Array.from(document.querySelectorAll('[data-duration]'));
+
+        dan kalau array kita bisa kasih High order function 
+        
+    // 2. Pilih hanya yang 'Javascript Lanjutan'
+    const jsLanjut = data.filter(vidio => vidio.textContent.includes('JAVASCRIPT LANJUTAN')); => menggunakan method yang penjelasan method nya ada di Library javascript
+console.log(jsLanjut);
+    // 3. ambil durasi masing masing vidio 
+    .map(item => item.dataset.duration)
+    // 4. Ubah durasi menjadi int, ubah menit menjadi detik
+    .map(waktu => {
+        // kita ubah 10:30 -> [10,30] = namanya di .split 
+        const parts = waktu.split(':').map(part => parseInt(part));
+            // Kita coba hialngkan : dengan menggunakan method .split();
+        return (parts[0] * 60) + parts[1]; =>Kalikan parts ke 0 dengan 60 + parts ke 1 = kan kita punya 2 element tuh => karena milisecon itu kan 1000s artinya 1 detik makanya kita kalikan , dan kita menjumlahkan nya dengan nilai di sampingnya 10:30 artinya => 10 * 60 lalu di tambah 30
+    })
+    // 5. jumlahkan semua detik
+    .reduce((total, detik) => total + detik);
+    // 6. ubah formatnya jadi jam menit detik 
+      // 1 Jam = 60 Menit, 1 Menit = 60 Detik, 1 Jam = 3600 Detik
+        // Kita bulatkan hasilnya
+        let jam = Math.floor(jsLanjut / 3600);
+        // Mengambil sisa dari pembagiannya dan kita kalikan artinya kita membuatnya jadi detik
+ jsLanjut -= jam * 3600;
+    // lalu setelah jadi detik kita bagi dengan 60 disini kita buat jadi 1 menit atau 60 detik
+ const menit = Math.floor(jsLanjut / 60);
+    // Mendapatkan detiknya
+    const detik = jsLanjut - menit * 60;
+    // 7. simpan di DOOM 
+
+            // Total Durasi
+    const pDurasi = document.querySelector('.total-durasi');
+    pDurasi.textContent = `${jam} Jam , ${menit} Menit , ${detik} Detik.`;
+        => gk perlu pake console karena hasil nya akan langsung tampak di browser karena setelah kita .textContent => artinya kita mendapatkan skaligus menampilkan dengan string atau meng isi nilai nya 
+    console.log(detik);

@@ -1,0 +1,78 @@
+            <== Semantic Elements ==>
+Semantic adalah Berkaitan dengan makna atau arti kata
+
+
+    contohnya dalam penulisan sebuah variable usahakan untuk memiliki makna pada 
+    variablenya sehingga lebih masuk akal ketika orang lain membaca syntax kita             
+
+     jangan menggunakan div dan span karena div dan span tidak punya makna jika 
+     tujuan kita adalah ingin membuat sebuah judul atau heading pada sebuah halaman
+            gunakanalah tag yang sesuai karena hampir semua tag itu memiliki makna
+
+       -> Alasan Menulis Semantic Element
+        1. accessibility (mudah dibaca User)
+        2. Maintainability (mudah di baca Developer)
+        3. SEO (Mudah dibaca oleh mesin pencari)
+
+            => lebih detail lagi 
+.   HTML harus ditulis dengan merepresentasikan data yang akan ditampilkan, bukan 
+            berdasarkan bagaimana dia ditampilkan(style) , jadi setiap data yang 
+            kita tulis harus di bungkus dengan tag yang kita sudah tau makna 
+            nya apa
+
+.   Memudahkan aksesibilitas, terutama saat menggunakan screen reader
+.   Sebagai developer lebih mudah mencari & mengelola code yang memiliki makna
+.   Berpengaruh pada SEO, karena semantic Element dianggap sebagai kata kunci 
+    yang penting 
+    
+                di HTML Ada beberapa kategori Element HTML5 
+        Element 
+    1. Metadata -> Untuk menjelaskan tentang Website kita dan biasanya tidak tampil 
+                   Ke layar
+    2. Flow Content -> adalah Element element yang biasanya kita gunakan pada
+                   Halaman Web kita 
+    3. Sectioning Content -> Digunakan untuk menjelaskan bagian bagian tertentu 
+                   Pada website kita 
+                   1. article 
+                   2. aside 
+                   3. nav 
+                   4. section 
+        biasanya sebelum ada ini kita menggunakan div untuk bagian section dan 
+        bagian halamannya                   
+    4. Heading Content -> untuk menuliskan judul ada h1 - h6 dan hgroup
+    5. Phrasing Content -> digunakan untuk menjelaskan informasi yang ada di 
+        Halaman web kita , baik itu tulisan , audio / vidio / dan element media dll
+    6. Embedded Content -> Element element multi media yang bisa kita masukkan ke 
+        dalam halaman web kita SVG / Canvas / audio / vidio dan Elemen media lainnya
+    7. Interactive Content -> Element element yang bisa kita berikan interaksi
+        bisa di click , bisa di ganti isinya dan lain sebagainya
+
+
+            <!-- Cara Menempatkan Semantic Element pada web kita -->
+ Setiap bagian pada web kita sudah ada element tag nya yang lebih memiliki makna 
+ misalkan saja seperti div-footer or div-heading , sekarang sudah ada heading 
+ dan footer untuk HTML5 jadi gk perlu lagi pakai div karena div tidak punya makna 
+ gunakanlah footer atau header atau main atau saidebar atau article atai aside 
+ yang lebih bermakna Secara semantic 
+
+
+        Kita bisa baca Dokumentasinya langsung penggunaan tag tag nya
+        salah satu contohnya 
+    1. main -> digunakan untuk content yang dominan dan hanya boleh 1 pada halaman 
+                web kita 
+    2. section -> digunakan untuk yang tidak memiliki element semantic yang spesifik
+            biasanya selalu di tambahkan heading didalamnya atau judul pada sectionya
+
+
+            <!-- Pertanyaannya adalah! ? -->
+        Bagaimana kita menambahkan semantic pada element yang tidak semantic 
+    agar tetap bisa dibaca baik oleh Screen Reader atau SEO 
+            caranya dengan menambahkan WAI - ARIA
+        -> contohnya 
+        <div class="navigation" role="navigation"></div>
+        kita tambahkan pada role nya role="" <- penjelasan yang akan di baca 
+        Screen Reader 
+
+            kita juga bisa memberikan informasi tambahan baru masuk navigation 
+        -> contohnya 
+<div class="navigation" role="navigation" aria-label="my-main-navigation"></div>

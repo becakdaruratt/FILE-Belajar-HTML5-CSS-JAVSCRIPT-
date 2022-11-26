@@ -9,7 +9,7 @@ function test(){
         // b += a;
         // a = b - a; => Cara dari bang dea 
 
-        [a,b] = [b,a]; => cara jitu
+        [a,b] = [b,a]; => cara jitu ini disebut Destructuring variable atau assignment
 
         // Coding
         // gimana cara nya supaya nilai b jadi nilai a
