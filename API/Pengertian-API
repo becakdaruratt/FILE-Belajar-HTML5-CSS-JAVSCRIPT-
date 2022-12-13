@@ -1,0 +1,21 @@
+            <-- API = Application programing Interface -->
+    . Antar muka yang berupa kumpulan fungsi yang dapat di panggil 
+      atau dijalankan oleh program lain
+        
+            dan kayaknya sadar atau tidak kita pernah berinteraksi dengan API
+            atau bahkan pernah Membuat API yang sederhana cuman kita tidak sadar 
+            saja kalau itu adalah API 
+
+    . Penerapannya Sangat luas 
+      . Bahasa Pemrograman biasanya ada APInya
+      . Library & Framework Itu juga biasanya ada APInya
+      . Sistem Operasi biasanya ada APInya
+      . Web API / Web Service biasanya ada APInya
+      
+            [Biasanya istilah dari API itu suka tertukar tukar]
+    => Maksud kita mungkin membuat Web service nah kita menyebutnya API padahal
+        API itu yang umumnya sedangkan Web Service itu salah satu bagian didalam
+        API bahkan web service itu sendiri masih umum , dan salah satu jenis web 
+         service didalamnya ada Rest API , jadi kadang kadang yang ada di pikiran
+         kita itu Rest API tetapi kita menyebutnya API aja
+         7:00

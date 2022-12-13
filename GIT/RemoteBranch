@@ -1,0 +1,8 @@
+            <== Remote Branch ==>
+yaitu bagaimana saat kita membuat branch di repo kita lalu branch tersebut kita usulkan perubahannya ke repo aslinya , dan nanti didalamnya kita juga akan belajar tentang pull request , perubahan kita disetujui dan diterima oleh pemilik repo aslinya ,
+
+        di vidio sebelumnya kita sudah membahas soal up to date dengan repo sumber , saat repo sumber kita melakukan perubahan , kita cek dilocal kita dengan menggunakan fetch lalu kita merged, kita samakan dulu local dengan sumber lalu local dengan master kita di github, nah sekarang gimana kalau yang melakukan perubahannya adalah kita yang melakukan fork , dan ini sering terjadi ada orang lain yang mengusulkan perubahan sehingga prosses colaborasi codingnya terjadi 
+    
+    nah ketika kita melakukan perubahan terhadap repo fork kita kan kita tidak bisa begitu saja mengirimkan nya ke repo sumber , karena kita tidak punya akses ke sana karena kita tidak punya akses , jadi github memberikan fitur yang namanya pull request , jadi permintaan agar perubahan kita ditarik masuk ke repo master 
+
+    code . = membuka code editor kita

@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+}
+body .container {
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  border: 2px solid black;
+  background-color: white;
+  display: grid;
+  grid-template-rows: repeat(1, 60px) repeat(3, 1fr);
+  grid-template-areas: "navbar navbar navbar" "saidebar main main" "saidebar main main" "footer footer footer";
+}
+body .container nav {
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+}
+body .container nav h2 {
+  margin-left: 20px;
+  margin-top: 20px;
+  color: black;
+}
+body .container nav ul li {
+  list-style: none;
+  margin-right: 30px;
+  margin-top: 20px;
+  display: inline-block;
+}
+body .container nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+body .container .saidebar {
+  grid-area: saidebar;
+  background-color: blue;
+  text-align: center;
+}
+body .container main {
+  grid-area: main;
+  background-color: cadetblue;
+  text-align: center;
+}
+body .container footer {
+  grid-area: footer;
+  background-color: chartreuse;
+  text-align: center;
+}/*# sourceMappingURL=gridsketsa.css.map */

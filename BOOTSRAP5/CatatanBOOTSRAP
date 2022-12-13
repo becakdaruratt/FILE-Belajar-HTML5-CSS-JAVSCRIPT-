@@ -1,0 +1,85 @@
+                <== BOOTSTRAP5 ==>
+Adalah bootstrap terbaru atau CSS framework, yang mana framework ini sebenarnya 
+mempermudah kita untuk membuat sebuah website , framework ini sangat bisa digunakan
+oleh mereka yang baru belajar dan yang sudah expert karena kita tidak perlu menulis 
+HTML dan css terlalu banyak untuk membuat website kita , karena semuanya sudah di 
+bikinkan di dalam BOOTSTRAP5 kita , kita tinggal pakai saja , tinggal copy paste 
+dan memanggil beberapa yang memang di butuhkan .....
+
+            Cara pakai 
+    1. Kunjungi website BOOTSTRAP5
+    2. pilih docs link 
+        kita bisa lihat ada banyak dokumentasi menggunakan BOOTSTRAP5 ini 
+
+        di vidio ini kita hanyak akan fokus ke 
+    * Layout
+    * Content
+    * Forms
+    * Components
+
+            Cara buat nya  
+        1. Template dasarnya di Getting starter 
+            . introduction 
+            . Cara Getting started (starter Template)
+        2. Kita bisa ubah color (warna nya) tinggal cek saja color yang ada di 
+            Customize 
+        3. Untuk sitematis color -> tulisan colornya jangan Ada huruf besar 
+        4. Untuk pemilihan warna nya kita bisa langsung pilih color 
+        5. Jika ingin menggunakan navbar tinggal search saja 
+        6. Setelah kita Copy paste Navbar nya tiba-tiba akan tampil dan kerennya
+            sudah Responsive 
+
+        7. kalau kita ingin warnanya tidak dengan BOOTSTRAP5 kita bisa pilih        sendiri color atau stylenya
+        8. Kita bisa membuat navbar kita punya bayangan , tinggal cari saja shadow
+
+
+                Jumbotron di BOOTSTRAP5 itu tidak ada jadi kita bisa copykan saja 
+berpindah dulu ke bootstrapV4 lalu kita copykan Jumbotronnya 
+
+        Kalau kita membuat Layout halaman , kita harus bungkus dulu dengan container , lalu row , lalu mau berapa coloumn (col-sm) dan pastikan 
+        jumlah dari col itu tidak boleh lebih dari 12 
+
+        saat kita membuat Projects , kita bisa save component cards 
+        pilih Components lalu cards pilih yang simple , save lalu paste kan
+
+                kalau kita perhatikan tidak ada kekurangan pada cards nya karena kaalu kita lihat dari lebar laya hp dia akan maksa 3 colom jadi tidak responsive gitu 
+
+    dan inilah kenapa kita butuh mainkan responsivenya caranya , pilih Layout dan ada yang namanya BreackPoints ini untuk mengkasih tau tiap tiap titik dimana desain responsivenya berubah di bootstrap
+
+
+                        // Dokumentasinya
+Breakpoint	Class infix	Dimensions
+X-Small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+
+
+            Cara pakainya 
+                    <div class="col-md-4"> 
+                    sehingga saat lebar layarnya di <= 768 maka akan 1 layar
+
+jangan lupa di paragraph nya juga berikam col-md-4 agar paragraphnya lebih rapih dan responsive
+                untuk FORM ada di dokumentasi Form , overview tinggal kita copy saja 
+                untuk Text area ada di Form , Form Control 
+
+
+    untuk pemilihan Icon , bisa kita search di dokumentasi nya 
+     icons / bootstrap icons 
+     lalu pilih Learn more about Bootstrap Icons
+
+                tinggal pilih jenis icons nya  
+
+        icon hati  = heart 
+
+        iconnya ada dua bisa di dwonload bisa dari CDN , caranya copy dulu link nya sebelum kita klick iconya , caranya search ke paling bawah copy CDN lalu kita pilih icon 
+        barulah bisa tinggal copi tag <i></i>
+        link nya tempel kan di paling atas
+
+
+                Position FIxed = di bootstrap ada di cari di dokumentasi Navbar , placement bagian kanan ada paling sudut lalu pilih fixed top
+
+
+

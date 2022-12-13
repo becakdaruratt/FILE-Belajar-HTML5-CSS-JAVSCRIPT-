@@ -1,0 +1,17 @@
+                <== Github pages ==>
+kita membuat Github sebagai Web Hosting        
+    github bisa digunakan sebagai web Hosting tentu saja gratis walau pun ada batasan, ukuran website maksimal berapa dll , coding niter itu tidak bisa di simpan di github pages 
+
+
+    1. buat repository , 
+        tidak boleh namanya sembarang cara nya buat namanya 
+         1. akungithubkita (dinamanya buat) lalu .github.io 
+    2. becakdaruratt.github.io 
+        dan nantinya halaman ini akan menjadi halaman website github kita , sudah otomatis dikasih nama username.github.io
+    3. buat repository di local kita dengan git init
+    4. lalu kita push ke github kita 
+    5. kita buka becakdaruratt.github.io secara tiba tiba kitasudah punya web hosting kita
+
+
+
+                GIT BERHENTI DI EPISODE KE 9 , SISA 10 - 14 lanjutkan jika saatnya 

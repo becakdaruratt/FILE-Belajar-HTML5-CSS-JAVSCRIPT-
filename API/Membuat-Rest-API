@@ -1,0 +1,14 @@
+        <-- API = Application programming interface -->
+karena saat ini istilah API ini banyak skali digunakanya dan mungkin saja ada diantara kita yang belum paham apa itu API atua bahkan salah mengartikan API itu seperti apa , istilahnya kita ilustrasikan dengan database. misalnya Mysql data base atau bukan ? Mysql itu bukan data BASE Tapi DBMS = database Menejement System , jadi defenisinya sebenarnya salah tapi karena sering kita gunakan seolah olah benar gitu , dan kalau misalkan dua orang yang ngobrol ini sama sama tau kalau Mysql ini bukan database itu gpapa, sama juga dengan API , kadang kadang yang kita sebut dengan API itu kurang tepat karena API itu masih sangat global ya...
+
+        Definisi Formal Dari API = (Application Programming Interface)
+        adalah sekumpulan fungsi, subroutine, protokol komunikasi, atau kakas
+        / tools untuk membuat perangkat lunak , Definisinya sangat global skali 
+
+    dan kalau kita lihat satu kata dari Pengertiannya yaitu Interface = antarmuka ? ini juga kadang kadang kita salah mengartikan, kalau misalkan ngomongin antarmuka biasanya yang ada di pikiran kita itu langsung antarmuka application yang bisa kita sebagai user pencet, pilih gitu ya , kalau web itu ada tombol , ada combobox ada radio button itu kadang kadang kita sebut antar muka tapi lebih dari itu , antarmuka adalah 
+
+        Interface / antarmuka adalah bagian yang sama antara dua atau lebih komponen terpisah pada sebuah sistem komputer , analogi contohnya seperti motherboard interface , jadi tiap tiap slot yang kita liat itu adalah antar muka agar tidak bingung kita masangnya , karena hanya ada 1 interface yang muat gitu , jadi slot slot itu biasanya kita sebut dengan interface
+
+            yang ada tombol windows10 itu itu disebut Grapihcal User Interface (GUI)
+jadi ada antarmukanya kita gk bingung tinggal kita click aja gitu 
+

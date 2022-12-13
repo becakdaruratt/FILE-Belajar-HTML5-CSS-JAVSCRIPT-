@@ -1,0 +1,78 @@
+
+
+    <ul class="navbar-nav ms-auto">
+  <!-- Kita tambahkan ms-auto (margin left) jadi yang leftnya tidak mepet kiri pindah kanan-->
+
+        bg-primary = kita membuat background berwarna biru 
+        navbar-light = otomatis warna kita dibuatkan jadi gelap
+        navbar-dark = otomatis warna kita dibuatkan jadi terang 
+
+        <img src="../301916590_1116381765928089_8582271123281649851_n (1).jpg" alt="Gambar bersama dengan teman teman" width="200" class="rounded-circle">
+    rounded-circle = untuk membuat gambar jadi bulat atau border radius 50%
+
+    <img src="..." class="img-thumbnail" alt="..."> 
+    img-thumbnail = untuk membuat ada bordernya (border putih dengna ukuran yang sudah di takar)
+
+
+            <!-- About -->
+    <section id="about">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col">
+              <h2>About Me</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir About -->
+        container = itu pembungkusnya 
+        row = baris satu nya 
+        col = mau berapa baris 
+        kalau col nya tidak kita spesifikasikan maka ukurannya adalah 6 dan 6
+        dan kalau cuma 1 column yang kita isi maka sisanya akan mengikuti 
+
+            kerennya dari BOOTSRAP5 semuanya sudah bentuk felxbox tinggal kita cari dokumentasi Layout Columns dan pilih classnya saja 
+
+    
+        font-size = bisa juga kita atur ukuran fontnya 
+
+            di bootsrap5
+            margin left itu = ms (margin start)
+            margin right itu = me (margin end)
+            margin bottom itu = mb (margin bottom
+            margin top itu = mt (margin top)
+            
+ dokumentasi ini ada di utility Spacing
+
+      di studi kasus kita kita , membuat warna nya sama agar background nya melekat 
+
+
+      justify-content-center <- Cara penulisan flexBOX
+
+      dokumentasi ada di Layout ,  Columns 
+
+      btn btn-primary = untuk membuat block biru 
+      text-white = agar tulisan warna putih
+      fw-bold = agar tulisan jadi bold
+      
+      kitabisa inspek eleemtnnya kalau ingin lihat warnanya pake heksa berapa #
+
+      pb-3 =  kita kasih padding bottom agar bawah yang gantung jadi turun habis
+      text-danger = di icon hati karena dia tulisan
+
+      kita kasih padding top ke semua section karena ngumpet sama navbar fixed nya
+
+      d-none = display-none
+
+      kita inging memubat animasinya , kita masuk dokumentasi nya lagi , masuk  
+      pecarian lalu cari Spinners lalu kita copy saja yang buttonsnya , lalu di pastekan di bawah button kita
+
+      selanjutnya kita buat Alert nya kita serach aja alert , lalu kita pilih mau yang mana
+
+
+      btnAlert.classList.toggle('d-none'); <-- d-none di bootstrap masuknya ke attribute yang punya style
+
+
+      img-fluid -> sebuah class untuk membuat gambar responsive
+
+    

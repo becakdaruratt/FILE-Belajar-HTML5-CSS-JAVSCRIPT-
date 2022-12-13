@@ -1,0 +1,34 @@
+                    <-- Library TiltJs -->
+adalah sebuah library 
+    1. kunjungi tiltJS
+        akan ada 2 buah library 
+         . library pertama adalah library utama adalah library yang membutuhkan jquery didalamnya
+         . library kedua adalah vanila JavaScript / vanila tilt jadi library ini dibuatkan berdasarkan tiltJS yang pertama atau jquery
+    dan yang kita gunakan adalah vanilaTiltJS ini 
+    
+     cara pakainya tiltJS vanila Javascript 
+        1. dwonload dulu librarynya , lalu masukkan script codingan kita
+         dan cara pakinya yang paling sederhana
+         <div class="your-element" data-tilt></div> kita kasih attribute data-tilt
+         lalu di akhir dari HTML kita , kita sisipkan script dari dataTilt vanila Javascriptnya
+
+
+        Ctt: cara pakainya mudah sekali kita dwonload dulu vanilaTiltJSnya, ada yang full ada yang di ringkas dan kita pilih yang di ringkas saja = vanilla-tilt.min.js
+
+        setelah kita dwonload tinggal kita panggil , bedanya dengan yang lainnya adalah AOS itu kita pke link , dan webshock juga , tapi ini kita dwonload , kita panggil scriptnya di akhir
+
+        tinggal kita perbaiki src dari scriptnya
+        setelah kita perbaiki , tinggal kita pakaikan attribute data-tilt
+
+        kita juga bisa menggunakan versi vanila javascriptnya , dan kita bisa configurasi kecepatannya mau berapa , dan sudutnya mau berapa 
+        37 : 00
+                    3D nya bisa bekerja karena 
+                    transform-style: preserve-3d; 
+                    dan kalau pun ada 
+                    transform-style: preserve-3d; tapi kita kasih 
+                    overflow = hidden tetap gepeng <- harus tidak ada overflownya
+
+        Alasan elemnt lain tidak jalan karena , kita masih panggil 1 elementnya saja tilt JS nya
+
+        Untuk configurasi lainnya bisa kita cek langsung di dokumentasinya
+                

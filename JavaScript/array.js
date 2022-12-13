@@ -6,13 +6,13 @@
 //     console.log(typeof(t));
             // Elemen array Boleh beda
 
-        var fungsi = function(){
+       var fungsi = function(){
             alert('Hello World');
         };
 
 var myarray = ['teks' , 2 , false , fungsi , [4,5,6]];
 
-        console.log(myarray[4][2]);
+        console.log(myarray[4][2]); 
 
 
                 // Manipulasi Array

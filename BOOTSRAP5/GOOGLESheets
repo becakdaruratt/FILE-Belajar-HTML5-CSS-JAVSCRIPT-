@@ -1,0 +1,129 @@
+            <== Google Sheets ==>
+Menyimpan Pesan dari Contact Form ke dalam GOOGLE SHEETS 
+
+    pertama kita kunjungi 
+
+            https://github.com/jamiewilson/form-to-google-sheets
+    sebuah repo untuk Menyimpan Pesan dari Contact Form 
+
+        Tahapan pembuatan 
+1. kita akan menyimpan data dari form menggunakan javascript 
+
+        Google Apps Script, Fetch and FormData. = kita bisa menuliskan script versi google , kita kirim menggunakan fetch API dan form data 
+
+.   First, go to Google Sheets and Start a new spreadsheet with the Blank template.
+    =   Pertama, buka Google Sheets dan Mulai spreadsheet baru dengan template Kosong.
+* pak sandhika biasanya buka google drive lalu new google Sheets , lalu pilih spread kosong = seperti microsoft excel
+
+. Kedua kita bisa kasih namanya dan namanya Bebas
+
+lalu selanjutnya bikin  
+Put the following headers into the first row: -> header ini di baris pertama 
+    ada contohnya lihat saja link nya atau reponya  ini adalah defaultnya 
+    selain siapa yang kirim , dan kita juga tahu kapan dikirim pesannya
+
+   A
+              в
+                           с
+                                         D
+timestamp
+                        email
+            nama
+                                        pesan
+
+    ingat tulisan nya huruf kecil semua
+
+. Masuk ke tools lalu Script editor di google Sheets nya 
+
+script editornya ada di Extensi Apps Editor <--
+
+
+. kita copy contekannya lalu di pastekan di script editor atau apps editor
+
+
+adakalanya Drive google kita tidak bisa di click itu karena google drivenya bingung kita menggunakan account yang mana , jadi sarannya pastikan kita menggunakan 1 account dengan kita logout dulu yang lain
+
+
+. kita bisa ganti nama Apps Scriptnya 
+. kita save di tombol simpan project (gambar copy)
+
+    defaultnya kan sheet1 kalau kita ingin ganti , maka nama variable di scriptnya juga kita ganti 
+
+    3. Run the setup function
+
+        . tombol jalannya ada di google sheets 
+        . pilih function yang ingin kita jalankan
+         funtionnya kita pilih initial setup
+         lalu kita pilih jalankan  , dan nanti akan ada eksekusi prosessnya
+
+    4. Add a new project trigger
+        ceritanya nanti ada pengunjung website kita yang mengclick tombol kirim , apa yang akan kita lakukan
+
+        trigger nya itu ada di sebelah kiri Apps scriptnya , yang tombol jam , setelahnya click tambahkan pemicu / trigger 
+
+        selanjutnya kita ubah functionnya jadi doPost
+
+        di pilih acaranya kita ubah jadi saat mengirim formulir / on from submit
+
+        selanjutnya kita bisa setting kegagalan mengirim dari user , kita pilih beritahu saya segera 
+
+setelah sudah 
+
+5. Publish the project as a web app
+
+    . pilih terapkan (deploy)
+     lalu Deployment Baru
+     pilih icon gear dipilih jenis 
+     lalu pilih Aplikasi web 
+
+    . Kita tulis saja descripsi dari aplikasi web kita
+        Api web nya kita ubah siapa saja
+    . lalu pilih terapkan (deploy)
+
+
+        setelah selesai kita akan di kasih 
+        deployment id
+        ke 2 
+        deploment url
+                inilah yang akan kita pakai di form html , sebenarnya sampai sini selesai
+
+    kita  done kan saja 
+    kalau mau cek lagi kita bsai , buka terapkan atua deploy nya lalau pilih kelola deployment , muncul lagi 
+
+
+6. Input your web app URL
+
+    kita bukan contact from kita lalu menambahkan scriptnya di bawahnya
+
+    <script>
+  const scriptURL = '<SCRIPT URL>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+untuk script formnya tidak kita copy karena kita sudah punya  
+kita bisa simpan di paling bawah sebelum tutup body
+
+
+    const scriptURL = '<SCRIPT URL>' <== kita ganti dengan url yang ada di deployment google sheets apps script kita
+
+    yang kita copy web aplikasi urlnya 
+
+      const form = document.forms['submit-to-google-sheet'] <== harus sama dengan nama form kita
+       artinya javascript carikan saya forms dengan nama submit-to dll 
+       kita bisa saja copy lalu simpan dengan attribute name='' yang sama dengan formnya 
+
+
+       Ctt: nama , email , pesan itu harus sama di forms nya , dengan attribute name="nama" gitu dll
+
+       kalau kita punya contact atau header dll , kita bisa buat tapi harus sama dengan name="" nya 
+
+       terakhir button kita harus type="submit"
+
+        dan sekarang sudah bisa terkirim

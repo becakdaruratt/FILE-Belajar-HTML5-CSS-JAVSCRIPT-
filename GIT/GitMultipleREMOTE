@@ -1,0 +1,37 @@
+                    <== Multiple REMOTE ==>
+Bagaimana kita bisa terhubung ke beberapa Remote sekaligus , kenapa kita melakukan ini ? karena mungkin saja kita ingin singkron ke beberapa remote sekaligus 
+.. ini mungkin akan terjadi jika kalian bekerja dengan tim tapi dengan Repo yang berbeda
+
+        1. Kita pilih Reponya lalu kita git clone linknya alias kita fork atau duplikat 
+        2. copy linknya HTTPS Clone Code 
+        3. tentukan mau nyimpannnya dimana
+        4. git bash clone linknya 
+        5. misalkan kita simpan nya di Dekstop 
+        6. masuk ke foldernya 
+kalau kita cek git remote sesudah kita git clone , otomatis dibuatkan origin defaultnya 
+        7. pastikan origin ini connectnya ke punya kita atau punya yang kita clone ?
+untuk menceknya bisa 
+        - git remote -v
+dan pada kasus ini connectnya ke repo kita yang sudah kita clone , jadi kalau kita melakukan perubahan filenya akan berubah , sedangkan file yang kita fork duplikat dari sandhika galih itu di ubah atau ada perubahan kita tidak akan pernah tau , 
+
+        8. sedangkan kita pengennya semuanya singkron, agar kita bisa juga up to date dengan repo yang kita fork tadi atau duplikat , kita harus menambahkan remote baru yang ditujukan ke sandhika galih , caranya 
+git remote add sofyanTanjung <- bebas nama remotenya defaultnya  origin -- https://github.com/sandhikagalih/wpu-login.git 
+
+url nya itu kita ambil dari repo yang kita fork atau duplikat sedangkan yang ini 
+https://github.com/becakdaruratt/wpu-login.git  <-- bukan url repo asli nya 
+
+        9. harusnya sekarang kita sudah punya 2 remote, remote pertama yang kita duplikat yang sudah ada di file kita dan kedua remote aslinya 
+
+    kita bisa cek dengan 
+                    
+        - git remote 
+kalau kita lihat graph kita bisa lihat kalau hanya ada 2 pointer , pointer branch nya hanya ada 2 , ada di local kita dan ada di origin punya nya fork kita akun becakdaruratt, sedangkan kita ingin lihat commit ke 3 tiganya posisi commit , 
+soalnya di akun repo aslinya kita belum lihat di graph ini 
+
+        untuk melihat commit sandhika galih repo asli kita harus git fetch dulu history commitnya kedalam local kita
+                    
+                    caranya 
+            - git fetch <nama remotenya apa>
+            - git fetch sandhikagalih
+            
+        masalahnya saat kita git fetch naam remotenya fatal , tidak ada repositori 

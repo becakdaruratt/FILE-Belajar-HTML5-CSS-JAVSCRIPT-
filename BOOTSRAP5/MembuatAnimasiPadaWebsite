@@ -1,0 +1,47 @@
+            <== Menggunakan AOS & GSAP ==>
+Kita akan menggunakan BOOTSRAP5 kita dan kita tambahkan sedikit animasi didalamnya
+            AOS = library -> library ini akan membuat elemnt yang kita punya akan mncul pada posisi tertentu
+    1. Siapkan Project dari Ngoding bareng BOOTSRAP5 kita 
+    2. kita buka AOS , lalu kita click logo kanan atas github nya
+    3. tambahkan link ini di bagian head kita 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    4. Kita tambahakn sebelum tutup body untuk ngacu ke Javascript nya secara online 
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+    5. Sekarang kita sudah siap menggunakan library nya 
+    6. <div data-aos="fade-in"></div> <== Kita pakai attribut data-aos='' di ikuti dengan tipe transisi apa ? " di valuenya " perlu di ingat ini bukan class tapi attribute
+
+    <div
+    data-aos="fade-up"
+    data-aos-offset="200" -> jarak scrol muncul nya halaman defaultnya "200"
+    data-aos-delay="50" -> saat sudah sampai halamaan dia nunggu 50 s 
+    data-aos-duration="1000" -> durasi dari animasi nya berapa lama
+    data-aos-easing="ease-in-out" ->artinya awalnya lambat - cepat - lambat lagi 
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+  >
+  </div>
+   properti yang lain ada juga 
+
+   7. Untuk card kita pakai animasi flip
+
+   8. Kita ingin animasi nya cukup 1 kalisaja saat user buka halamannya 
+   kita bisa masuk ke AOS.init();
+   AOS.init({
+    once: true;
+  });
+  ada di dokumentasi githubnya
+
+  duration: 400, <- bisa kita ubah jadi 2000 atau 2 detik juga 
+
+  9. di bagian gallery nya kita membuat animasinya bukan dengan manual copy paste tapi dinamis caranya dengan memanfaatkan Javascript
+
+  const galleryImage = document.querySelectorAll('.gallery-img');
+      galleryImage.forEach((img, i) => {
+        img.data-aos ="fade-down";
+      });

@@ -98,3 +98,6 @@ $dark-text: #ddd ;
     beda nya antara div dan span 
     div itu block line = menambahkan baris baru 
     sendagkan span inline = tidak meanmbahakn baris baru 
+
+
+        > * = apapun yang ada didalamnya

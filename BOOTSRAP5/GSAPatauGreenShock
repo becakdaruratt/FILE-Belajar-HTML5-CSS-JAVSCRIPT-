@@ -1,0 +1,25 @@
+                <== Green Shock ==>
+Sebuah platform bukan library 
+Sebuah property manipulator
+
+    Cara pakai ->
+
+            1. Masuk Getting Started with GSAP
+    . uniknya dari contoh yang dia berika ada code pennya jadi kita bisa lihat 
+       script dan demonya sekaligus
+
+            2. Simpan scriptnya ke HTML ada di bagian bawah dari Getting Started
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>  <-- Scriptnya 
+
+                penjelasan cara pakai nya lengkap 
+
+                NGOBAR#30 - Membuat Animasi pada Website (Menggunakan AOS & GSAP)
+        menit 36:00
+
+
+        ada yang namanya text plugin -> untuk memanipulasi text 
+        lihat documentasi textnya , lalu click demonya
+
+
+                    

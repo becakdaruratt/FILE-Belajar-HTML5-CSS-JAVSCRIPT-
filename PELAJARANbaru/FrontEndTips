@@ -27,3 +27,7 @@
           kita juga bisa memberikan informasi tambahan baru masuk navigation 
         -> contohnya 
 <div class="navigation" role="navigation" aria-label="my-main-navigation"></div>           
+
+
+    cara agar yang kita click lari nya kesana , berika alamat href nya dan id nya sama dengan href
+    dan linknya harus gini #home

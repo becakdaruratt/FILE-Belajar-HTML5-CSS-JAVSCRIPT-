@@ -79,7 +79,7 @@ const c = mycanvas.getContext('2d');
 c.fillRect(25,25,100,100); <- untuk membuat lingkaran lebih lanjutnya baca di HTML5 Tentang canvas 
 
         arguments => bukan sebuah array tapi object
-            
+28. .reset(); -> untuk mereset formnya    
                     // Method pada array
     // 1. .length
     // 2. .join()
